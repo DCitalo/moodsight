@@ -1,24 +1,19 @@
 {
-  "name": "moodsight",
-  "version": "0.1.0",
+  "name": "RV-Test",
+  "version": "0.0.1",
   "private": true,
-  "homepage": "https://dcitalo.github.io/moodsight/",
-  "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.5",
-    "@fortawesome/react-fontawesome": "^0.0.18",
-    "gh-pages": "^1.1.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "react-svg": "^2.2.15"
-  },
+  "description": "Teste para Front-end na empresa Red Venture.",
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "DCitalo",
+  "license": "MIT",
+  "dependencies": {
+    "air-datepicker": "^2.2.3",
+    "connect": "~3.1.1",
+    "express": "^4.16.3",
+    "serve-static": "~1.5.3"
+  },
+  "repository": {}
 }

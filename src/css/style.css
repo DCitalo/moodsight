@@ -1,0 +1,421 @@
+/*---------------------- RESET ------------------------*/
+  @import url('https://fonts.googleapis.com/css?family=Paytone+One|Quicksand:300,400,700');
+  @charse "UTf-8";
+  *, *::after, *::before{
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html, body, header, #root, #menu{
+    height: 100%;
+  }
+  html, body, div, span, applet, object, iframe, table, caption,
+  tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+  kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+  acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
+    font-size: 100%;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  :focus {
+    outline: 0;
+  }
+  body {
+    line-height: 1;
+  }
+  footer{
+    border-top: solid 0.2em #2980b9;
+    margin: 3em 0 0em;
+    padding: 0 0 2em;
+    width: 100%;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  caption, th, td {
+    font-weight: normal;
+    text-align: left;
+  }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+  }
+  blockquote, q {
+    quotes: "" "";
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  button{
+    border: none;
+    background: transparent;
+  }
+/*---------------------- FIM RESET --------------------*/
+/*---------------------- PADROES ----------------------*/
+  .font-1{
+    font-family: 'Quicksand', sans-serif;
+  }
+  .font-2{
+    font-family: 'Paytone One', sans-serif;
+  }
+  .Upper{
+    text-transform: uppercase;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .light{
+    font-weight: lighter;
+  }
+  .tamfont0{
+    font-size: 0px;
+  }
+  .tamfont1{
+    font-size: 12px;
+  }
+  .tamfont2{
+    font-size: 14px;
+  }
+  .tamfont3{
+    font-size: 16px;
+  }
+  .tamfont4{
+    font-size: 18px;
+  }
+  .tamfont5 {
+    font-size: 20px;
+  }
+  .tamfont6 {
+    font-size: 22px;
+  }
+  .tamfont7 {
+    font-size: 24px;
+  }
+  .tamfont8 {
+    font-size: 26px;
+  }
+  .background-alert{
+    background-color: #FA4941;
+  }
+  .bgcolor-1{
+    background-color:#27363b;
+  }
+  .bgcolor-2{
+    background-color:#6252b8;
+  }
+  .bgcolor-3{
+    background-color:#eb4960;
+  }
+  .bgcolor-4{
+    background-color:#31bdbb;
+  }
+  .bgcolor-5{
+    background-color:#fcceaa;
+  }
+  .color-1{
+    color: #FFFFFF;
+  }
+  .color-2{
+    color: #000000;
+  }
+  .color-3{
+    color: #3498d0;
+  }
+  .color-4{
+    color: #FCD658;
+  }
+  .color-5{
+    color: #909090;
+  }
+  .light{
+    font-weight: 100;
+  }
+  .regular{
+    font-weight: 300;
+  }
+  .bold{
+    font-weight: 600;
+  }
+  .align-right{
+    margin:0 0 0 auto;
+  }
+  .align-center{
+    margin:0 auto;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .text-right{
+    text-align: right;
+  }
+  .DIB{
+    display: inline-block;
+  }
+  .DBA{
+    display: block;
+    position: absolute;
+  }
+  .DF{
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: flex;  
+  }
+  .DIF{
+    -webkit-display: inline-flex;
+        -ms-display: inline-flex;
+            display: inline-flex;   
+  }
+  .FW{
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+  .PA{
+    position: absolute;
+  }
+  .PF{
+    position: fixed;
+  }
+  .PR{
+    position: relative;
+  }
+  .DN{
+    display: none;
+  }
+  .DB{
+    display: block;
+  }
+  .DG{
+  	display: grid;
+  }
+  .FL{
+    float: left;
+  }
+  .FR{
+    float: right;
+  }
+  .hide{
+    visibility: hidden;
+    display: none;
+  }
+  .show{
+    visibility: visible;
+    display: block;
+  }
+  .mx1440{
+    max-width: 1300px;
+  }
+  .mx1400{
+    max-width: 1400px;
+  }
+  .MRL-auto{
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .CS{
+    -webkit-align-items: center;
+            align-items: center;
+    }
+  .CSP{
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;    
+  }
+  .CSA{
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+            justify-content: space-around;
+  }
+  .SB{
+    -webkit-justify-content: space-between;
+            justify-content: space-between;  
+  }
+  .link-hover:hover{
+    text-decoration: underline;
+    text-decoration-color: #3498db;
+  }
+  .link-hover-negative:hover,.buy-cont:hover .link-hover-negative{
+    text-decoration: underline;
+    text-decoration-color: #f9cc27;
+  }
+  #conteudopag{
+    margin-top:90px;
+  }
+  .align-right{
+    -webkit-align-content:  flex-start;
+            align-content:  flex-start; 
+  }
+  /* BOTOES */
+    .btn{
+      cursor: pointer;
+      text-transform: uppercase; 
+    }
+    .btn-login{
+      border-radius: 5px;
+      background-color: transparent;
+      border: solid 1px rgba(0, 0, 0, 0.3);
+      margin: 0 0 10px auto;
+    }
+    .fa-sign-in-alt{
+      margin-left: 5px;
+    }
+  /* FIM BOTOES */
+/*---------------------- FIM PADROES ------------------*/
+/*---------------------- CONTAINER --------------------*/
+  .h-50{
+    height: 50%;
+  }
+  .container-100{
+    width:100%;
+  }
+  .container-FH{
+    margin-left: 130px;
+    width: calc(100% - 130px);
+  }
+  .container-90{
+    width:90%;
+    margin:0 auto;
+    height:auto;
+  }
+  .container-80{
+    width:80%;
+  }
+/*---------------------- FIM CONTAINER ----------------*/
+/*---------------------- GRIDS ----------------*/
+	.G-1x2-30{
+		grid-template-columns: calc(50% - 30px) calc(50% - 30px);
+		grid-column-gap: 30px;
+	  	justify-content: space-evenly;
+	}
+	.G-1x5-20{
+		grid-template-columns:auto auto auto auto auto;
+		grid-column-gap: 20px;
+	}
+/*---------------------- FIM GRIDS ----------------*/
+/*---------------------- SPRITE -----------------------*/
+	.icon-small{
+		max-width: 25px;
+	}
+	.icon-center{
+		margin: 0 auto;
+		display: block;
+	}
+/*---------------------- FIM SPRITE -------------------*/
+/*---------------------- MENU -----------------------*/
+  #menu{
+    width: 130px;
+    background: linear-gradient(to top, #a767ff, #8ee6be);
+    -webkit-align-content: flex-start;
+            align-content: flex-start;
+  }  
+  .navigation-menu{
+    height: calc(100% - 100px);
+    margin: auto 0 0 0;
+    -webkit-align-content: flex-end;
+            align-content: flex-end;
+  } 
+  .menu-item{
+    height: 60px;
+  }
+  .menu-item > svg{
+    height: 50%;
+  }
+  .logo-cont {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto;
+  }
+
+/*---------------------- FIM MENU -------------------*/
+/*---------------------- CONTEUDO -----------------------*/
+  #conteudo-body{
+    margin-left: 130px;
+    width: calc(100% - 130px);
+    padding: 20px 30px;
+    background: url('/img/bg-pattern.png');
+  }
+/*---------------------- FIM CONTEUDO -------------------*/
+/*---------------------- HOME ---------------------------*/
+  .logoFull-cont{
+  	max-width: 300px;
+    margin-bottom: 20px;
+  }
+  .pal-home{
+   height: 25px;
+  }
+  .pal-item-home{
+   height: 50px;
+    border-radius: 10px;
+  }
+  .title-chamada{
+    margin-bottom: 20px;
+  }
+  .video-container{
+    border-radius: 15px;
+    box-shadow: 0px 10px 9px 0 rgba(0, 0, 0, 0.29);
+    background-color: #ffffff;
+    margin: 20px 0;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 400px;
+  }
+  .info-home-cont{
+  	margin: 50px auto 30px;
+  }
+  .info-home{
+  	 grid-row-gap: 20px;
+  }
+/*---------------------- FIM HOME -----------------------*/
+/*---------------------- RESPONSIVO -------------------*/
+  @media screen and (max-width: 1080px){
+    /*------PADROES------*/
+    .tb-container-100{
+      width:100%;
+    }
+    .tb-container-90{
+      width:90%;
+    }
+    .tb-container-80{
+      width:80%;
+    }
+    .tb-container-50{
+      width:50%;
+    }
+    .minibanner-item{
+      width:48%;
+    }
+    .tb-show{
+      display: block;
+      visibility: visible;
+    }
+    .tb-hide{
+      display: none;
+      visibility: hidden;
+    }
+    .tb-text-center{
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .mb-container-100{
+      width:100% !important;
+    }
+    .mb-hide{
+      display: none;
+      visibility: hidden;      
+    }  
+  }
+/*---------------------- FIM RESPONSIVO ---------------*/
