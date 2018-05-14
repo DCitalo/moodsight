@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <head>
   <title>MoodSigth</title>
-  <link rel="stylesheet" href="css/style.css" media="all">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <header role="menubar" id="menu" class="PF DF FW">
-    <a class="logo-cont" href="/"><img src="img/icon-100x100.png" alt="Logo MoodSight"></a>
-    <nav class="navigation-menu DF FW container-100">
-      <a role="menuitem" class="container-100 text-center menu-item color-1 Upper DF FW" href="/Sobre">
-        <i class="fas fa-info-circle tamfont4 container-100 MRL-auto"></i>
-      </a>
-      <a role="menuitem" class="container-100 text-center menu-item color-1 Upper DF FW" href="/Ajuda">
-        <i class="fas fa-question-circle tamfont4 container-100 MRL-auto"></i>
-      </a>
-      <a role="menuitem" class="container-100 text-center menu-item color-1 Upper DF FW" href="/Contato">
-        <i class="fas fa-envelope tamfont4 container-100 MRL-auto"></i>
-      </a>
-    </nav>
-  </header>
+  <% include ../header.ejs %> 
   <section id="conteudo-body">
     <div class="container-100">
-      <button onclick=" pintrestLogin()" class="btn btn-login DF CS color-2 tamfont2 font-1 Upper">Comece seu projeto com  <span class="bold"> Pinterest</span><img src="img/pinterest.svg" class="icon-small" alt="Pinterest Logo"></button>
+      <button onclick="pintrestLogin()" class="btn btn-login DF CS color-2 tamfont2 font-1 Upper">Comece seu projeto com  <span class="bold"> Pinterest</span><img src="img/pinterest.svg" class="icon-small" alt="Pinterest Logo"></button>
     </div>
     <div class="container-100 DG G-1x2-30">
       <div class="container-100">
         <div class="logoFull-cont">
           <img src="img/logo-full.png" alt="Logo completo da MoodSight">
         </div>
-        <ul class="container-100 DG G-1x5-20 pal-home">
+        <ul class="container-100 DF FW pal-home">
           <li class="pal-item-home container-100 bgcolor-1"></li>
           <li class="pal-item-home container-100 bgcolor-2"></li>
           <li class="pal-item-home container-100 bgcolor-3"></li>
@@ -67,7 +50,7 @@
         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam iste totam, necessitatibus quia dolorum dignissimos praesentium, molestias deleniti tenetur autem pariatur quam harum laboriosam provident ut ipsum nostrum consectetur vel.</p>
       </div>
       <div class="info-home DG">
-        <div class="container-100"><img src="img/Typo%20Icon.svg" alt="" class="icon-center icon-small"></div>
+        <div class="container-100"><img src="./public/img/Typo%20Icon.svg" alt="" class="icon-center icon-small"></div>
         <p class="container-100 Upper text-center font-1 bold">MockUp UI Interativo</p>
         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolor impedit hic fugit, minima. Illo ipsam deserunt quam officiis aliquid quasi dignissimos nisi aut porro voluptas aperiam, architecto libero reprehenderit.</p>
       </div>
@@ -76,9 +59,7 @@
     <div class="container-FH">
       <img src="img/BANNER_05.png">
     </div>
-  <div id="result"></div>
 </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <script src="js/default.js"></script> 
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/default.js"></script>
 </html>

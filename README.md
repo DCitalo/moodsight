@@ -1,7 +1,20 @@
-## RV-Test
+## Moodsight 
 
-Para fazer o teste foram utilizados os seguintes plugins:
+Um site que te ajuda durante seu processo criativo, te fornece recursos,conteúdo e te ajuda a testar suas ideias e conceitos focando nas tuas decisões de Ui/UX do seu projeto. Para isso usamos algumas ferramentas detacadas abaixo.
 
+P
+
+Back-End:
+	[body-parser versao 1.18.2]
+	[ejs versao 2.5.9]
+	[express versao 4.16.3]
+	[express-load versao 1.1.16]
+	[firebase versao 4.13.1]
+	[firebase-admin versao 5.12.0]
+	[firebase-functions versao 1.0.2]
+	[mysql versao 2.15.0]
+	[nodemon versao 1.17.3]
+	[pinterest-api versao 1.1.]
 - [Jquery 1.12.4](https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js) - Para conseguir utilizar alguns dos outros plugins e facilitar a codificação do JS;
 
 - [Jquery-UI 1.12.1](https://jqueryui.com/) - Para fazer o filtro de preço;

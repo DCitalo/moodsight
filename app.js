@@ -1,7 +1,5 @@
-var app         = require('connect')()
-var serveStatic = require('serve-static')
-
-app.use(serveStatic('src'))
-
-console.log(' ➜   Open: http://localhost:4041')
-app.listen(4041)
+var app = require('./config/express')();
+const PORT = 8080;
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);

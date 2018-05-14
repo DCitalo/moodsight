@@ -6,26 +6,29 @@ function pintrestLogin(){
 	    });
 	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
-	          console.log('Error occurred');
+	          	console.log(response.error);
+	        	PDK.logout();
 	        } else {
-	          console.log(JSON.stringify(response));
+	          console.log(response);
 	        }
 	    var pins = [];
-	    PDK.request('/v1/me/boards/', function (response) {
+	    PDK.request('/v1/me', function (response) {
 	      if (!response || response.error) {
-	       console.log('Error occurred');
+	       console.log(response.error);
 	      } else {
 	      	var data = response.data;
-	      	console.log(data)
-	      	data.map(function(p) {
-	      		console.log(p.name)
-	      		//var yahoo = $( "#result" ).load( p.url );
-	       		//console.log(yahoo);
-	      		//console.log("https://api.pinterest.com/v1/me/"+p.id+"?access_token="+PDK.getSession().accessToken+"&fields=counts" )
-	      	})
 	      	//console.log(data)
-	        PDK.getSession().accessToken; 
-	        PDK.logout();
+	      	$.post('/salva', {data});
+	      }
+	    });
+	    console.log(PDK.me)
+	    PDK.request('/v1/me/boards', function (response) {
+	      if (!response || response.error) {
+	       console.log(response.error);
+	      } else {
+	      	var dataBoards = response.data;
+	      	console.log(dataBoards)
+	      	$.post('/salva', {dataBoards});
 	      }
 	    });
 	    });

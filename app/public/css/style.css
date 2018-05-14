@@ -196,9 +196,6 @@
   .DB{
     display: block;
   }
-  .DG{
-  	display: grid;
-  }
   .FL{
     float: left;
   }
@@ -294,17 +291,6 @@
     width:80%;
   }
 /*---------------------- FIM CONTAINER ----------------*/
-/*---------------------- GRIDS ----------------*/
-	.G-1x2-30{
-		grid-template-columns: calc(50% - 30px) calc(50% - 30px);
-		grid-column-gap: 30px;
-	  	justify-content: space-evenly;
-	}
-	.G-1x5-20{
-		grid-template-columns:auto auto auto auto auto;
-		grid-column-gap: 20px;
-	}
-/*---------------------- FIM GRIDS ----------------*/
 /*---------------------- SPRITE -----------------------*/
 	.icon-small{
 		max-width: 25px;
@@ -344,6 +330,7 @@
   #conteudo-body{
     margin-left: 130px;
     width: calc(100% - 130px);
+    min-height: 100%;
     padding: 20px 30px;
     background: url('/img/bg-pattern.png');
   }
