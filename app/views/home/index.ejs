@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <% include ../header.ejs %> 
+  <% include ../commom/header.ejs %> 
   <section id="conteudo-body">
     <div class="container-100">
       <button onclick="pintrestLogin()" class="btn btn-login DF CS color-2 tamfont2 font-1 Upper">Comece seu projeto com  <span class="bold"> Pinterest</span><img src="img/pinterest.svg" class="icon-small" alt="Pinterest Logo"></button>
@@ -14,7 +14,7 @@
         <div class="logoFull-cont">
           <img src="img/logo-full.png" alt="Logo completo da MoodSight">
         </div>
-        <ul class="container-100 DF FW pal-home">
+        <ul class="container-100 DF FW pal-home CSA">
           <li class="pal-item-home container-100 bgcolor-1"></li>
           <li class="pal-item-home container-100 bgcolor-2"></li>
           <li class="pal-item-home container-100 bgcolor-3"></li>
@@ -55,6 +55,7 @@
         <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolor impedit hic fugit, minima. Illo ipsam deserunt quam officiis aliquid quasi dignissimos nisi aut porro voluptas aperiam, architecto libero reprehenderit.</p>
       </div>
     </div>
+    <% include ../commom/footer.ejs %> 
     </section>
     <div class="container-FH">
       <img src="img/BANNER_05.png">

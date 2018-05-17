@@ -1,6 +1,5 @@
 /*---------------------- RESET ------------------------*/
   @import url('https://fonts.googleapis.com/css?family=Paytone+One|Quicksand:300,400,700');
-  @charse "UTf-8";
   *, *::after, *::before{
     text-decoration: none;
     -webkit-box-sizing: border-box;
@@ -341,9 +340,11 @@
     margin-bottom: 20px;
   }
   .pal-home{
+    width: 600px;
    height: 25px;
   }
   .pal-item-home{
+    width: calc(20% - 10px);
    height: 50px;
     border-radius: 10px;
   }

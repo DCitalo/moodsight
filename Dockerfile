@@ -1,21 +1,12 @@
-FROM node:8.9.4
+FROM node:carbon
 
-RUN useradd --user-group --create-home --shell /bin/false app &&\
-    npm install --global npm@5.6.0
+WORKDIR /usr/src/app
 
-ENV HOME=/home/app
+COPY package*.json ./
 
-COPY package.json npm-shrinkwrap.json $HOME/MOODSIGHT/
+RUN npm install
 
-RUN chown -R app:app $HOME/*
+COPY . .
 
-USER app
-WORKDIR $HOME/MOODSIGHT
-RUN npm cache clean && npm install --silent --progress=false
-
-USER root
-COPY .$HOME/MOODSIGHT
-RUN chown -R app:app $HOME/*
-USER app
-
-CMD ["npm", "start"]
+EXPOSE 8080
+CMD [ "npm", "start" ]
