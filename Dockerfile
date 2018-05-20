@@ -1,5 +1,5 @@
 FROM node:carbon
-WORKDIR #!/bin/sh/usr/src/moodsight
+WORKDIR /usr/src/moodsight
 COPY package*.json ./
 RUN npm install --silent --progress=false 
 COPY . .
