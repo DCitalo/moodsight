@@ -1,10 +1,10 @@
 FROM node:carbon
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/moodsight
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --silent --progress=false 
 
 COPY . .
 
