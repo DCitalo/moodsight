@@ -5,10 +5,7 @@ Um site que te ajuda durante seu processo criativo, te fornece recursos,conteúd
 P
 
 Back-End:
-	- [AWS](https://aws.amazon.com/pt/):
-		-[ECS] -
-		-[ECR] -
-		-[Route 53] -
+	- [Heroku]
 	- [Body parser versao 1.18.2](https://github.com/expressjs/body-parser) - Extenção do node.js, pode ser encontrado dentro da pastas node_modules.   Node.js body parsing middleware. Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
 	- [Docker] - 
 	- [Express versao 4.16.3] - 
