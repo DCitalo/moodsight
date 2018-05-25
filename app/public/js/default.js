@@ -24,10 +24,10 @@ function pintrestLogin(){
 			console.log(response.error);
 				} else {
 					let databoard = response.data;
+					console.log(databoard)
 				}
 			});
 			console.log(data)
-			console.log(databoard)
 	    });
 	};
 	(function(d, s, id){
