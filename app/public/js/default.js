@@ -27,6 +27,18 @@ function pintrestLogin(){
 					console.log(databoard)
 				}
 			});
+			var pins = [];
+			PDK.request('/boards/441704744642831426/pins/', function (response) { // Make sure to change the board_id
+			if (!response || response.error) {
+				alert('Error occurred');
+			} else {
+				pins = pins.concat(response.data);
+				if (response.hasNext) {
+				response.next(); // this will recursively go to this same callback
+				}
+			}
+			});
+			console.log(pintrestLogin)
 			console.log(data)
 	    });
 	};
