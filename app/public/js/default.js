@@ -11,12 +11,12 @@ function pintrestLogin(){
 	        } else {
 	          console.log(response);
 	        }
-			var pins = [];
+			var data = [];
 			PDK.request('/v1/me', function (response) {
 			if (!response || response.error) {
 			console.log(response.error);
 			} else {
-				var data = response.data;
+					data += response.data;
 			}
 			});
 			PDK.request('/v1/me/boards', function (response) {
@@ -27,7 +27,6 @@ function pintrestLogin(){
 				}
 			});
 			console.log(data)
-			$.post('/salva', {data});
 	    });
 	};
 	(function(d, s, id){
