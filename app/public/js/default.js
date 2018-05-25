@@ -11,7 +11,7 @@ function pintrestLogin(){
 	        } else {
 	          console.log(response);
 	        }
-			var data = [];
+			let data = [];
 			PDK.request('/v1/me', function (response) {
 			if (!response || response.error) {
 			console.log(response.error);
@@ -23,10 +23,11 @@ function pintrestLogin(){
 			if (!response || response.error) {
 			console.log(response.error);
 				} else {
-					data += response.data;
+					let databoard = response.data;
 				}
 			});
 			console.log(data)
+			console.log(databoard)
 	    });
 	};
 	(function(d, s, id){
