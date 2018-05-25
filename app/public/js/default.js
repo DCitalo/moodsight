@@ -11,26 +11,23 @@ function pintrestLogin(){
 	        } else {
 	          console.log(response);
 	        }
-	    var pins = [];
-	    PDK.request('/v1/me', function (response) {
-	      if (!response || response.error) {
-	       console.log(response.error);
-	      } else {
-	      	var data = response.data;
-	      	//console.log(data)
-	      	$.post('/salva', {data});
-	      }
-	    });
-	    console.log(PDK.me)
-	    PDK.request('/v1/me/boards', function (response) {
-	      if (!response || response.error) {
-	       console.log(response.error);
-	      } else {
-	      	var dataBoards = response.data;
-	      	console.log(dataBoards)
-	      	$.post('/salva', {dataBoards});
-	      }
-	    });
+			var pins = [];
+			PDK.request('/v1/me', function (response) {
+			if (!response || response.error) {
+			console.log(response.error);
+			} else {
+				var data = response.data;
+			}
+			});
+			PDK.request('/v1/me/boards', function (response) {
+			if (!response || response.error) {
+			console.log(response.error);
+				} else {
+					data += response.data;
+				}
+			});
+			console.log(data)
+			$.post('/salva', {data});
 	    });
 	};
 	(function(d, s, id){
