@@ -11,14 +11,8 @@ module.exports = function() {
     app.use(express.static('./app/public'))
     
     //middleware - BodyParser
-    app.use(function (req, res, next) {
-        res.setHeader('Access-Control-Allow-Origin', "*");
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-        res.setHeader('Access-Control-Allow-Credentials', true);
-        next();
-    });
     app.use(bodyParser.urlencoded({extended : true}));
+    
 
     load('routes',{cwd: 'app'}).into(app);
 
