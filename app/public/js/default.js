@@ -4,7 +4,7 @@ function pintrestLogin(){
 	        appId: "4956315507922840393",
 	        cookie: true
 	    });
-	    PDK.login(function(response){
+	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
 	          	// console.log(response.error);
 	        	PDK.logout();

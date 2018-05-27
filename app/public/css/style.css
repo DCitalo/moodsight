@@ -79,31 +79,31 @@ button{
   font-weight: lighter;
 }
 .tamfont0{
-  font-size: 0px;
+  font-size: 0em;
 }
 .tamfont1{
-  font-size: 12px;
+  font-size: 1em;
 }
 .tamfont2{
-  font-size: 14px;
+  font-size: 1.5em;
 }
 .tamfont3{
-  font-size: 16px;
+  font-size: 2em;
 }
 .tamfont4{
-  font-size: 18px;
+  font-size: 2.5em;
 }
 .tamfont5 {
-  font-size: 20px;
+  font-size: 3em;
 }
 .tamfont6 {
-  font-size: 22px;
+  font-size: 3.5em;
 }
 .tamfont7 {
-  font-size: 24px;
+  font-size: 4em;
 }
 .tamfont8 {
-  font-size: 26px;
+  font-size: 4.5em;
 }
 .background-alert{
   background-color: #FA4941;
