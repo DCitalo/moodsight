@@ -6,11 +6,10 @@ function pintrestLogin(){
 	    });
 	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
-	          	// console.log(response.error);
+	          	console.log(response.error);
 	        	PDK.logout();
 	        } else {
-				// console.log(response)
-				console.log("ok")
+	          console.log(response);
 	        }
 			let data = [];
 			PDK.request('/v1/me', function (response) {
@@ -25,8 +24,18 @@ function pintrestLogin(){
 			console.log(response.error);
 				} else {
 				let	databoard = response.data;
-				console.log(databoard)
-				console.log(response.hasNext)
+				console.log(databoard["0"].id);
+				let pins = []
+					PDK.request('/v1/me/boards/'+databoard.["0"].id+'/pins/', function (response) {if (!response || response.error) {
+						alert('Error occurred');
+					} else {
+						pins = pins.concat(response.data);
+						console.log(pins)
+						if (response.hasNext) {
+							response.next(); // this will recursively go to this same callback
+						}
+					}
+					});
 				}
 			});
 	    });
