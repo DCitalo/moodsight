@@ -37,7 +37,7 @@ function pintrestLogin(){
 									if (!response || response.error) {
 										console.log(response.error);	
 									}else{
-										var ThisPin = response.data;
+										var ThisPin = response;
 										console.log(ThisPin)
 									}
 								})
