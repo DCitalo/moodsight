@@ -26,7 +26,7 @@ function pintrestLogin(){
 				let	databoard = response.data;
 				console.log(databoard["0"].id);
 				let pins = []
-					PDK.request('/v1/me/boards/'+ databoard["0"].id +'/pins/', function (response) {if (!response || response.error) {
+					PDK.request('/v1/boards/'+ databoard["0"].id +'/pins/', function (response) {if (!response || response.error) {
 						alert('Error occurred');
 					} else {
 						pins = pins.concat(response.data);
