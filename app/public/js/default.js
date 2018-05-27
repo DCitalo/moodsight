@@ -16,7 +16,7 @@ function pintrestLogin(){
 			if (!response || response.error) {
 				console.log(response.error);
 			} else {
-					data = response.data;
+					data += response.data;
 			}
 			});
 			let databoard = []
@@ -24,7 +24,7 @@ function pintrestLogin(){
 			if (!response || response.error) {
 			console.log(response.error);
 				} else {
-					databoard = response.data;
+					databoard += response.data;
 				}
 			});
 			var pins = [];
@@ -32,7 +32,7 @@ function pintrestLogin(){
 			if (!response || response.error) {
 				alert('Error occurred');
 			} else {
-				pins = pins.concat(response.data);
+				pins += pins.concat(response.data);
 				if (response.hasNext) {
 					response.next(); // this will recursively go to this same callback
 				}
