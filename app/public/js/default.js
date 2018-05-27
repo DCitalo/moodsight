@@ -24,15 +24,15 @@ function pintrestLogin(){
 			if (!response || response.error) {
 			console.log(response.error);
 				} else {
-					let databoard += response.data;
+					databoard += response.data;
 				}
 			});
 			var pins = [];
-			PDK.request('/boards/441704744642831426/pins/', function (response) { // Make sure to change the board_id
+			PDK.request('/v1/me/boards/441704744642831426/pins/', function (response) { // Make sure to change the board_id
 			if (!response || response.error) {
 				alert('Error occurred');
 			} else {
-				let pins += pins.concat(response.data);
+				pins += pins.concat(response.data);
 				if (response.hasNext) {
 					response.next(); // this will recursively go to this same callback
 				}
