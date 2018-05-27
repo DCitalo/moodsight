@@ -12,11 +12,12 @@ function pintrestLogin(){
 	          console.log(response);
 	        }
 			let data = [];
-			PDK.request('/v1/me', function (response) {
+			PDK.me( function (response) {
 			if (!response || response.error) {
 				console.log(response.error);
 			} else {
 				data = response.data;
+				console.log(data)
 			}
 			});
 			let pins = [];
@@ -32,7 +33,7 @@ function pintrestLogin(){
 							} else {
 								pins = pins.concat(response.data);
 								console.log(pins)
-								PDK.request(pins["0"].url, function (response) {
+								PDK.request('/pins/'+pins["0"].id, function (response) {
 									if (!response || response.error) {
 										console.log(response.error);	
 									}else{
