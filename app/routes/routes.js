@@ -5,11 +5,6 @@ module.exports = function(app) {
         credential: admin.credential.cert(serviceAccount),
         databaseURL: "https://moodsight-dc6b7.firebaseio.com"
       });
-      app.use(function (req, res, next) {
-        res.setHeader('Access-Control-Allow-Origin', "*");
-        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-        next();
-    });
     app.get("/",function(req, res) {
       res.render('home/index');
     });
