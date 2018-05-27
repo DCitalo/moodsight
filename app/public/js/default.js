@@ -16,23 +16,23 @@ function pintrestLogin(){
 			if (!response || response.error) {
 				console.log(response.error);
 			} else {
-				data += response.data;
+				data = response.data;
 			}
 			});
+			let pins = [];
 			PDK.request('/v1/me/boards', function (response) {
 				if (!response || response.error) {
 					console.log(response.error);
 				} else {
 					let	databoard = response.data;
 					console.log(databoard["0"].id);
-					let pins = []
 					PDK.request('/v1/boards/'+ databoard["0"].id +'/pins/', function (response) {
 							if (!response || response.error) {
 							alert('Error occurred');
 							} else {
 								pins = pins.concat(response.data);
 								console.log(pins)
-								PDK.request('/v1/pins/'+ pins["0"].id, function (response) {
+								PDK.request(pins["0"].id, function (response) {
 									if (!response || response.error) {
 										console.log(response.error);	
 									}else{
