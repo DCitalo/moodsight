@@ -14,9 +14,9 @@ function pintrestLogin(){
 			let data = [];
 			PDK.request('/v1/me', function (response) {
 			if (!response || response.error) {
-			console.log(response.error);
+				console.log(response.error);
 			} else {
-					data += response.data;
+					data = response.data;
 			}
 			});
 			let databoard = []
@@ -24,8 +24,7 @@ function pintrestLogin(){
 			if (!response || response.error) {
 			console.log(response.error);
 				} else {
-					let databoard = response.data;
-					console.log(databoard)
+					databoard = response.data;
 				}
 			});
 			var pins = [];
