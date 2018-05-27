@@ -16,7 +16,7 @@ function pintrestLogin(){
 			if (!response || response.error) {
 				console.log(response.error);
 			} else {
-				let data += response.data;
+				data += response.data;
 			}
 			});
 			let databoard = []
