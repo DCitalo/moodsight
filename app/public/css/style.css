@@ -274,21 +274,30 @@ button{
 .h-50{
   height: 50%;
 }
-.container-33{
+.w-33{
   width: calc(100%/3)
 }
-.container-100{
+.w-100{
   width:100%;
 }
 .container-FH{
   margin-left: 130px;
   width: calc(100% - 130px);
 }
-.container-90{
+.w-90{
   width:90%;
 }
-.container-80{
+.w-80{
   width:80%;
+}
+.w-60{
+  width: 60%;
+}
+.w-50{
+  width: 50%;
+}
+.w-40{
+  width: 40%;
 }
 /*---------------------- FIM CONTAINER ----------------*/
 /*---------------------- SPRITE -----------------------*/
