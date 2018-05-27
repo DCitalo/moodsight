@@ -33,12 +33,15 @@ function pintrestLogin(){
 							} else {
 								pins = pins.concat(response.data);
 								console.log(pins)
-								PDK.request('/pins/'+pins["0"].id.images["136x136,236x,1200x"], function (response) {
+								PDK.request('/pins/'+pins["0"].id, function (response) {
 									if (!response || response.error) {
 										console.log(response.error);	
 									}else{
 										var ThisPin = response;
-										console.log(ThisPin)
+										console.log("1"+ThisPin.images['136x136,236x,1200x'])
+										console.log("2"+ThisPin.pin.images['136x136,236x,1200x'])
+										console.log("3"+ThisPin.data.images['136x136,236x,1200x'])
+										console.log("3"+ThisPin.data.pin.images['136x136,236x,1200x'])
 									}
 								})
 								if (response.hasNext) {
