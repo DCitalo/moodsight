@@ -4,12 +4,13 @@ function pintrestLogin(){
 	        appId: "4956315507922840393",
 	        cookie: true
 	    });
-	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
+	    PDK.login(function(response){
 	        if (!response || response.error) {
-	          	console.log(response.error);
+	          	// console.log(response.error);
 	        	PDK.logout();
 	        } else {
-	          console.log(response);
+				// console.log(response)
+				console.log("ok")
 	        }
 			let data = [];
 			PDK.request('/v1/me', function (response) {
@@ -19,27 +20,15 @@ function pintrestLogin(){
 				data += response.data;
 			}
 			});
-			let databoard = []
 			PDK.request('/v1/me/boards', function (response) {
 			if (!response || response.error) {
 			console.log(response.error);
 				} else {
-					databoard += response.data;
+				let	databoard = response.data;
+				console.log(databoard)
+				console.log(response.hasNext)
 				}
 			});
-			var pins = [];
-			PDK.request('/v1/me/boards/441704744642831426/pins/', function (response) { // Make sure to change the board_id
-			if (!response || response.error) {
-				alert('Error occurred');
-			} else {
-				pins += pins.concat(response.data);
-				if (response.hasNext) {
-					response.next(); // this will recursively go to this same callback
-				}
-			}
-			});
-			console.log(pins)
-			console.log(data)
 	    });
 	};
 	(function(d, s, id){
