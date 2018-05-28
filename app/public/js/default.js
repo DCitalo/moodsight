@@ -38,7 +38,6 @@ function pintrestLogin(){
 										console.log(response.error);	
 									}else{
 										var ThisPin = response.data;
-										console.log("3"+ThisPin.images['136x136,236x,1200x']);
 										console.log("3"+ThisPin.pin.images['136x136,236x,1200x']);
 									}
 								})
