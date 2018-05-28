@@ -123,6 +123,9 @@ button{
 .bgcolor-5{
   background-color:#0ee0b9;
 }
+.bgcolor-6{
+  background-color:#FFFFFF;
+}
 .color-1{
   color: #FFFFFF;
 }
@@ -215,7 +218,7 @@ button{
 .mx1400{
   max-width: 1400px;
 }
-.MRL-auto{
+.CB{
   margin-right: auto;
   margin-left: auto;
 }
@@ -342,7 +345,9 @@ button{
   height: 60px;
   margin: 20px auto;
 }
-
+.logoFull-cont > img {
+    max-width: 80%;
+}
 /*---------------------- FIM MENU -------------------*/
 /*---------------------- CONTEUDO -----------------------*/
 #conteudo-body{
@@ -355,7 +360,6 @@ button{
 /*---------------------- FIM CONTEUDO -------------------*/
 /*---------------------- HOME ---------------------------*/
 .logoFull-cont{
-  max-width: 300px;
   margin-bottom: 20px;
 }
 .pal-item-home{
@@ -365,6 +369,11 @@ button{
 }
 .title-chamada{
   margin-bottom: 20px;
+  padding-left: 40px;
+}
+.text-chamada{
+    line-height: 1.5em;
+    padding-left: 40px;
 }
 .video-container{
   border-radius: 15px;
