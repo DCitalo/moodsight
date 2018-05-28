@@ -37,10 +37,9 @@ function pintrestLogin(){
 									if (!response || response.error) {
 										console.log(response.error);	
 									}else{
-										var ThisPin = response;
-										console.log("2"+ThisPin.pin.images['136x136,236x,1200x']);
-										console.log("3"+ThisPin.data.images['136x136,236x,1200x']);
-										console.log("3"+ThisPin.data.pin.images['136x136,236x,1200x']);
+										var ThisPin = response.data;
+										console.log("3"+ThisPin.images['136x136,236x,1200x']);
+										console.log("3"+ThisPin.pin.images['136x136,236x,1200x']);
 									}
 								})
 								if (response.hasNext) {
