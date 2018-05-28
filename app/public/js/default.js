@@ -27,7 +27,7 @@ function pintrestLogin(){
 				} else {
 					let	databoard = response.data;
 					console.log(databoard["0"].id);
-					PDK.request('/v1/boards/'+ databoard["0"].id +'/pins/', {fields: 'id,note,link,url,image'} , function (response) {
+					PDK.request('/v1/boards/'+ databoard["0"].id +'/pins/', {fields: 'id,note,link,url,image,color'} , function (response) {
 							if (!response || response.error) {
 							alert('Error occurred');
 							} else {
