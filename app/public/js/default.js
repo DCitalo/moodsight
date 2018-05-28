@@ -33,7 +33,7 @@ function pintrestLogin(){
 							} else {
 								pins = pins.concat(response.data);
 								console.log(pins)
-								PDK.request('/pins/'+pins["0"].id, function (response) {
+								PDK.request('/pins/'+pins["0"].id, {fields: 'id,note,link,url,image'}, function (response) {
 									if (!response || response.error) {
 										console.log(response.error);	
 									}else{

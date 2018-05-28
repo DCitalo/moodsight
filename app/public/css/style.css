@@ -105,8 +105,11 @@ button{
 .tamfont8 {
   font-size: 4.5em;
 }
-.background-alert{
+.bg-alert{
   background-color: #FA4941;
+}
+.bg-home{
+  background: url(../img/bghomeL.png) no-repeat left center, url(../img/bghomeR.png) no-repeat right center;;
 }
 .bgcolor-1{
   background-color:#f60a9d;
@@ -125,6 +128,9 @@ button{
 }
 .bgcolor-6{
   background-color:#FFFFFF;
+}
+.bgcolor-7{
+  background-color:#232027;
 }
 .color-1{
   color: #FFFFFF;
@@ -314,12 +320,75 @@ button{
 /*---------------------- FIM CONTAINER ----------------*/
 /*---------------------- SPRITE -----------------------*/
 .icon-small{
-  max-width: 25px;
+  width: 25px;
+  height: 25px;
+  background-size: 25px 25px;
 }
 .icon-center{
   margin: 0 auto;
   display: block;
 }
+.icon-ad-block{
+  background: url(.../img/ad-block.svg);
+}
+.icon-ajuda{
+  background: url(.../img/ajuda.svg);
+}
+.icon-ajuda:hover{
+  background: url(.../img/ajuda~hover.svg);
+}
+.icon-api-nw{
+  background: url(.../img/API-pinterest-no-white.svg);
+}
+.icon-api{
+  background: url(.../img/API-pinterest.svg);
+}
+.icon-armazenamento{
+  background: url(.../img/armazenamento.svg);
+}
+.icon-bars{
+  background: url(.../img/bars.svg);
+}
+.icon-biblioteca-conteudo{
+  background: url(.../img/biblioteca-conteudo.svg);
+}
+.icon-biblioteca-conteudo:hover{
+  background: url(.../img/biblioteca-conteudo~hover.svg);
+}
+.icon-brain-nw{
+  background: url(.../img/Brain-no-white.svg);
+}
+.icon-brain{
+  background: url(.../img/Brain.svg);
+}
+.icon-check-feedback{
+  background: url(.../img/check-feedback.svg);
+}
+.icon-check-square{
+  background: url(.../img/check-square.svg);
+}
+.icon-check-square:hover{
+  background: url(.../img/check-square~hover.svg);
+}
+.icon-code{
+  background: url(.../img/condigo-icon.svg);
+}
+.icon-conta-geral{
+  background: url(.../img/Conta-geral.svg);
+}
+.icon-conta-geral:hover{
+  background: url(.../img/Conta-geral~hover.svg);
+}
+.icon-contato{
+  background: url(.../img/Contato.svg);
+}
+.icon-contato:hover{
+  background: url(.../img/Contato~hover.svg);
+}
+.icon-desconto-normal{
+  background: url(.../img/Contato~hover.svg);
+}
+
 /*---------------------- FIM SPRITE -------------------*/
 /*---------------------- MENU -----------------------*/
 #menu{
