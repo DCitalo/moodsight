@@ -40,8 +40,8 @@ function pintrestLogin(){
 					})	
 				}
 			});
-			let data = [dataMe,databoard];
-			console.log(data)
+			console.log(databoard)
+			console.log(dataMe)
 	    });
 	};
 	(function(d, s, id){
