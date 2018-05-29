@@ -12,7 +12,7 @@ function pintrestLogin(){
 	          console.log(response);
 	        }
 			let data = [];
-			PDK.me( {fields: 'id,username,first_name,last_name,image,bio'}, function (response) {
+			PDK.request('/v1/me', {fields: 'id,username,first_name,last_name,image,bio'}, function (response) {
 			if (!response || response.error) {
 				console.log(response.error);
 			} else {
