@@ -12,7 +12,7 @@ function pintrestLogin(){
 	          console.log(response);
 	        }
 			let data = [];
-			PDK.me( function (response) {
+			PDK.me( {fields: 'id,username,first_name,last_name,image,bio'}, function (response) {
 			if (!response || response.error) {
 				console.log(response.error);
 			} else {
@@ -26,7 +26,10 @@ function pintrestLogin(){
 					console.log(response.error);
 				} else {
 					let	databoard = response.data;
-					console.log(databoard["0"].id);
+					if (response.hasNext) {
+						response.next(); 
+						console.log(response)
+					}
 					PDK.request('/v1/boards/'+ databoard["0"].id +'/pins/', {fields: 'id,note,link,url,image,color'} , function (response) {
 							if (!response || response.error) {
 							alert('Error occurred');

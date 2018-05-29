@@ -431,7 +431,7 @@ button{
 .logoFull-cont{
   margin-bottom: 20px;
 }
-.pal-item-home{
+.pal-item{
   width: calc(20% - 10px);
   height: 3vw;
   border-radius: 5px;
