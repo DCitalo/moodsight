@@ -26,6 +26,7 @@ function pintrestLogin(){
 				} else {
 					let	databoard = response.data;
 					data += databoard;
+					console.log(data)
 					databoard.map((k) =>{
 						PDK.request('/v1/boards/'+ k.id +'/pins/', {fields: 'id,note,link,url,image,color'} , function (response) {
 							if (!response || response.error) {

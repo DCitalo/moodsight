@@ -324,183 +324,201 @@ button{
 /*---------------------- SPRITE -----------------------*/
 .icon-small{
   width: 25px;
+  display: block;
   height: 25px;
   background-size: 25px 25px;
 }
+.icon-medium{
+  width: 50px;
+  display: block;
+  height: 50px;
+  background-size: 50px 50px;
+}
+.icon-big{
+  width: 75px;
+  display: block;
+  height: 75px;
+  background-size: 75px 75px;
+}
+.icon-large{
+  width: 100px;
+  display: block;
+  height: 100px;
+  background-size: 100px 100px;
+}
 .icon-center{
   margin: 0 auto;
-  display: block;
 }
 .icon-ad-block{
-  background-image: url(.../img/ad-block.svg);
+  background-image: url(../img/ad-block.svg);
 }
 .icon-ajuda{
-  background-image: url(.../img/ajuda.svg);
+  background-image: url(../img/ajuda.svg);
 }
 .icon-ajuda:hover{
-  background-image: url(.../img/ajuda~hover.svg);
+  background-image: url(../img/ajuda~hover.svg);
 }
 .icon-api-nw{
-  background-image: url(.../img/API-pinterest-no-white.svg);
+  background-image: url(../img/API-pinterest-no-white.svg);
 }
 .icon-api{
-  background-image: url(.../img/API-pinterest.svg);
+  background-image: url(../img/API-pinterest.svg);
 }
 .icon-armazenamento{
-  background-image: url(.../img/armazenamento.svg);
+  background-image: url(../img/armazenamento.svg);
 }
 .icon-bars{
-  background-image: url(.../img/bars.svg);
+  background-image: url(../img/bars.svg);
 }
 .icon-biblioteca-conteudo{
-  background-image: url(.../img/biblioteca-conteudo.svg);
+  background-image: url(../img/biblioteca-conteudo.svg);
 }
 .icon-biblioteca-conteudo:hover{
-  background-image: url(.../img/biblioteca-conteudo~hover.svg);
+  background-image: url(../img/biblioteca-conteudo~hover.svg);
 }
 .icon-brain-nw{
-  background-image: url(.../img/Brain-no-white.svg);
+  background-image: url(../img/Brain-no-white.svg);
 }
 .icon-brain{
-  background-image: url(.../img/Brain.svg);
+  background-image: url(../img/Brain.svg);
 }
 .icon-check-feedback{
-  background-image: url(.../img/check-feedback.svg);
+  background-image: url(../img/check-feedback.svg);
 }
 .icon-check-square{
-  background-image: url(.../img/check-square.svg);
+  background-image: url(../img/check-square.svg);
 }
 .icon-check-square:hover{
-  background-image: url(.../img/check-square~hover.svg);
+  background-image: url(../img/check-square~hover.svg);
 }
 .icon-code{
-  background-image: url(.../img/condigo-icon.svg);
+  background-image: url(../img/condigo-icon.svg);
 }
 .icon-conta-geral{
-  background-image: url(.../img/Conta-geral.svg);
+  background-image: url(../img/Conta-geral.svg);
 }
 .icon-conta-geral:hover{
-  background-image: url(.../img/Conta-geral~hover.svg);
+  background-image: url(../img/Conta-geral~hover.svg);
 }
 .icon-contato{
-  background-image: url(.../img/Contato.svg);
+  background-image: url(../img/Contato.svg);
 }
 .icon-contato:hover{
-  background-image: url(.../img/Contato~hover.svg);
+  background-image: url(../img/Contato~hover.svg);
 }
 .icon-desconto-normal{
-  background-image: url(.../img/desconto-normal.svg);
+  background-image: url(../img/desconto-normal.svg);
 }
 .icon-dica-rapida{
-  background-image: url(.../img/dica-rapida.svg);
+  background-image: url(../img/dica-rapida.svg);
 }
 .icon-edit{
-  background-image: url(.../img/edit.svg);
+  background-image: url(../img/edit.svg);
 }
 .icon-error-feedback{
-  background-image: url(.../img/error-feedback.svg);
+  background-image: url(../img/error-feedback.svg);
 }
 .icon-exclamation-circle{
-  background-image: url(.../img/exclamation-circle.svg);
+  background-image: url(../img/exclamation-circle.svg);
 }
 .icon-expe-nw{
-  background-image: url(.../img/experimentacao-no-white.svg);
+  background-image: url(../img/experimentacao-no-white.svg);
 }
 .icon-expe{
-  background-image: url(.../img/experimentacao.svg);
+  background-image: url(../img/experimentacao.svg);
 }
 .icon-font{
-  background-image: url(.../img/fonte-icone.svg);
+  background-image: url(../img/fonte-icone.svg);
 }
 .icon-formas{
-  background-image: url(.../img/formas.svg);
+  background-image: url(../img/formas.svg);
 }
 .icon-info{
-  background-image: url(.../img/Info.svg);
+  background-image: url(../img/Info.svg);
 }
 .icon-info:hover{
-  background-image: url(.../img/Info~hover.svg);
+  background-image: url(../img/Info~hover.svg);
 }
 .icon-info-circle{
-  background-image: url(.../img/info-circle.svg);
+  background-image: url(../img/info-circle.svg);
 }
 .icon-material-kit{
-  background-image: url(.../img/Material-kit.svg);
+  background-image: url(../img/Material-kit.svg);
 }
 .icon-material-kit:hover{
-  background-image: url(.../img/Material-kit~hover.svg);
+  background-image: url(../img/Material-kit~hover.svg);
 }
 .icon-mockup{
-  background-image: url(.../img/mockup-icon.svg);
+  background-image: url(../img/mockup-icon.svg);
 }
 .icon-news{
-  background-image: url(.../img/newsletter.svg);
+  background-image: url(../img/newsletter.svg);
 }
 .icon-paleta{
-  background-image: url(.../img/paletadecor.svg);
+  background-image: url(../img/paletadecor.svg);
 }
 .icon-projetos-salvos{
-  background-image: url(.../img/Projetos-salvos.svg);
+  background-image: url(../img/Projetos-salvos.svg);
 }
 .icon-projetos-salvos:hover{
-  background-image: url(.../img/Projetos-salvos~hover.svg);
+  background-image: url(../img/Projetos-salvos~hover.svg);
 }
 .icon-selecao-de-painel{
-  background-image: url(.../img/selecao-de-paineis.svg);
+  background-image: url(../img/selecao-de-paineis.svg);
 }
 .icon-selecao-de-painel:hover{
-  background-image: url(.../img/selecao-de-paineis~hover.svg);
+  background-image: url(../img/selecao-de-paineis~hover.svg);
 }
 .icon-seta-direita{
-  background-image: url(.../img/seta-direita.svg);
+  background-image: url(../img/seta-direita.svg);
 }
 .icon-seta-drop{
-  background-image: url(.../img/seta-drop.svg);
+  background-image: url(../img/seta-drop.svg);
 }
 .icon-seta-drop-w{
-  background-image: url(.../img/seta-drop-white.svg);
+  background-image: url(../img/seta-drop-white.svg);
 }
 .icon-seta-esquerda{
-  background-image: url(.../img/seta-esquerda.svg);
+  background-image: url(../img/seta-esquerda.svg);
 }
 .icon-privacidade{
-  background-image: url(.../img/S-privacidade.svg);
+  background-image: url(../img/S-privacidade.svg);
 }
 .icon-privacidade:hover{
-  background-image: url(.../img/S-privacidade~hover.svg);
+  background-image: url(../img/S-privacidade~hover.svg);
 }
 .icon-status{
-  background-image: url(.../img/status-conta.svg);
+  background-image: url(../img/status-conta.svg);
 }
 .icon-status:hover{
-  background-image: url(.../img/status-conta~hover.svg);
+  background-image: url(../img/status-conta~hover.svg);
 }
 .icon-UI-elements-nw{
-  background-image: url(.../img/UI-elements-no-white.svg);
+  background-image: url(../img/UI-elements-no-white.svg);
 }
 .icon-UI-elements{
-  background-image: url(.../img/UI-elements.svg);
+  background-image: url(../img/UI-elements.svg);
 }
 .icon-upload{
-  background-image: url(.../img/upload.svg);
+  background-image: url(../img/upload.svg);
 }
 .icon-upload:hover{
-  background-image: url(.../img/upload~hover.svg);
+  background-image: url(../img/upload~hover.svg);
 }
 .icon-user-circle{
-  background-image: url(.../img/user-circle.svg);
+  background-image: url(../img/user-circle.svg);
 }
 .icon-UX{
-  background-image: url(.../img/UX.svg);
+  background-image: url(../img/UX.svg);
 }
 .icon-UX-nw{
-  background-image: url(.../img/UX-no-white.svg);
+  background-image: url(../img/UX-no-white.svg);
 }
 .icon-visao-comp{
-  background-image: url(.../img/visao-computacional.svg);
+  background-image: url(../img/visao-computacional.svg);
 }
 .icon-visao-comp-nw{
-  background-image: url(.../img/visao-computacional-no-white.svg);
+  background-image: url(../img/visao-computacional-no-white.svg);
 }
 
 /*---------------------- FIM SPRITE -------------------*/
