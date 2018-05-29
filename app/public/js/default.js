@@ -17,7 +17,6 @@ function pintrestLogin(){
 				console.log(response.error);
 			} else {
 				data = response.data;
-				console.log(data)
 			}
 			});
 			let pins = [];
@@ -26,11 +25,9 @@ function pintrestLogin(){
 					console.log(response.error);
 				} else {
 					let	databoard = response.data;
-					if (response.hasNext) {
-						response.next(); 
-						console.log(response)
-					}
-					PDK.request('/v1/boards/'+ databoard["0"].id +'/pins/', {fields: 'id,note,link,url,image,color'} , function (response) {
+					data += databoard;
+					databoard.map((K) =>{
+						PDK.request('/v1/boards/'+ k.id +'/pins/', {fields: 'id,note,link,url,image,color'} , function (response) {
 							if (!response || response.error) {
 							alert('Error occurred');
 							} else {
@@ -40,7 +37,8 @@ function pintrestLogin(){
 									response.next(); // this will recursively go to this same callback
 								}
 							}
-					});
+						});
+					})	
 				}
 			});
 	    });

@@ -386,7 +386,118 @@ button{
   background: url(.../img/Contato~hover.svg);
 }
 .icon-desconto-normal{
-  background: url(.../img/Contato~hover.svg);
+  background: url(.../img/desconto-normal.svg);
+}
+.icon-dica-rapida{
+  background: url(.../img/dica-rapida.svg);
+}
+.icon-edit{
+  background: url(.../img/edit.svg);
+}
+.icon-error-feedback{
+  background: url(.../img/error-feedback.svg);
+}
+.icon-exclamation-circle{
+  background: url(.../img/exclamation-circle.svg);
+}
+.icon-expe-nw{
+  background: url(.../img/experimentacao-no-white.svg);
+}
+.icon-expe{
+  background: url(.../img/experimentacao.svg);
+}
+.icon-font{
+  background: url(.../img/fonte-icone.svg);
+}
+.icon-formas{
+  background: url(.../img/formas.svg);
+}
+.icon-info{
+  background: url(.../img/Info.svg);
+}
+.icon-info:hover{
+  background: url(.../img/Info~hover.svg);
+}
+.icon-info-circle{
+  background: url(.../img/info-circle.svg);
+}
+.icon-material-kit{
+  background: url(.../img/Material-kit.svg);
+}
+.icon-material-kit:hover{
+  background: url(.../img/Material-kit~hover.svg);
+}
+.icon-mockup{
+  background: url(.../img/mockup-icon.svg);
+}
+.icon-news{
+  background: url(.../img/newsletter.svg);
+}
+.icon-paleta{
+  background: url(.../img/paletadecor.svg);
+}
+.icon-projetos-salvos{
+  background: url(.../img/Projetos-salvos.svg);
+}
+.icon-projetos-salvos:hover{
+  background: url(.../img/Projetos-salvos~hover.svg);
+}
+.icon-selecao-de-painel{
+  background: url(.../img/selecao-de-paineis.svg);
+}
+.icon-selecao-de-painel:hover{
+  background: url(.../img/selecao-de-paineis~hover.svg);
+}
+.icon-seta-direita{
+  background: url(.../img/seta-direita.svg);
+}
+.icon-seta-drop{
+  background: url(.../img/seta-drop.svg);
+}
+.icon-seta-drop-w{
+  background: url(.../img/seta-drop-white.svg);
+}
+.icon-seta-esquerda{
+  background: url(.../img/seta-esquerda.svg);
+}
+.icon-privacidade{
+  background: url(.../img/S-privacidade.svg);
+}
+.icon-privacidade:hover{
+  background: url(.../img/S-privacidade~hover.svg);
+}
+.icon-status{
+  background: url(.../img/status-conta.svg);
+}
+.icon-status:hover{
+  background: url(.../img/status-conta~hover.svg);
+}
+.icon-UI-elements-nw{
+  background: url(.../img/UI-elements-no-white.svg);
+}
+.icon-UI-elements{
+  background: url(.../img/UI-elements.svg);
+}
+.icon-upload{
+  background: url(.../img/upload.svg);
+}
+.icon-upload:hover{
+  background: url(.../img/upload~hover.svg);
+}
+.icon-user-circle{
+  background: url(.../img/user-circle.svg);
+}
+.icon-UX{
+  background: url(.../img/UX.svg);
+}
+.icon-UX-nw{
+  background: url(.../img/UX-no-white.svg);
+}
+.icon-visao-comp{
+  background: url(.../img/visao-computacional.svg);
+}
+.icon-visao-comp-nw{
+  background: url(.../img/visao-computacional-no-white.svg);
 }
 
 /*---------------------- FIM SPRITE -------------------*/
