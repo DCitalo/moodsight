@@ -10,8 +10,9 @@ function pintrestLogin(){
 	        	PDK.logout();
 	        } else {
 	          console.log(response);
-	        }
-			let dataMe = [];
+			}
+			var obj = [];
+			let dataMe = {};
 			PDK.request('/v1/me', {fields: 'id,username,first_name,last_name,image,bio'}, function (response) {
 			if (!response || response.error) {
 				console.log(response.error);
@@ -19,8 +20,8 @@ function pintrestLogin(){
 				dataMe = response.data;
 			}
 			});
-			let pins = [];
-			let	databoard = [];
+			let pins = {};
+			let	databoard = {};
 			PDK.me('boards', function (response) {
 				if (!response || response.error) {
 					console.log(response.error);
@@ -40,8 +41,8 @@ function pintrestLogin(){
 					})	
 				}
 			});
-			console.log(databoard)
 			console.log(dataMe)
+			//$.post('/salva', {});
 	    });
 	};
 	(function(d, s, id){
