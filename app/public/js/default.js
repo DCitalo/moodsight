@@ -18,30 +18,12 @@ function pintrestLogin(){
 				console.log(response.error);
 			} else {
 				dataMe = response.data;
+				obj = Object.assign({}, dataMe);
 			}
 			});
 			let pins = {};
 			let	databoard = {};
-			PDK.me('boards', function (response) {
-				if (!response || response.error) {
-					console.log(response.error);
-				} else {
-					databoard = response.data;
-					databoard.map((k) =>{
-						PDK.request('/v1/boards/'+ k.id +'/pins/', {fields: 'id,note,link,url,image,color'} , function (response) {
-							if (!response || response.error) {
-							alert('Error occurred');
-							} else {
-								pins = pins.concat(response.data);
-								if (response.hasNext) {
-									response.next(); // this will recursively go to this same callback
-								}
-							}
-						});
-					})	
-				}
-			});
-			console.log(dataMe)
+			console.log(obj)
 			//$.post('/salva', {});
 	    });
 	};
