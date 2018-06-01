@@ -11,7 +11,27 @@ function pintrestLogin(){
 	        } else {
 	          console.log(response);
 			}
-			
+			let pins = {};
+			let	databoard = {};
+			var jsonArr = [];
+			PDK.me('boards', function (response) {
+				if (!response || response.error) {
+					console.log(response.error);
+				} else {
+					databoard = response.data;
+					for each(var item in databoard){
+						PDK.request('/v1/boards/'+ databoard[item].id +'/pins/', {fields: 'board,id,note,link,url,image,color'} , function (response) {
+							if (!response || response.error) {
+							alert('Error occurred');
+							} else {
+							pins = response.data;
+							if (response.hasNext) {
+								response.next();
+							}
+						})
+					}	
+				}
+			});
 			//$.post('/salva', {obj});
 	    });
 	};
