@@ -21,6 +21,18 @@ module.exports = function(app) {
             url: req.body.datafirebase.pessoal.image["60x60"].url
           }
       });
+      for(var i= 1; i < req.body.datafirebase.length; i++){
+        usersRef.push({
+          boardName: req.body.datafirebase[i].boardName,
+          boardId: req.body.datafirebase[i].boardId,
+          boardUrl: req.body.datafirebase[i].boardUrl,
+          id: req.body.datafirebase[i].id,
+          note: req.body.datafirebase[i].note,
+          img: req.body.datafirebase[i].img,
+          url: req.body.datafirebase[i].url,
+          color: req.body.datafirebase[i].color
+        })
+      }
       // you have address available in req.body:
       // always send a response:
       res.json({ ok: true });
