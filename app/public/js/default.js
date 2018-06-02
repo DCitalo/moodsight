@@ -58,6 +58,7 @@ function pintrestLogin(){
 					databoard.forEach(ShowResults)
 				}
 			});
+			console.log(datafirebase)
 			$.post('/salva', {datafirebase});
 	    });
 	};

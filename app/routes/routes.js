@@ -6,10 +6,6 @@ module.exports = function(app) {
         databaseURL: "https://moodsight-dc6b7.firebaseio.com"
       });
     app.get("/",function(req, res) {
-      res.setHeader('Access-Control-Allow-Origin', "*");
-      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-      res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-      res.setHeader('Access-Control-Allow-Credentials', true);
       res.render('home/index');
     });
     app.post('/salva', (req, res) => {
