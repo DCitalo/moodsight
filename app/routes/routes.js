@@ -11,7 +11,7 @@ module.exports = function(app) {
     app.post('/salva', (req, res) => {
       var db = admin.database();
       var ref = db.ref("users");
-      var userRef = ref.child(req.body.datafirebase.pessoal.id);
+      var usersRef = ref.child(req.body.datafirebase.pessoal.id);
       userRef.push({
           nome: {
             nome: req.body.datafirebase.pessoal.first_name,
@@ -22,7 +22,7 @@ module.exports = function(app) {
           }
       });
       for(var i= 1; i < req.body.datafirebase.length; i++){
-        userRef.push({
+        usersRef.push({
           boardName: req.body.datafirebase[i].boardName,
           boardId: req.body.datafirebase[i].boardId,
           boardUrl: req.body.datafirebase[i].boardUrl,
