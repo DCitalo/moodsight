@@ -11,7 +11,7 @@ function pintrestLogin(){
 	        } else {
 	          console.log(response);
 			}
-			let pins = [],
+			var pins = [],
                 databoard = {},
                 datafirebase = [],
                 obj = [],
@@ -58,8 +58,7 @@ function pintrestLogin(){
 					databoard.forEach(ShowResults)
 				}
 			});
-			console.log(datafirebase)
-			//$.post('/salva', {datafirebase});
+			$.post('/salva', {datafirebase});
 	    });
 	};
 	(function(d, s, id){
