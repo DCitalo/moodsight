@@ -251,6 +251,9 @@ button{
 .P-020{
   padding: 0 20px
 }
+.P-040{
+  padding: 0 40px
+}
 .link-hover:hover{
   text-decoration: underline;
   text-decoration-color: #3498db;
@@ -370,6 +373,9 @@ button{
 .icon-bars{
   background-image: url(../img/bars.svg);
 }
+.icon-behance{
+  background-image: url(../img/BEhance.svg);
+}
 .icon-biblioteca-conteudo{
   background-image: url(../img/biblioteca-conteudo.svg);
 }
@@ -427,6 +433,9 @@ button{
 .icon-expe{
   background-image: url(../img/experimentacao.svg);
 }
+.icon-facebook{
+  background-image: url(../img/facebook-square.svg);
+}
 .icon-font{
   background-image: url(../img/fonte-icone.svg);
 }
@@ -442,6 +451,9 @@ button{
 .icon-info-circle{
   background-image: url(../img/info-circle.svg);
 }
+.icon-instagram{
+  background-image: url(../img/Instagram.svg);
+}
 .icon-material-kit{
   background-image: url(../img/Material-kit.svg);
 }
@@ -456,6 +468,12 @@ button{
 }
 .icon-paleta{
   background-image: url(../img/paletadecor.svg);
+}
+.icon-pinterest{
+  background-image: url(../img/pinterest.svg);
+}
+.icon-premium{
+  background-image: url(../img/Premium.svg);
 }
 .icon-projetos-salvos{
   background-image: url(../img/Projetos-salvos.svg);
@@ -520,6 +538,9 @@ button{
 .icon-visao-comp-nw{
   background-image: url(../img/visao-computacional-no-white.svg);
 }
+.icon-youtube{
+  background-image: url(../img/youtube-icon.svg);
+}
 
 /*---------------------- FIM SPRITE -------------------*/
 /*---------------------- MENU -----------------------*/
@@ -555,7 +576,7 @@ button{
   margin-left: 130px;
   width: calc(100% - 130px);
   min-height: 100%;
-  padding: 20px 30px;
+  padding: 20px 0px;
   background: url('/img/bg-pattern.png');
 }
 /*---------------------- FIM CONTEUDO -------------------*/

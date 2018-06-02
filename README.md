@@ -6,7 +6,7 @@ P
 
 Back-End:
 
-	- [Heroku] 
+	- [Heroku] -  Heroku é uma plataforma de serviço em nuvem (PaaS) suportando várias linguagens de programação. Heroku é de propriedade da Salesforce.com . Heroku, uma das primeiras plataformas de nuvem , já está em desenvolvimento desde junho de 2007, quando suportava apenas a linguagem de programação Ruby , mas, desde então, adicionou suporte para Java , Node.js , Scala , Clojure e Python e PHP. O sistema operacional de base é Debian ou, no mais recente, o Debian-based Ubuntu.
 
 	- [Body parser versao 1.18.2](https://github.com/expressjs/body-parser) - Extenção do node.js, pode ser encontrado dentro da pastas node_modules.   Node.js body parsing middleware. Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
 
@@ -18,7 +18,7 @@ Back-End:
 
 	- [Firebase versao 4.13.1] -
 
-	- [Node.js] - 
+	- [Node.js] - Node é uma tecnologia que permite 
 
 	- [Nodemon versao 1.17.3] -
 
