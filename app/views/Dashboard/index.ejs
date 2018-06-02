@@ -4,10 +4,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-  <% include ../header.ejs %>    
+  <% include ../commom/header.ejs %> 
   <section id="conteudo-body">
     <div class="container-100">
       <button onclick="pintrestLogout()" class="btn btn-login DF CS color-2 tamfont2 font-1 Upper">Sair</button>
@@ -16,6 +16,7 @@
     <button onclick="dahboards()" class="btn DF CS color-2 tamfont2 font-1 Upper">LOAD</button>
   </section>
   <div id="result"></div>
+  <% include ../commom/footer.ejs %>
 </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
