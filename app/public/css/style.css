@@ -134,6 +134,7 @@ button{
 }
 .bg-home{
   background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
+  background-size: contain;
 }
 .bgcolor-1{
   background-color:#f60a9d;
