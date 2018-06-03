@@ -31,10 +31,10 @@ body {
   line-height: 1;
 }
 footer{
-  border-top: solid 0.2em #2980b9;
-  margin: 3em 0 0em;
-  padding: 0 0 2em;
-  width: 100%;
+  margin-left: 130px;
+  width: calc(100% - 130px);
+  padding: 20px 60% 20px 40px;
+  color: rgba(255, 255, 255, 0.8);
 }
 ol, ul {
   list-style: none;
@@ -105,11 +105,35 @@ button{
 .tamfont8 {
   font-size: 4.5em;
 }
+.LH1{
+  line-height: 1em;
+}
+.LH2{
+  line-height: 1.5em;
+}
+.LH3{
+  line-height: 2em;
+}
+.LH4{
+  line-height: 2.5em;
+}
+.LH5 {
+  line-height: 3em;
+}
+.LH6 {
+  line-height: 3.5em;
+}
+.LH7 {
+  line-height: 4em;
+}
+.LH8 {
+  line-height: 4.5em;
+}
 .bg-alert{
   background-color: #FA4941;
 }
 .bg-home{
-  background: url(../img/bghomeL.png) no-repeat left center, url(../img/bghomeR.png) no-repeat right center;;
+  background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
 }
 .bgcolor-1{
   background-color:#f60a9d;
@@ -132,6 +156,9 @@ button{
 .bgcolor-7{
   background-color:#232027;
 }
+.bg-icon-footer{
+  background-color: rgba(255, 255, 255, 0.8);
+}
 .color-1{
   color: #FFFFFF;
 }
@@ -142,7 +169,7 @@ button{
   color: #3498d0;
 }
 .color-4{
-  color: #FCD658;
+  color: #f60a9e;
 }
 .color-5{
   color: #909090;
@@ -238,6 +265,12 @@ button{
   -webkit-justify-content: space-between;
           justify-content: space-between;    
 }
+.CEP{
+  -webkit-align-items: flex-end;
+          align-items: flex-end;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;    
+}
 .CSA{
   -webkit-align-items: center;
           align-items: center;
@@ -249,10 +282,16 @@ button{
           justify-content: space-between;  
 }
 .P-020{
-  padding: 0 20px
+  padding: 0 20px;
 }
 .P-040{
-  padding: 0 40px
+  padding: 0 40px;
+}
+.P-100{
+  padding: 10px 0;
+}
+.P-600{
+  padding: 60px 0;
 }
 .link-hover:hover{
   text-decoration: underline;
@@ -284,6 +323,23 @@ button{
     margin-left: 5px;
   }
 /* FIM BOTOES */
+.balao{
+  border-radius: 5px;
+  padding: 15px 40px;
+  position: relative;
+}
+.balao::before{
+  content:"";
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  top:-15px;
+  margin-right: 10px;
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #232027;
+}
 /*---------------------- FIM PADROES ------------------*/
 /*---------------------- CONTAINER --------------------*/
 .h-50{
@@ -320,8 +376,14 @@ button{
 .w-30{
   width: 30%;
 }
+.w-25{
+  width: 25%;
+}
 .w-20{
   width: 20%;
+}
+.w-16{
+  width: calc(100%/6);
 }
 /*---------------------- FIM CONTAINER ----------------*/
 /*---------------------- SPRITE -----------------------*/
@@ -348,6 +410,12 @@ button{
   display: block;
   height: 100px;
   background-size: 100px 100px;
+}
+.icon-Xlarge{
+  width: 200px;
+  display: block;
+  height: 200px;
+  background-size: 200px 200px;
 }
 .icon-center{
   margin: 0 auto;
@@ -434,7 +502,11 @@ button{
   background-image: url(../img/experimentacao.svg);
 }
 .icon-facebook{
-  background-image: url(../img/facebook-square.svg);
+  -webkit-mask: url(../img/facebook-square.svg);
+  mask: url(../img/facebook-square.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
 }
 .icon-font{
   background-image: url(../img/fonte-icone.svg);
@@ -452,7 +524,11 @@ button{
   background-image: url(../img/info-circle.svg);
 }
 .icon-instagram{
-  background-image: url(../img/Instagram.svg);
+  -webkit-mask: url(../img/Instagram.svg);
+  mask: url(../img/Instagram.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
 }
 .icon-material-kit{
   background-image: url(../img/Material-kit.svg);
@@ -539,9 +615,15 @@ button{
   background-image: url(../img/visao-computacional-no-white.svg);
 }
 .icon-youtube{
-  background-image: url(../img/youtube-icon.svg);
+  -webkit-mask: url(../img/youtube-icon.svg);
+  mask: url(../img/youtube-icon.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
 }
-
+.mascot-home{
+  background-image: url(../img/mascote-home.png)
+}
 /*---------------------- FIM SPRITE -------------------*/
 /*---------------------- MENU -----------------------*/
 #menu{
@@ -556,9 +638,6 @@ button{
   -webkit-align-content: flex-end;
           align-content: flex-end;
 } 
-.menu-item{
-  height: 60px;
-}
 .menu-item > svg{
   height: 50%;
 }
@@ -576,7 +655,7 @@ button{
   margin-left: 130px;
   width: calc(100% - 130px);
   min-height: 100%;
-  padding: 20px 0px;
+  padding: 20px 0px 0px;
   background: url('/img/bg-pattern.png');
 }
 /*---------------------- FIM CONTEUDO -------------------*/
@@ -606,11 +685,23 @@ button{
   width: 100%;
   height: 400px;
 }
-.info-home-cont{
-  margin: 50px auto 30px;
+.text-home{
+  max-width: 495px;
+  min-height: 118px;
+  padding: 100px 40px 0;
+}
+.sub-text-home{
+  max-width: 615px;
+  min-height: 109px;
+  padding: 0px 40px 100px;
 }
 .info-home{
-   grid-row-gap: 20px;
+  padding: 5px 10px;
+  align-content: start;
+}
+.cont-masc-home{
+  right: 15px;
+  top:50px;
 }
 /*---------------------- FIM HOME -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/
