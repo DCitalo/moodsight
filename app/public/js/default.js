@@ -59,7 +59,14 @@ function pintrestLogin(){
 				}
 			});
 			console.log(datafirebase)
-			$.post('/salva', {datafirebase});
+			$.ajax({
+				url:'/salva',
+				type: 'POST',
+				data: datafirebase,
+				contentType: 'application/json',
+				success: function() { console.log('success');},
+				error  : function() { console.log('error');}
+			});
 	    });
 	};
 	(function(d, s, id){
