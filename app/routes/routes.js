@@ -16,18 +16,14 @@ module.exports = function(app) {
       app.post('/salva', (req, res) => {
         var db = admin.database();
         var ref = db.ref("users");
-        var usersRef = ref.child(req.body.datafirebase["0"].pessoal.id);
-        userRef.push({
+        var usersRef = ref.child(req.body.data.id);
+        usersRef.set({
             nome: {
-              nome: req.body.datafirebase["0"].pessoal.first_name,
-              sobrenome: req.body.datafirebase["0"].pessoal.last_name
+              first_name: req.body.data.first_name,
+              last_name: req.body.data.last_name
             },
-            image_profile: {
-              url: req.body.datafirebase["0"].pessoal.image["60x60"].url
-            }
+            url: req.body.data.url
         });
-        // you have address available in req.body:
-        console.log(req.body.datafirebase);
         // always send a response:
         res.json({ ok: true });
       });
