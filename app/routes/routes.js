@@ -16,14 +16,14 @@ module.exports = function(app) {
       app.post('/salva', (req, res) => {
         var db = admin.database();
         var ref = db.ref("users");
-        var usersRef = ref.child(req.body.datafirebase.pessoal.id);
+        var usersRef = ref.child(req.body.datafirebase["0"].pessoal.id);
         userRef.push({
             nome: {
-              nome: req.body.datafirebase.pessoal.first_name,
-              sobrenome: req.body.datafirebase.pessoal.last_name
+              nome: req.body.datafirebase["0"].pessoal.first_name,
+              sobrenome: req.body.datafirebase["0"].pessoal.last_name
             },
             image_profile: {
-              url: req.body.datafirebase.pessoal.image["60x60"].url
+              url: req.body.datafirebase["0"].pessoal.image["60x60"].url
             }
         });
         for(var i= 1; i < req.body.datafirebase.length; i++){
