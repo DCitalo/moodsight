@@ -141,7 +141,7 @@ button{
   background-color:#f60a9d;
 }
 .bgcolor-2{
-  background-color:#79d3d3;
+  background-color:#00c9c9;
 }
 .bgcolor-3{
   background-color:#f60a9d;
@@ -728,7 +728,7 @@ button{
   background-size: 50px 50px;
 }
 .car-item:hover{
-  background-color: #79d3d3;
+  background-color: #00c9c9;
   border:1px solid #FFF;
 }
 .car-cont{
