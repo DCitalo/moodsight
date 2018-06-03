@@ -18,9 +18,9 @@ function pintrestLogin(){
 	      } else {
 	      	var data = response.data;
 	      	//console.log(data)
-	      	$.post('/salva', {data});
 	      }
 	    });
+		$.post('/salva', {data});
 	    });
 	};
 	(function(d, s, id){
