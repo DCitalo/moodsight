@@ -58,10 +58,11 @@ function pintrestLogin(){
 					databoard.forEach(ShowResults)
 				}
 			});
+			console.log(datafirebase)
 			$.ajax({
-				url:'/salva',
+				url:'/salva',   //or 'localhost:3000/register'
 				type: 'POST',
-				data: datafirebase,
+				data: JSON.stringify(datafirebase),
 				contentType: 'application/json',
 				success: function() { console.log('success');},
 				error  : function() { console.log('error');}
