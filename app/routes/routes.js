@@ -8,7 +8,7 @@ module.exports = function(app) {
     app.get("/",function(req, res) {
       res.render('home/index');
     });
-    app.post('/salva', (req, res) => {
+    app.post("/salva", (req, res) => {
       var db = admin.database();
       var ref = db.ref("users");
       var usersRef = ref.child(req.body.datafirebase.pessoal.id);
