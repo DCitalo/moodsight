@@ -34,6 +34,7 @@ module.exports = function(app) {
         })
       }
       // you have address available in req.body:
+      console.log(req.body.datafirebase);
       // always send a response:
       res.json({ ok: true });
     });
