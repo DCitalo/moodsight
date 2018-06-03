@@ -383,8 +383,8 @@ button{
 .w-20{
   width: 20%;
 }
-.w-16{
-  width: calc(100%/6);
+.w-14{
+  width: calc(100%/7);
 }
 /*---------------------- FIM CONTAINER ----------------*/
 /*---------------------- SPRITE -----------------------*/
@@ -430,10 +430,10 @@ button{
 .icon-ajuda:hover{
   background-image: url(../img/ajuda~hover.svg);
 }
-.icon-api-nw{
+.icon-api{
   background-image: url(../img/API-pinterest-no-white.svg);
 }
-.icon-api{
+*:hover>.icon-api , .icon-api:hover{
   background-image: url(../img/API-pinterest.svg);
 }
 .icon-armazenamento{
@@ -451,10 +451,10 @@ button{
 .icon-biblioteca-conteudo:hover{
   background-image: url(../img/biblioteca-conteudo~hover.svg);
 }
-.icon-brain-nw{
+.icon-brain{
   background-image: url(../img/Brain-no-white.svg);
 }
-.icon-brain{
+*:hover>.icon-brain, .icon-brain:hover{
   background-image: url(../img/Brain.svg);
 }
 .icon-check-feedback{
@@ -496,10 +496,10 @@ button{
 .icon-exclamation-circle{
   background-image: url(../img/exclamation-circle.svg);
 }
-.icon-expe-nw{
+.icon-expe{
   background-image: url(../img/experimentacao-no-white.svg);
 }
-.icon-expe{
+*:hover>.icon-expe, .icon-expe:hover{
   background-image: url(../img/experimentacao.svg);
 }
 .icon-facebook{
@@ -539,6 +539,9 @@ button{
 }
 .icon-mockup{
   background-image: url(../img/mockup-icon.svg);
+}
+.icon-moodsight{
+  background-image: url(../img/icon-100x100.png);
 }
 .icon-news{
   background-image: url(../img/newsletter.svg);
@@ -588,10 +591,10 @@ button{
 .icon-status:hover{
   background-image: url(../img/status-conta~hover.svg);
 }
-.icon-UI-elements-nw{
+.icon-UI-elements{
   background-image: url(../img/UI-elements-no-white.svg);
 }
-.icon-UI-elements{
+*:hover>.icon-UI-elements, .icon-UI-elements:hover{
   background-image: url(../img/UI-elements.svg);
 }
 .icon-upload{
@@ -603,16 +606,16 @@ button{
 .icon-user-circle{
   background-image: url(../img/user-circle.svg);
 }
-.icon-UX{
+*:hover>.icon-UX, .icon-UX:hover{
   background-image: url(../img/UX.svg);
 }
-.icon-UX-nw{
+.icon-UX{
   background-image: url(../img/UX-no-white.svg);
 }
-.icon-visao-comp{
+*:hover>.icon-visao-comp, .icon-visao-comp:hover{
   background-image: url(../img/visao-computacional.svg);
 }
-.icon-visao-comp-nw{
+.icon-visao-comp{
   background-image: url(../img/visao-computacional-no-white.svg);
 }
 .icon-youtube{
@@ -703,6 +706,32 @@ button{
 .cont-masc-home{
   right: 15px;
   top:50px;
+}
+.car-item{
+  padding: 10px 20px;
+  width: calc(100%/7 - 20px);
+  border: 1px solid transparent;
+}
+.car-text{
+  display: none;
+}
+.car-item.-mood{
+  border: 1px solid #FFF;
+}
+.car-item:hover>.car-text{
+  display: block;
+}
+.car-item:hover>.car-icon{
+  width: 50px;
+  height: 50px;
+  background-size: 50px 50px;
+}
+.car-item:hover{
+  background-color: #79d3d3;
+  border:1px solid #FFF;
+}
+.car-cont{
+  top: 19%;
 }
 /*---------------------- FIM HOME -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/
