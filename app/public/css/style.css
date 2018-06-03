@@ -291,8 +291,8 @@ button{
 .P-100{
   padding: 10px 0;
 }
-.P-600{
-  padding: 60px 0;
+.P-400{
+  padding: 40px 0;
 }
 .link-hover:hover{
   text-decoration: underline;
@@ -689,12 +689,12 @@ button{
 .text-home{
   max-width: 495px;
   min-height: 118px;
-  padding: 100px 40px 0;
+  padding: 110px 40px 0;
 }
 .sub-text-home{
   max-width: 615px;
   min-height: 109px;
-  padding: 0px 40px 100px;
+  padding: 10px 40px 40px;
 }
 .info-home{
   padding: 5px 10px;
