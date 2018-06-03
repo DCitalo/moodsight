@@ -65,6 +65,7 @@ button{
 /*---------------------- PADROES ----------------------*/
 .font-1{
   font-family: 'Quicksand', sans-serif;
+  letter-spacing: 2px;
 }
 .font-2{
   font-family: 'Paytone One', sans-serif;
@@ -296,11 +297,6 @@ button{
 }
 .link-hover:hover{
   text-decoration: underline;
-  text-decoration-color: #3498db;
-}
-.link-hover-negative:hover,.buy-cont:hover .link-hover-negative{
-  text-decoration: underline;
-  text-decoration-color: #f9cc27;
 }
 #conteudopag{
   margin-top:90px;
@@ -543,6 +539,12 @@ button{
 .icon-moodsight{
   background-image: url(../img/icon-100x100.png);
 }
+.icon-moodsight-box{
+  background-image: url(../img/logo-box.png);
+}
+.icon-moodsight-box:hover{
+  background-image: url(../img/logo-box~hover.png);
+}
 .icon-news{
   background-image: url(../img/newsletter.svg);
 }
@@ -637,21 +639,21 @@ button{
           align-content: flex-start;
 }  
 .navigation-menu{
-  height: calc(100% - 100px);
+  height: calc(100% - 140px);
   margin: auto 0 0 0;
   -webkit-align-content: flex-end;
-          align-content: flex-end;
+  align-content: flex-end;
 } 
 .menu-item > svg{
   height: 50%;
 }
 .logo-cont {
-  width: 60px;
-  height: 60px;
+  /* width: 60px; */
+  /* height: 60px; */
   margin: 20px auto;
 }
 .logoFull-cont > img {
-    max-width: 80%;
+    max-width: 60%;
 }
 /*---------------------- FIM MENU -------------------*/
 /*---------------------- CONTEUDO -----------------------*/
@@ -659,7 +661,7 @@ button{
   margin-left: 130px;
   width: calc(100% - 130px);
   min-height: 100%;
-  padding: 20px 0px 0px;
+  padding: 40px 0px 0px;
   background: url('/img/bg-pattern.png');
 }
 /*---------------------- FIM CONTEUDO -------------------*/
@@ -697,7 +699,7 @@ button{
 .sub-text-home{
   max-width: 615px;
   min-height: 109px;
-  padding: 10px 40px 40px;
+  padding: 40px 40px 40px;
 }
 .info-home{
   padding: 5px 10px;
@@ -708,15 +710,14 @@ button{
   top:50px;
 }
 .car-item{
+  width: 150px;
   padding: 10px 20px;
-  width: calc(100%/7 - 20px);
   border: 1px solid transparent;
+  z-index:1;
+  cursor: default;
 }
 .car-text{
   display: none;
-}
-.car-item.-mood{
-  border: 1px solid #FFF;
 }
 .car-item:hover>.car-text{
   display: block;
@@ -732,6 +733,35 @@ button{
 }
 .car-cont{
   top: 19%;
+}
+.-mood-box::before {
+    content: '';
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    z-index: 0;
+    bottom: 20%;
+    right: 20%;
+    border: 2px dashed #FFF;
+}
+.-mood-box::after {
+    content: '';
+    width: 88%;
+    height: 87%;
+    position: absolute;
+    z-index: 1;
+    top: 6%;
+    left: 6%;
+    box-shadow: 10px 10px 80px 10px rgba(0, 0, 0, 0.8);
+}
+.-mood-box > icon-moodsight-box {
+    z-index: 2;
+    position: absolute;
+}
+
+.-mood-box>.icon-moodsight-box {
+    position: relative;
+    z-index: 2;
 }
 /*---------------------- FIM HOME -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/
