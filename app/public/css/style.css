@@ -314,13 +314,14 @@ button{
 /* BOTOES */
   .btn{
     cursor: pointer;
+    display:block;
   }
   .btn-login{
     border-radius: 45px;
     background-color: transparent;
-    margin: 10px 0 10px auto;
+    margin: 10px auto;
     background-image: linear-gradient(45deg, #a767ff, #f60a9e);
-    height: 60px;
+    height: 65px;
     border: solid 2px #ffffff;
     box-shadow: 0px 3px 13px 0 rgba(0, 0, 0, 0.36);
   }
@@ -453,6 +454,9 @@ button{
   background-image: url(../img/biblioteca-conteudo.svg);
 }
 .icon-biblioteca-conteudo:hover{
+  background-image: url(../img/biblioteca-conteudo~hover.svg);
+}
+.icon-biblioteca-conteudo-col{
   background-image: url(../img/biblioteca-conteudo~hover.svg);
 }
 .icon-brain{
@@ -640,9 +644,9 @@ button{
 }
 /*---------------------- FIM SPRITE -------------------*/
 /*---------------------- MENU -----------------------*/
-#menu{
+.menu-cont{
   width: 130px;
-  background: linear-gradient(to top, #a767ff, #8ee6be);
+  background: linear-gradient(to top, #a766fe, #0fe0ba);
   -webkit-align-content: flex-start;
           align-content: flex-start;
 }  
@@ -665,6 +669,13 @@ button{
 }
 /*---------------------- FIM MENU -------------------*/
 /*---------------------- CONTEUDO -----------------------*/
+#conteudo-header{
+  margin-left: 130px;
+  width: calc(100% - 130px);
+  min-height: 50%;
+  padding: 40px 0px 0px;
+  background-image: linear-gradient(45deg, #a767ff, #f60a9e);
+}
 #conteudo-body{
   margin-left: 130px;
   width: calc(100% - 130px);
@@ -717,29 +728,29 @@ button{
   right: 15px;
   top:50px;
 }
-.car-item{
+.mood-box-item{
   width: 150px;
   padding: 10px 20px;
   border: 1px solid transparent;
   z-index:1;
   cursor: default;
 }
-.car-text{
+.mood-box-text{
   display: none;
 }
-.car-item:hover>.car-text{
+.mood-box-item:hover>.mood-box-text{
   display: block;
 }
-.car-item:hover>.car-icon{
+.mood-box-item:hover>.mood-box-icon{
   width: 50px;
   height: 50px;
   background-size: 50px 50px;
 }
-.car-item:hover{
+.mood-box-item:hover{
   background-color: #20d2d2;
   border:1px solid #FFF;
 }
-.car-cont{
+.mood-box-cont{
   top: 19%;
 }
 .-mood-box::before {
