@@ -79,7 +79,34 @@ function pintrestLogin(){
 	    pjs.parentNode.insertBefore(js, pjs);
 	}(document, 'script', 'pinterest-jssdk'));
 }
-$('#setaE')
-$('#setaD').click({
-	
-})
+var n = $('.car-cont').data("car");
+var m = 0;
+if(n == 0){
+	$('#setaE').css("visibility","hidden")
+}
+$('#setaE').click(function() {
+	n--;
+	m += 10;
+	console.log(n)
+	if(n == 0){
+		$('#setaE').css("visibility","hidden")
+	}
+	if(n != 6){
+		$('#setaD').css("visibility","visible")
+	}
+	console.log(m)
+	$('.car-cont').css("transform","translateX("+ m +"%)")
+});
+$('#setaD').click(function() {
+	n++;
+	m -= 10;
+	console.log(n)
+	if(n == 6){
+		$('#setaD').css("visibility","hidden")
+	}
+	if(n != 0){
+		$('#setaE').css("visibility","visible")
+	}
+	console.log(m)
+	$('.car-cont').css("transform","translateX("+ m +"%)")
+});

@@ -171,7 +171,7 @@ button{
   color: #232027;
 }
 .color-3{
-  color: #3498d0;
+  color: #7ad3d3;
 }
 .color-4{
   color: #f60a9e;
@@ -334,10 +334,12 @@ button{
 /* FIM BOTOES */
 .balao{
   border-radius: 5px;
-  padding: 15px 40px;
   position: relative;
 }
-.balao::before{
+.balao-fala{
+  padding: 15px 40px;
+}
+.fala-home::before{
   content:"";
   display: inline-block;
   position: absolute;
@@ -348,6 +350,31 @@ button{
   height: 0; 
   border-left: 15px solid transparent;
   border-bottom: 15px solid #232027;
+}
+.menu-balao{
+  right: -140px;
+  top:50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.menu-balao-item{
+  width: 130px;
+  padding: 10px 15px;
+}
+.menu-balao-item::before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  top: 50%;
+  margin-top: -5px;
+  left: -10px;
+  margin-right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 10px solid #423f45;
 }
 /*---------------------- FIM PADROES ------------------*/
 /*---------------------- CONTAINER --------------------*/
@@ -435,7 +462,7 @@ button{
 .icon-ajuda{
   background-image: url(../img/ajuda.svg);
 }
-.icon-ajuda:hover{
+*:hover>.icon-ajuda, .icon-ajuda:hover{
   background-image: url(../img/ajuda~hover.svg);
 }
 .icon-api{
@@ -456,7 +483,7 @@ button{
 .icon-biblioteca-conteudo{
   background-image: url(../img/biblioteca-conteudo.svg);
 }
-.icon-biblioteca-conteudo:hover{
+*:hover>.icon-biblioteca-conteudo, .icon-biblioteca-conteudo:hover{
   background-image: url(../img/biblioteca-conteudo~hover.svg);
 }
 .icon-biblioteca-conteudo-col{
@@ -474,7 +501,7 @@ button{
 .icon-check-square{
   background-image: url(../img/check-square.svg);
 }
-.icon-check-square:hover{
+*:hover>.icon-check-square, .icon-check-square:hover{
   background-image: url(../img/check-square~hover.svg);
 }
 .icon-code{
@@ -483,13 +510,13 @@ button{
 .icon-conta-geral{
   background-image: url(../img/Conta-geral.svg);
 }
-.icon-conta-geral:hover{
+*:hover>.icon-conta-geral, .icon-conta-geral:hover{
   background-image: url(../img/Conta-geral~hover.svg);
 }
 .icon-contato{
   background-image: url(../img/Contato.svg);
 }
-.icon-contato:hover{
+*:hover>.icon-contato, .icon-contato:hover{
   background-image: url(../img/Contato~hover.svg);
 }
 .icon-desconto-normal{
@@ -529,7 +556,7 @@ button{
 .icon-info{
   background-image: url(../img/Info.svg);
 }
-.icon-info:hover{
+*:hover>.icon-info, .icon-info:hover{
   background-image: url(../img/Info~hover.svg);
 }
 .icon-info-circle{
@@ -545,7 +572,7 @@ button{
 .icon-material-kit{
   background-image: url(../img/Material-kit.svg);
 }
-.icon-material-kit:hover{
+*:hover>.icon-material-kit, .icon-material-kit:hover{
   background-image: url(../img/Material-kit~hover.svg);
 }
 .icon-mockup{
@@ -575,13 +602,13 @@ button{
 .icon-projetos-salvos{
   background-image: url(../img/Projetos-salvos.svg);
 }
-.icon-projetos-salvos:hover{
+*:hover>.icon-projetos-salvos, .icon-projetos-salvos:hover{
   background-image: url(../img/Projetos-salvos~hover.svg);
 }
 .icon-selecao-de-painel{
   background-image: url(../img/selecao-de-paineis.svg);
 }
-.icon-selecao-de-painel:hover{
+*:hover>.icon-selecao-de-painel, .icon-selecao-de-painel:hover{
   background-image: url(../img/selecao-de-paineis~hover.svg);
 }
 .icon-seta-direita{
@@ -599,13 +626,13 @@ button{
 .icon-privacidade{
   background-image: url(../img/S-privacidade.svg);
 }
-.icon-privacidade:hover{
+*:hover>.icon-privacidade, .icon-privacidade:hover{
   background-image: url(../img/S-privacidade~hover.svg);
 }
 .icon-status{
   background-image: url(../img/status-conta.svg);
 }
-.icon-status:hover{
+*:hover>.icon-status, .icon-status:hover{
   background-image: url(../img/status-conta~hover.svg);
 }
 .icon-UI-elements{
@@ -617,7 +644,7 @@ button{
 .icon-upload{
   background-image: url(../img/upload.svg);
 }
-.icon-upload:hover{
+*:hover>.icon-upload, .icon-upload:hover{
   background-image: url(../img/upload~hover.svg);
 }
 .icon-user-circle{
@@ -651,7 +678,8 @@ button{
   width: 130px;
   background: linear-gradient(to top, #a766fe, #0fe0ba);
   -webkit-align-content: flex-start;
-          align-content: flex-start;
+  align-content: flex-start;
+  z-index: 9999;
 }  
 .navigation-menu{
   height: calc(100% - 140px);
@@ -659,12 +687,10 @@ button{
   -webkit-align-content: flex-end;
   align-content: flex-end;
 } 
-.menu-item > svg{
-  height: 50%;
+.menuitem:hover .menu-balao{
+  display: block;
 }
 .logo-cont {
-  /* width: 60px; */
-  /* height: 60px; */
   margin: 20px auto;
 }
 .logoFull-cont > img {
@@ -829,20 +855,9 @@ button{
   height: 25px;
 }
 .setas{
-  top: 39%;
-  width: 99%;
-  right: 0;
-}
-.bolas {
-  height: 25px;
-  width: 200px;
-  margin: 0 auto;
-}
-.car-bolas {
-  width: 20px;
-  height: 20px;
-  background: #000;
-  border-radius: 50px;
+  top: 30%;
+  width: 100%;
+  left: 4px;
 }
 /*---------------------- FIM BIBLIOTECA -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/
