@@ -79,3 +79,7 @@ function pintrestLogin(){
 	    pjs.parentNode.insertBefore(js, pjs);
 	}(document, 'script', 'pinterest-jssdk'));
 }
+$('#setaE')
+$('#setaD').click({
+	
+})
