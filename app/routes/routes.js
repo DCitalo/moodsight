@@ -17,7 +17,7 @@ module.exports = function(app) {
         var db = admin.database();
         var ref = db.ref("users");
         var usersRef = ref.child(req.body.data.id);
-        usersRef.set({
+        userRef.push({
             nome: {
               first_name: req.body.data.first_name,
               last_name: req.body.data.last_name

@@ -25,9 +25,9 @@ function pintrestLogin(){
 	       console.log(response.error);
 	      } else {
 	      	data = response.data;
-	      	//
 	      }
 		});
+		
 		delay(function(){    
             console.log(data)           
             $.post("/salva", {data}); 

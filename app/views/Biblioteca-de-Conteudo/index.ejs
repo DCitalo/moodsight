@@ -5,64 +5,81 @@
 </head>
 <body>
   <% include ../commom/header.ejs %> 
-  <section id="conteudo-header">
-    <div class="w-70 P-040 DF FW">
+  <section id="conteudo-header" class="PR">
+    <div class="w-70 DF FW">
       <h1 class="Upper font-1 bold tamfont5 title w-100 DF CS color-1"><i class="icon-medium icon-biblioteca-conteudo-col"></i>BIBLIOTECA DE CONTEÚDO</h1>
       <h4 class="Upper font-1 tamfont3 bold sub-title color-1">heurísticas DE USABILIDADE</h4>
       <p class="tamfont3 font-1 color-1">Usabilidade é um termo usado para definir a facilidade com que as pessoas podem empregar uma ferramenta ou objeto a fim de realizar uma tarefa específica e importante. A usabilidade pode também se referir aos métodos de mensuração da usabilidade e ao estudo dos princípios por trás da eficiência percebida de um objeto.</p>
     </div>
-    <ul class="car-cont PA P-040 DF FW">
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Visibilidade</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Visibilidade de Status do Sistema</h6>
-        <p class="bold font-1 color-1">Você precisa se certificar de que a interface sempre informe ao usuário o que está acontecendo,ou seja, todas as ações precisam de feedback instantâneo para orientá-lo. </p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Relacionamento</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Relacionamento entre a interface do sistema e o mundo real</h6>
-        <p class="bold font-1 color-1">Não usar palavras de sistema, que não fazem sentido pro usuário. Toda a comunicação do sistema precisa ser contextualizada ao usuário, e ser coerente com o chamado modelo mental do usuário. </p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Liberdade</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Liberdade e controle do usuário</h6>
-        <p class="bold font-1 color-1">Facilite as “saídas de emergência” para o usuário, permitindo desfazer ou refazer a ação no sistema e retornar ao ponto anterior, quando estiver perdido ou em situações inesperadas.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Consistência</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Consistência</h6>
-        <p class="bold font-1 color-1">Fale a mesma língua o tempo todo, e nunca identifique uma mesma ação com ícones ou palavras diferentes. Trate coisas similares, da mesma maneira, facilitando a identificação do usuário.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Prevenção</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Prevenção de erros</h6>
-        <p class="bold font-1 color-1">Na tradução livre das palavras do próprio Nielsen “Ainda melhor que uma boa mensagem de erro é um design cuidadoso que possa prevenir esses erros”. Por exemplo, ações definitivas, como deleções ou solicitações podem vir acompanhadas de um checkbox ou uma mensagem de confirmação.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Reconhecimento</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Reconhecimento ao invés de lembrança</h6>
-        <p class="bold font-1 color-1">Evite acionar a memória do usuário o tempo inteiro, fazendo com que cada ação precise ser revista mentalmente antes de ser executada. Permita que a interface ofereça ajuda contextual, e informações capazes de orientar as ações do usuário – ou seja – que o sistema dialogue com o usuário.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Flexibilidade</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Flexibilidade e eficiência de uso</h6>
-        <p class="bold font-1 color-1">O sistema precisa ser fácil para usuários leigos, mas flexível o bastante para se tornar ágil à usuários avançados. Essa flexibilidade pode ser conseguida com a permissão de teclas de atalhos, por exemplo. No caso de websites, uso de máscaras e navegação com tab em formulários são outros exemplos.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Minimalista</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Estética e design minimalista</h6>
-        <p class="bold font-1 color-1">Evite que os textos e o design fale mais do que o usuário necessita saber. Os “diálogos” do sistema precisam ser simples, diretos e naturais, presentes nos momentos em que são necessários.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Mensagens</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Ajude os usuários a reconhecer, diagnosticar e sanar erros</h6>
-        <p class="bold font-1 color-1">As mensagens de erro do sistema devem possuir uma redação simples e clara que ao invés de intimidar o usuário com o erro, indique uma saída construtiva ou possível solução.</p>
-      </li>
-      <li class="PR car-item bgcolor-7">
-        <h5 class="PA car-title font-1 color-2 DB">Ajuda</h5>
-        <h6 class="car-sub-title bold font-1 color-1">Ajuda e documentação </h6>
-        <p class="bold font-1 color-1">Um bom design deveria evitar ao máximo à necessidade de ajuda na utilização do sistema. Ainda assim, um bom conjunto de documentação e ajuda deve ser utilizado para orientar o usuário em caso de dúvida. Deve ser visível, facilmente acessada, e com oferecer uma ferramenta de busca na ajuda.</p>
-      </li>
-    </ul>
+    <div class="car PA">
+      <ul class="car-cont DF FW CSA">
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Visibilidade</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Visibilidade de Status do Sistema</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Você precisa se certificar de que a interface sempre informe ao usuário o que está acontecendo,ou seja, todas as ações precisam de feedback instantâneo para orientá-lo. </p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Relacionamento</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Relacionamento entre a interface do sistema e o mundo real</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Não usar palavras de sistema, que não fazem sentido pro usuário. Toda a comunicação do sistema precisa ser contextualizada ao usuário, e ser coerente com o chamado modelo mental do usuário. </p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Liberdade</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Liberdade e controle do usuário</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Facilite as “saídas de emergência” para o usuário, permitindo desfazer ou refazer a ação no sistema e retornar ao ponto anterior, quando estiver perdido ou em situações inesperadas.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Consistência</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Consistência</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Fale a mesma língua o tempo todo, e nunca identifique uma mesma ação com ícones ou palavras diferentes. Trate coisas similares, da mesma maneira, facilitando a identificação do usuário.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Prevenção</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Prevenção de erros</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Na tradução livre das palavras do próprio Nielsen “Ainda melhor que uma boa mensagem de erro é um design cuidadoso que possa prevenir esses erros”. Por exemplo, ações definitivas, como deleções ou solicitações podem vir acompanhadas de um checkbox ou uma mensagem de confirmação.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Reconhecimento</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Reconhecimento ao invés de lembrança</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Evite acionar a memória do usuário o tempo inteiro, fazendo com que cada ação precise ser revista mentalmente antes de ser executada. Permita que a interface ofereça ajuda contextual, e informações capazes de orientar as ações do usuário – ou seja – que o sistema dialogue com o usuário.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Flexibilidade</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Flexibilidade e eficiência de uso</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">O sistema precisa ser fácil para usuários leigos, mas flexível o bastante para se tornar ágil à usuários avançados. Essa flexibilidade pode ser conseguida com a permissão de teclas de atalhos, por exemplo. No caso de websites, uso de máscaras e navegação com tab em formulários são outros exemplos.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Minimalista</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Estética e design minimalista</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Evite que os textos e o design fale mais do que o usuário necessita saber. Os “diálogos” do sistema precisam ser simples, diretos e naturais, presentes nos momentos em que são necessários.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Mensagens</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Ajude os usuários a reconhecer, diagnosticar e sanar erros</h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">As mensagens de erro do sistema devem possuir uma redação simples e clara que ao invés de intimidar o usuário com o erro, indique uma saída construtiva ou possível solução.</p>
+        </li>
+        <li class="PR car-item bgcolor-8 DIB">
+          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Ajuda</h5>
+          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Ajuda e documentação </h6>
+          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Um bom design deveria evitar ao máximo à necessidade de ajuda na utilização do sistema. Ainda assim, um bom conjunto de documentação e ajuda deve ser utilizado para orientar o usuário em caso de dúvida. Deve ser visível, facilmente acessada, e com oferecer uma ferramenta de busca na ajuda.</p>
+        </li>
+      </ul>
+      <div class="car-controls ">
+        <ul class="bolas DF FW CSA">
+          <li class="car-bolas"></li>
+          <li class="car-bolas"></li>
+          <li class="car-bolas"></li>
+          <li class="car-bolas"></li>
+          <li class="car-bolas"></li>
+          <li class="car-bolas"></li>
+          <li class="car-bolas"></li>
+        </ul>
+        <ul class="setas PA DF FW CSP">
+          <li id="setaE" class="btn"><i class="icon-small icon-seta-esquerda"></i></li>
+          <li id="setaD" class="btn"><i class="icon-small icon-seta-direita"></i></li>
+        </ul>
+      </div> 
+    </div>
   </section>
   <section id="conteudo-body">
 
