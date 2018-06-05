@@ -27,7 +27,7 @@ module.exports = function(app) {
             }
         });
         for(var i= 1; i < req.body.datafirebase.length; i++){
-          var boardRef = usersRef.child(req.body.datafirebase[i].boardId);
+          var boardRef = usersRef.child(req.body.datafirebase[i].boardId+i);
           boardRef.set({
             board:{
               boardName: req.body.datafirebase[i].boardName,
@@ -36,7 +36,7 @@ module.exports = function(app) {
           });
           var pinRef = boardRef.child(req.body.datafirebase[i].id)
           pinRef.set({
-            pin:{
+            [i]:{
               note: req.body.datafirebase[i].note,
               img: req.body.datafirebase[i].img,
               url: req.body.datafirebase[i].url,
