@@ -16,9 +16,8 @@ module.exports = function(app) {
       app.post('/salva', (req, res) => {
         var db = admin.database();
         var ref = db.ref("users");
-        var postsRef = ref.child(req.body.datafirebase[0].pessoal.id);
-        var newPostRef = postsRef.push();
-        newPostRef.set({
+        var usersRef = ref.child(req.body.datafirebase[0].pessoal.id);
+        usersRef.set({
             nome: {
               nome: req.body.datafirebase[0].pessoal.first_name,
               sobrenome: req.body.datafirebase[0].pessoal.last_name
@@ -28,15 +27,19 @@ module.exports = function(app) {
             }
         });
         for(var i= 1; i < req.body.datafirebase.length; i++){
-          newPostRef.set({
-            boardName: req.body.datafirebase[i].boardName,
-            boardId: req.body.datafirebase[i].boardId,
-            boardUrl: req.body.datafirebase[i].boardUrl,
-            id: req.body.datafirebase[i].id,
-            note: req.body.datafirebase[i].note,
-            img: req.body.datafirebase[i].img,
-            url: req.body.datafirebase[i].url,
-            color: req.body.datafirebase[i].color
+          var boardRef = usersRef.child(req.body.datafirebase[i].boardId);
+          boardRef.set({
+            board:{
+              boardName: req.body.datafirebase[i].boardName,
+              boardUrl: req.body.datafirebase[i].boardUrl,
+            },
+            pin:{
+              id: req.body.datafirebase[i].id,
+              note: req.body.datafirebase[i].note,
+              img: req.body.datafirebase[i].img,
+              url: req.body.datafirebase[i].url,
+              color: req.body.datafirebase[i].color
+            }
           })
         }
         res.json({ ok: true });
