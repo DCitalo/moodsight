@@ -32,9 +32,11 @@ module.exports = function(app) {
             board:{
               boardName: req.body.datafirebase[i].boardName,
               boardUrl: req.body.datafirebase[i].boardUrl,
-            },
+            }
+          });
+          var pinRef = boardRef.child(req.body.datafirebase[i].id)
+          pinRef.set({
             pin:{
-              id: req.body.datafirebase[i].id,
               note: req.body.datafirebase[i].note,
               img: req.body.datafirebase[i].img,
               url: req.body.datafirebase[i].url,
