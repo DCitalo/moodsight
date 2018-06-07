@@ -32,14 +32,12 @@ module.exports = function(app) {
               boardName: req.body.datafirebase[i].boardName,
               boardUrl: req.body.datafirebase[i].boardUrl,
           });
-          var pinRef = boardRef.child(req.body.datafirebase[i].id+i)
-          pinRef.set({
-            [i]:{
+          var pinRef = boardRef.child("pins/"+req.body.datafirebase[i].id)
+          pinRef.update({
               note: req.body.datafirebase[i].note,
               img: req.body.datafirebase[i].img,
               url: req.body.datafirebase[i].url,
               color: req.body.datafirebase[i].color
-            }
           })
         }
         res.json({ ok: true });
