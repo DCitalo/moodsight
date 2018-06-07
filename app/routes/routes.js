@@ -15,8 +15,8 @@ module.exports = function(app) {
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
-        var ref = db.ref("users");
-        var usersRef = ref.child(req.body.datafirebase[0].pessoal.id);
+        var ref = db.ref(req.body.datafirebase[0].pessoal.id);
+        var usersRef = ref.child("user");
         usersRef.set({
             nome: {
               nome: req.body.datafirebase[0].pessoal.first_name,
@@ -32,7 +32,7 @@ module.exports = function(app) {
               boardName: req.body.datafirebase[i].boardName,
               boardUrl: req.body.datafirebase[i].boardUrl,
           });
-          var pinRef = boardRef.child(req.body.datafirebase[i].id)
+          var pinRef = boardRef.child(req.body.datafirebase[i].id+i)
           pinRef.set({
             [i]:{
               note: req.body.datafirebase[i].note,
