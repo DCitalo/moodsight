@@ -27,12 +27,10 @@ module.exports = function(app) {
             }
         });
         for(var i= 1; i < req.body.datafirebase.length; i++){
-          var boardRef = usersRef.child(req.body.datafirebase[i].boardId+i);
+          var boardRef = usersRef.child("boards/"+req.body.datafirebase[i].boardId);
           boardRef.set({
-            board:{
               boardName: req.body.datafirebase[i].boardName,
               boardUrl: req.body.datafirebase[i].boardUrl,
-            }
           });
           var pinRef = boardRef.child(req.body.datafirebase[i].id)
           pinRef.set({
