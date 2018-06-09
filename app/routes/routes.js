@@ -15,16 +15,6 @@ module.exports = function(app) {
       app.get("/",function(req, res) {
         res.render('home/index');
       });
-      app.post('/login', (req, res) =>{
-        userID = req.body.id;
-        var ref = db.ref(userID);
-        ref.on("value", function(snapshot) {
-          var resultados = snapshot.val();
-          res.render('Dashboard/index', {data:resultados})
-        }, function (errorObject) {
-          console.log("The read failed: " + errorObject.code);
-        });
-      });
       app.post('/salva', (req, res) => {
         userID = req.body.datafirebase[0].pessoal.id;
         var ref = db.ref(userID);
