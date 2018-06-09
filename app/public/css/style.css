@@ -143,6 +143,10 @@ button{
 .bg-pattern-3{
   background-image: url('/img/banners-body-BC.png');
 }
+.bg-footer-BC{
+  background-image: url('/img/banner-BC.png');
+  background-size: contain;
+}
 .bg-home{
   background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
   background-size: contain;
