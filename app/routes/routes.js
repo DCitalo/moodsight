@@ -19,8 +19,8 @@ module.exports = function(app) {
         var db = admin.database();
         var ref = db.ref(userID);
         var resultados = [];
-        ref.on("boards", function(snapshot) {
-          var resultados = snapshot.val();
+        ref.on("values", function(snapshot) {
+          resultados = snapshot.val();
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });
