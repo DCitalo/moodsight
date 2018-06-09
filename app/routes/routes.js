@@ -22,8 +22,8 @@ module.exports = function(app) {
         usersRef.update({
           oi:oi
         })
+        res.json({ ok: true });
         
-        res.redirect('Dashboard/index', {data:resultados})
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
@@ -53,7 +53,6 @@ module.exports = function(app) {
               color: req.body.datafirebase[i].color
           })
         }
-        res.redirect('Dashboard/index', {id:userID})
         res.json({ ok: true });
       });
       app.get("/Dashboard",function(req, res) {
