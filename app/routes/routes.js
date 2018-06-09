@@ -17,7 +17,7 @@ module.exports = function(app) {
         var db = admin.database();
         var ref = db.ref(req.body.datafirebase[0].pessoal.id);
         var usersRef = ref.child("user");
-        usersRef.set({
+        usersRef.update({
             nome: {
               nome: req.body.datafirebase[0].pessoal.first_name,
               sobrenome: req.body.datafirebase[0].pessoal.last_name
@@ -28,7 +28,7 @@ module.exports = function(app) {
         });
         for(var i= 1; i < req.body.datafirebase.length; i++){
           var boardRef = usersRef.child("boards/"+req.body.datafirebase[i].boardId);
-          boardRef.set({
+          boardRef.update({
               boardName: req.body.datafirebase[i].boardName,
               boardUrl: req.body.datafirebase[i].boardUrl,
           });
