@@ -18,7 +18,14 @@ function pintrestLogin(){
 					if (!response || response.error) {
 						console.log(response.error);
 					} else{
-						console.log(response);
+						PDK.request('/v1/me', {fields: 'id'}, function (response) {
+							if (!response || response.error) {
+								console.log(response.error);
+							} else {
+								var id = response.data;
+								console.log(id);
+							}
+						})
 					};
 				});
 	        } else {
