@@ -18,7 +18,7 @@ module.exports = function(app) {
         userID = req.body.id;
         var db = admin.database();
         var ref = db.ref(userID);
-        ref.on("value", function(snapshot) {
+        ref.on("boards", function(snapshot) {
           var resultados = snapshot.val();
           res.redirect('Dashboard/index', {data:resultados})
         }, function (errorObject) {
