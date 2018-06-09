@@ -15,15 +15,14 @@ module.exports = function(app) {
         res.render('home/index');
       });
       app.post('/login', (req, res) =>{
-        var userID = req.body.id;
+        userID = req.body.id;
         var db = admin.database();
         var ref = db.ref(userID);
-        var resultados = [];
-        ref.on("values", function(snapshot) {
-          resultados = snapshot.val();
-        }, function (errorObject) {
-          console.log("The read failed: " + errorObject.code);
-        });
+        var usersRef = ref.child("user");
+        usersRef.update({
+          oi:oi
+        })
+        
         res.redirect('Dashboard/index', {data:resultados})
       });
       app.post('/salva', (req, res) => {

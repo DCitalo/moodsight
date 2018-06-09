@@ -137,18 +137,24 @@ button{
 .bg-pattern-1{
   background: url('/img/bg-pattern.png');
 }
+.bg-pattern-2{
+  background-image: url('/img/banners-pagina-header-BC.png');
+}
+.bg-pattern-3{
+  background-image: url('/img/banners-body-BC.png');
+}
 .bg-home{
   background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
   background-size: contain;
 }
 .bg-gradient-1{
-  background-image: linear-gradient(299deg, #ff009c, #ff005a 96%);
+  background: linear-gradient(299deg, #ff009c, #ff005a 96%);
 }
 .bg-gradient-2{
-  background-image: linear-gradient(299deg, #ec15aa, #f96463);
+  background: linear-gradient(299deg, #ec15aa, #f96463);
 }
 .bg-gradient-3{
-  background-image: linear-gradient(45deg, #a767ff, #f60a9e);
+  background: linear-gradient(45deg, #a767ff, #f60a9e);
 }
 .bgcolor-1{
   background-color:#f60a9d;
@@ -590,7 +596,7 @@ button{
 .icon-info{
   background-image: url(../img/Info.svg);
 }
-*:hover>.icon-info, .icon-info:hover{
+*:hover>.icon-info, .icon-info:hover, .icon-info-col{
   background-image: url(../img/Info~hover.svg);
 }
 .icon-info-circle{
@@ -768,7 +774,8 @@ button{
   margin: 20px 0;
   border: solid 1px rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 400px;
+  height: 570px;
+  overflow: hidden;
 }
 .text-home{
   max-width: 495px;
