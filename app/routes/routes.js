@@ -14,9 +14,20 @@ module.exports = function(app) {
       app.get("/",function(req, res) {
         res.render('home/index');
       });
-      app.post('/salva', (req, res) => {
-        userID = req.body.datafirebase[0].pessoal.id;
+      app.post('/login', (req, res) =>{
+        userID = req.body.id;
         var db = admin.database();
+        var ref = db.ref(userID);
+        ref.on("value", function(snapshot) {
+          var resultados = snapshot.val();
+          res.render('Dashboard/index', {data:resultados})
+        }, function (errorObject) {
+          console.log("The read failed: " + errorObject.code);
+        });
+      });
+      app.post('/salva', (req, res) => {
+        var db = admin.database();
+        userID = req.body.datafirebase[0].pessoal.id;
         var ref = db.ref(userID);
         var usersRef = ref.child("user");
         usersRef.update({
@@ -42,6 +53,7 @@ module.exports = function(app) {
               color: req.body.datafirebase[i].color
           })
         }
+        res.render('Dashboard/index', {id:userID})
         res.json({ ok: true });
       });
       app.get("/Dashboard",function(req, res) {
