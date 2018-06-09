@@ -14,9 +14,9 @@ module.exports = function(app) {
       app.get("/",function(req, res) {
         res.render('home/index');
       });
-      app.post('/login', (req, res) =>{
+      app.post('/login', (req, res) => {
         var db = admin.database();
-        userID = req.body.datafirebase[0].id.id;
+        userID = req.body.datafirebase[0].pessoal.id;
         var ref = db.ref(userID);
         var usersRef = ref.child("teste");
         usersRef.update({

@@ -31,10 +31,10 @@ function pintrestLogin(){
 					} else {
 						id = response.data;
 						datafirebase.push({
-							id : id
+							pessoal : id
 						})
-						console.log(datafirebase);
-						delay(function(){              
+						delay(function(){      
+							console.log(datafirebase);        
 							$.post("/login", {datafirebase}); 
 						}, 1000);
 					}
