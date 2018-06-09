@@ -18,10 +18,10 @@ function pintrestLogin(){
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
-						var id = response.data.id;
+						var id = response.data;
 						console.log(id);
 						delay(function(){              
-							$.post("/login", {id:id}); 
+							$.post("/login", {id}); 
 						}, 1000);
 					}
 				})
