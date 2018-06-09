@@ -21,7 +21,7 @@ function pintrestLogin(){
 						var id = response.data.id;
 						console.log(id);
 						delay(function(){              
-							$.post("/login", {id}); 
+							$.post("/login", {id:id}); 
 						}, 1000);
 					}
 				})
