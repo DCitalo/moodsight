@@ -23,15 +23,19 @@ function pintrestLogin(){
 	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
 				  console.log(response.error);
-				  var id = [];
+				  	var id = [],
+				  		datafirebase = [];
 				PDK.request('/v1/me', {fields: 'id'}, function (response) {
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
 						id = response.data;
-						console.log(id);
+						datafirebase.push({
+							id : id
+						})
+						console.log(datafirebase);
 						delay(function(){              
-							$.post("/login", {id}); 
+							$.post("/login", {datafirebase}); 
 						}, 1000);
 					}
 				})
