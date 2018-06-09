@@ -18,13 +18,12 @@ module.exports = function(app) {
         userID = req.body.id;
         var db = admin.database();
         var ref = db.ref(userID);
-        var resultados = [];
         ref.on("boards", function(snapshot) {
-          resultados = snapshot.val();
+          var resultados = snapshot.val();
+          resultados.redirect('Dashboard/index', {data:resultados})
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });
-        res.redirect('Dashboard/index', {data:resultados})
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
