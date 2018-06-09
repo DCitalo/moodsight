@@ -144,8 +144,8 @@ button{
   background-image: url('/img/banners-body-BC.png');
 }
 .bg-footer-BC{
-  background-image: url('/img/banner-BC.png');
-  background-size: contain;
+  background: url('/img/banner-BC.png')  no-repeat;
+  background-size: cover;
 }
 .bg-home{
   background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
