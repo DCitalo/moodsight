@@ -15,7 +15,7 @@ module.exports = function(app) {
         res.render('home/index');
       });
       app.post('/login', (req, res) =>{
-        userID = req.body.id;
+        var userID = req.body.id;
         var db = admin.database();
         var ref = db.ref(userID);
         var resultados = [];
