@@ -42,7 +42,6 @@ module.exports = function(app) {
               color: req.body.datafirebase[i].color
           })
         }
-        res.render('Dashboard/index', {id:userID})
         res.json({ ok: true });
       });
       app.get("/Dashboard",function(req, res) {
