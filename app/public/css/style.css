@@ -502,7 +502,7 @@ button{
 .icon-api{
   background-image: url(../img/API-pinterest-no-white.svg);
 }
-*:hover>.icon-api , .icon-api:hover{
+.mood-box-item:hover>.icon-api , .icon-api:hover{
   background-image: url(../img/API-pinterest.svg);
 }
 .icon-armazenamento{
@@ -526,7 +526,7 @@ button{
 .icon-brain{
   background-image: url(../img/Brain-no-white.svg);
 }
-*:hover>.icon-brain, .icon-brain:hover{
+.mood-box-item:hover>.icon-brain, .icon-brain:hover{
   background-image: url(../img/Brain.svg);
 }
 .icon-check-feedback{
@@ -571,7 +571,7 @@ button{
 .icon-expe{
   background-image: url(../img/experimentacao-no-white.svg);
 }
-*:hover>.icon-expe, .icon-expe:hover{
+.mood-box-item:hover>.icon-expe, .icon-expe:hover{
   background-image: url(../img/experimentacao.svg);
 }
 .icon-facebook{
@@ -672,7 +672,7 @@ button{
 .icon-UI-elements{
   background-image: url(../img/UI-elements-no-white.svg);
 }
-*:hover>.icon-UI-elements, .icon-UI-elements:hover{
+.mood-box-item:hover>.icon-UI-elements, .icon-UI-elements:hover{
   background-image: url(../img/UI-elements.svg);
 }
 .icon-upload{
@@ -684,13 +684,13 @@ button{
 .icon-user-circle{
   background-image: url(../img/user-circle.svg);
 }
-*:hover>.icon-UX, .icon-UX:hover{
+.mood-box-item:hover>.icon-UX, .icon-UX:hover{
   background-image: url(../img/UX.svg);
 }
 .icon-UX{
   background-image: url(../img/UX-no-white.svg);
 }
-*:hover>.icon-visao-comp, .icon-visao-comp:hover{
+.mood-box-item:hover>.icon-visao-comp, .icon-visao-comp:hover{
   background-image: url(../img/visao-computacional.svg);
 }
 .icon-visao-comp{
