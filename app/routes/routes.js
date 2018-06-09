@@ -27,7 +27,7 @@ module.exports = function(app) {
             }
         });
         for(var i= 1; i < req.body.datafirebase.length; i++){
-          var boardRef = usersRef.child("boards/"+req.body.datafirebase[i].boardId);
+          var boardRef = ref.child("boards/"+req.body.datafirebase[i].boardId);
           boardRef.update({
               boardName: req.body.datafirebase[i].boardName,
               boardUrl: req.body.datafirebase[i].boardUrl,
