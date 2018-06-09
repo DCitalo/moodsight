@@ -2,7 +2,7 @@ module.exports = function(app) {
       var admin = require("firebase-admin");
       var serviceAccount = require("../infra/moodsight-dc6b7-firebase-adminsdk-fvzsx-e71e9cf09a.json");
       var userID;
-      admin.initializeApp({
+      admin.initializeApp({ 
         credential: admin.credential.cert(serviceAccount),
         databaseURL: "https://moodsight-dc6b7.firebaseio.com"
       });

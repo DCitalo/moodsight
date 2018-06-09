@@ -6,7 +6,7 @@ var delay = (function(){
 	};
   })(); 
 function pintrestLogin(){
-	window.pAsyncInit = function() {
+	window.pAsyncInit = function() { 
 	    PDK.init({
 	        appId: "4956315507922840393",
 	        cookie: true
@@ -18,7 +18,7 @@ function pintrestLogin(){
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
-						var id = response.data;
+						var id = response.data.id;
 						console.log(id);
 						delay(function(){    
 							console.log(datafirebase)           
