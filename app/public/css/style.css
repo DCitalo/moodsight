@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
 acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend {
   vertical-align: baseline;
+  font-family: inherit;
   font-weight: inherit;
   font-style: inherit;
   color: inherit;
@@ -86,22 +87,22 @@ button{
   font-size: 1em;
 }
 .tamfont2{
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 .tamfont3{
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .tamfont4{
-  font-size: 2.5em;
+  font-size: 1.75em;
 }
 .tamfont5 {
-  font-size: 3em;
+  font-size: 2em;
 }
 .tamfont6 {
-  font-size: 3.5em;
+  font-size: 2.5em;
 }
 .tamfont7 {
-  font-size: 4em;
+  font-size: 3em;
 }
 .tamfont8 {
   font-size: 4.5em;
@@ -133,9 +134,21 @@ button{
 .bg-alert{
   background-color: #FA4941;
 }
+.bg-pattern-1{
+  background: url('/img/bg-pattern.png');
+}
 .bg-home{
   background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
   background-size: contain;
+}
+.bg-gradient-1{
+  background-image: linear-gradient(299deg, #ff009c, #ff005a 96%);
+}
+.bg-gradient-2{
+  background-image: linear-gradient(299deg, #ec15aa, #f96463);
+}
+.bg-gradient-3{
+  background-image: linear-gradient(45deg, #a767ff, #f60a9e);
 }
 .bgcolor-1{
   background-color:#f60a9d;
@@ -159,7 +172,7 @@ button{
   background-color:#232027;
 }
 .bgcolor-8{
-  background-color:#423f45;
+  background-color:#2c223b;
 }
 .bg-icon-footer{
   background-color: rgba(255, 255, 255, 0.8);
@@ -256,6 +269,9 @@ button{
 .mx1400{
   max-width: 1400px;
 }
+.mx860{
+  max-width: 860px;
+}
 .CB{
   margin-right: auto;
   margin-left: auto;
@@ -313,6 +329,20 @@ button{
 .align-right{
   -webkit-align-content:  flex-start;
           align-content:  flex-start; 
+}
+/* ELEMENTOS PADRÕES */
+.text-pages {
+  padding: 0 0 0 50px;
+}
+.paragraphList {
+  width: calc(100% - 15px);
+  display: block;
+  margin: 10px 0px 10px 15px;
+  margin-left: 15px;
+}
+.paragraphList::before {
+  content: "-";
+  margin-right: 5px;
 }
 /* BOTOES */
   .btn{
@@ -374,8 +404,9 @@ button{
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 10px solid #423f45;
+  border-right: 10px solid #232027;
 }
+/* FIM ELEMENTOS PADRÕES */
 /*---------------------- FIM PADROES ------------------*/
 /*---------------------- CONTAINER --------------------*/
 .h-50{
@@ -386,6 +417,9 @@ button{
 }
 .w-100{
   width:100%;
+}
+.h-100{
+  height: 100%;
 }
 .container-FH{
   margin-left: 130px;
@@ -698,19 +732,16 @@ button{
 }
 /*---------------------- FIM MENU -------------------*/
 /*---------------------- CONTEUDO -----------------------*/
-#conteudo-header{
-  margin-left: 130px;
-  width: calc(100% - 130px);
-  min-height: calc(50% + 200px);
-  padding: 40px 40px 200px;
-  background-image: linear-gradient(45deg, #a767ff, #f60a9e);
-}
-#conteudo-body{
+.conteudo-body{
   margin-left: 130px;
   width: calc(100% - 130px);
   min-height: 100%;
-  padding: 40px 0px 0px;
-  background: url('/img/bg-pattern.png');
+}
+#conteudo-header{
+  margin-left: 130px;
+  width: calc(100% - 130px);
+  min-height: calc(50% + 240px);
+  padding: 40px 40px 200px;
 }
 /*---------------------- FIM CONTEUDO -------------------*/
 /*---------------------- HOME ---------------------------*/
@@ -813,19 +844,26 @@ button{
 }
 /*---------------------- FIM HOME -----------------------*/
 /*---------------------- BIBLIOTECA -----------------------*/
+.sub-title {
+  margin: 10px 0px 10px 50px;
+}
+.intro{
+  margin: 10px 0px 10px 50px;
+}
 .car{
   overflow: hidden;
-  bottom: -200px;
+  bottom: -260px;
   left:40px;
   padding: 0 20px;
   width: calc(100% - 80px);
 }
 .car-cont{
   width: calc(250% + 40px);
-  height: 450px;
+  height: 500px;
   -webkit-transition: 2s ease;
   transition: 2s ease;
   transform: translateX(0%);
+  position: relative;
 }
 .car-item{
   width: calc(100%/10 - 40px);
@@ -833,23 +871,41 @@ button{
   margin-top: 25px;
   margin-bottom: 25px;
   box-shadow: 0px 6px 16px 0 rgba(0, 0, 0, 0.8);
-  padding: 40px 20px 0;
-  border-radius: 10px;
+  padding: 50px 20px 0;
+  border-radius: 10px 10px 0px 0px;
 }
-.car-title{
-  width: 80%;
+.car-item:hover{
+  background-image: linear-gradient(299deg, #ec15aa, #f96463);
+}
+.car-item::after{
+  content: '';
+  width: 100%;
+  height: 15px;
+  background: #0fe0ba;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.8);
+}
+.car-item:hover::after{
+  background: #FFFFFF;
+}
+.car-number{
+  width: 50px;
   height: 50px;
   border-radius: 50px;
-  left: 50%;
+  left: 15px;
   transform: translateX(-50%);
   top: -25px;
   padding: 17px 20px;
 }
-.car-sub-title{
-  height: 30%;
+.car-title{
+  height: 15%;
 }
 .car-text{
-  height: 70%;
+  height: 80%;
+  margin-top: 5%;
 }
 .car-controls {
   height: 25px;
@@ -858,6 +914,15 @@ button{
   top: 30%;
   width: 100%;
   left: 4px;
+}
+.setaE{
+  float: left;
+}
+.setaD{
+  float: right;
+}
+.biblioteca-conteudo{
+  padding: 300px 40px 40px 40px;
 }
 /*---------------------- FIM BIBLIOTECA -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/

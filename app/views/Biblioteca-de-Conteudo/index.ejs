@@ -1,81 +1,183 @@
 <!DOCTYPE html>
 <head>
   <title>MoodSigth - Biblioteca-de-Conteudo</title>
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <% include ../commom/tags-header.ejs %>
 </head>
 <body>
   <% include ../commom/header.ejs %> 
-  <section id="conteudo-header" class="PR">
-    <div class="w-70 DF FW">
-      <h1 class="Upper font-1 bold tamfont5 title w-100 DF CS color-1"><i class="icon-medium icon-biblioteca-conteudo-col"></i>BIBLIOTECA DE CONTEÚDO</h1>
+  <section id="conteudo-header" class="PR bg-gradient-3">
+    <div class="w-70 h-100 DF FW tamfont1">
+      <h1 class="Upper font-1 bold tamfont5 title w-100 DF CS color-1 PR"><i class="icon-medium icon-biblioteca-conteudo-col"></i>BIBLIOTECA DE CONTEÚDO</h1>
       <h4 class="Upper font-1 tamfont3 bold sub-title color-1">heurísticas DE USABILIDADE</h4>
-      <p class="tamfont3 font-1 color-1">Usabilidade é um termo usado para definir a facilidade com que as pessoas podem empregar uma ferramenta ou objeto a fim de realizar uma tarefa específica e importante. A usabilidade pode também se referir aos métodos de mensuração da usabilidade e ao estudo dos princípios por trás da eficiência percebida de um objeto.</p>
+      <p class="tamfont2 font-1 color-1 mx860 intro">Usabilidade é um termo usado para definir a facilidade com que as pessoas podem empregar uma ferramenta ou objeto a fim de realizar uma tarefa específica e importante. A usabilidade pode também se referir aos métodos de mensuração da usabilidade e ao estudo dos princípios por trás da eficiência percebida de um objeto.</p>
     </div>
     <div class="car PA">
-      <ul data-car="0" class="car-cont DF FW CSP">
+      <ul data-car="0" class="car-cont DF FW CSP tamfont3">
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Visibilidade</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Visibilidade de Status do Sistema</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Você precisa se certificar de que a interface sempre informe ao usuário o que está acontecendo,ou seja, todas as ações precisam de feedback instantâneo para orientá-lo. </p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">1</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Visibilidade de Status do Sistema</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Você precisa se certificar de que a interface sempre informe ao usuário o que está acontecendo,ou seja, todas as ações precisam de feedback instantâneo para orientá-lo. </p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Relacionamento</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Relacionamento entre a interface do sistema e o mundo real</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Não usar palavras de sistema, que não fazem sentido pro usuário. Toda a comunicação do sistema precisa ser contextualizada ao usuário, e ser coerente com o chamado modelo mental do usuário. </p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">2</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Relacionamento entre a interface do sistema e o mundo real</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Não usar palavras de sistema, que não fazem sentido pro usuário. Toda a comunicação do sistema precisa ser contextualizada ao usuário, e ser coerente com o chamado modelo mental do usuário. </p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Liberdade</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Liberdade e controle do usuário</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Facilite as “saídas de emergência” para o usuário, permitindo desfazer ou refazer a ação no sistema e retornar ao ponto anterior, quando estiver perdido ou em situações inesperadas.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">3</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Liberdade e controle do usuário</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Facilite as “saídas de emergência” para o usuário, permitindo desfazer ou refazer a ação no sistema e retornar ao ponto anterior, quando estiver perdido ou em situações inesperadas.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Consistência</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Consistência</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Fale a mesma língua o tempo todo, e nunca identifique uma mesma ação com ícones ou palavras diferentes. Trate coisas similares, da mesma maneira, facilitando a identificação do usuário.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">4</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Consistência</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Fale a mesma língua o tempo todo, e nunca identifique uma mesma ação com ícones ou palavras diferentes. Trate coisas similares, da mesma maneira, facilitando a identificação do usuário.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Prevenção</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Prevenção de erros</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Na tradução livre das palavras do próprio Nielsen “Ainda melhor que uma boa mensagem de erro é um design cuidadoso que possa prevenir esses erros”. Por exemplo, ações definitivas, como deleções ou solicitações podem vir acompanhadas de um checkbox ou uma mensagem de confirmação.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">5</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Prevenção de erros</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Na tradução livre das palavras do próprio Nielsen “Ainda melhor que uma boa mensagem de erro é um design cuidadoso que possa prevenir esses erros”. Por exemplo, ações definitivas, como deleções ou solicitações podem vir acompanhadas de um checkbox ou uma mensagem de confirmação.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Reconhecimento</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Reconhecimento ao invés de lembrança</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Evite acionar a memória do usuário o tempo inteiro, fazendo com que cada ação precise ser revista mentalmente antes de ser executada. Permita que a interface ofereça ajuda contextual, e informações capazes de orientar as ações do usuário – ou seja – que o sistema dialogue com o usuário.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">6</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Reconhecimento ao invés de lembrança</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Evite acionar a memória do usuário o tempo inteiro, fazendo com que cada ação precise ser revista mentalmente antes de ser executada. Permita que a interface ofereça ajuda contextual, e informações capazes de orientar as ações do usuário – ou seja – que o sistema dialogue com o usuário.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Flexibilidade</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Flexibilidade e eficiência de uso</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">O sistema precisa ser fácil para usuários leigos, mas flexível o bastante para se tornar ágil à usuários avançados. Essa flexibilidade pode ser conseguida com a permissão de teclas de atalhos, por exemplo. No caso de websites, uso de máscaras e navegação com tab em formulários são outros exemplos.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">7</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Flexibilidade e eficiência de uso</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">O sistema precisa ser fácil para usuários leigos, mas flexível o bastante para se tornar ágil à usuários avançados. Essa flexibilidade pode ser conseguida com a permissão de teclas de atalhos, por exemplo. No caso de websites, uso de máscaras e navegação com tab em formulários são outros exemplos.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Minimalista</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Estética e design minimalista</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Evite que os textos e o design fale mais do que o usuário necessita saber. Os “diálogos” do sistema precisam ser simples, diretos e naturais, presentes nos momentos em que são necessários.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">8</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Estética e design minimalista</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Evite que os textos e o design fale mais do que o usuário necessita saber. Os “diálogos” do sistema precisam ser simples, diretos e naturais, presentes nos momentos em que são necessários.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Mensagens</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Ajude os usuários a reconhecer, diagnosticar e sanar erros</h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">As mensagens de erro do sistema devem possuir uma redação simples e clara que ao invés de intimidar o usuário com o erro, indique uma saída construtiva ou possível solução.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">9</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Ajude os usuários a reconhecer, diagnosticar e sanar erros</h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">As mensagens de erro do sistema devem possuir uma redação simples e clara que ao invés de intimidar o usuário com o erro, indique uma saída construtiva ou possível solução.</p>
         </li>
         <li class="PR car-item bgcolor-8 DIB">
-          <h5 class="PA car-title font-1 color-2 DB bgcolor-6 tamfont5 text-center">Ajuda</h5>
-          <h6 class="car-sub-title bold font-1 color-1 text-center tamfont4 LH2 DF FW CSS">Ajuda e documentação </h6>
-          <p class="bold font-1 color-1 tamfont3 text-center car-text LH3 DF FW CSS">Um bom design deveria evitar ao máximo à necessidade de ajuda na utilização do sistema. Ainda assim, um bom conjunto de documentação e ajuda deve ser utilizado para orientar o usuário em caso de dúvida. Deve ser visível, facilmente acessada, e com oferecer uma ferramenta de busca na ajuda.</p>
+          <span class="PA car-number font-1 color-2 DB bgcolor-6 tamfont4 text-center">10</span>
+          <h4 class="car-title bold font-1 color-1 text-center tamfont3 LH2 DF FW CSS">Ajuda e documentação </h4>
+          <p class="bold font-1 color-1 tamfont2 text-center car-text LH3 DF FW CSS">Um bom design deveria evitar ao máximo à necessidade de ajuda na utilização do sistema. Ainda assim, um bom conjunto de documentação e ajuda deve ser utilizado para orientar o usuário em caso de dúvida. Deve ser visível, facilmente acessada, e com oferecer uma ferramenta de busca na ajuda.</p>
         </li>
       </ul>
-      <ul class="setas PA DF FW CSP">
-        <li id="setaE" class="btn"><i class="icon-small icon-seta-esquerda"></i></li>
-        <li id="setaD" class="btn"><i class="icon-small icon-seta-direita"></i></li>
+      <ul class="setas PA">
+        <li id="setaE" class="btn setaE"><i class="icon-small icon-seta-esquerda"></i></li>
+        <li id="setaD" class="btn setaD"><i class="icon-small icon-seta-direita"></i></li>
       </ul>
     </div>
   </section>
-  <section id="conteudo-body">
-
+  <section class="biblioteca-conteudo conteudo-body bg-pattern-1">
+    <p class="tamfont3 font-1 color-2 mx860 text-pages LH3">
+      Além das dez heurísticas de Nielsen, existem outros principios para implementar interfaces eficazes.<br>
+      <strong class="bold tamfont2">Apresente as etapas do processo</strong><br>      
+      Sequências de ações devem ser organizadas em grupos com início, meio e fim. O feedback informativo ao completar um grupo de ações dá ao usuário satisfação de realização, senso de distinção e uma indicação que o caminho é claro para se preparar para o próximo conjunto de ações.<br><br>     
+      <strong class="bold tamfont2">Faça uma navegação clara e eficiente</strong><br>      
+      Uma boa navegação ajuda o usuário a saber onde ele está e para onde quer ir. Os segredos de uma navegação eficiente incluem:<br>
+        <span class="paragraphList tamfont1">Organização - separa as areas mais e menos importantes, reflete como as pessoas pensam e as prioridades do negócio;</span>
+        <span class="paragraphList tamfont1">Dentro do "triângulo de ouro";</span>
+        <span class="paragraphList tamfont1">Compacta, para deixar espaço para o conteúdo;</span>
+        <span class="paragraphList tamfont1">Rótulos (labels) curtos;</span>
+        <span class="paragraphList tamfont1">Mostra visualmente, com clareza, onde o usuário está; e</span>
+        <span class="paragraphList tamfont1">Exemplo navegação clara</span><br><br>
+      <strong class="bold tamfont2">Título das páginas reforça a navegação e orienta o usuário</strong><br>
+      Os elementos que tornam o título das páginas eficaz são: 
+        <span class="paragraphList tamfont1">(Quase) sempre estão no mesmo lugar;</span>
+        <span class="paragraphList tamfont1">Está destacado visulamente;</span>
+        <span class="paragraphList tamfont1">É curto;</span>
+        <span class="paragraphList tamfont1">O nome coincide com o que está na navegação;</span>
+        <span class="paragraphList tamfont1">É consistente na capitalização das letras.</span><br><br>
+      <strong class="bold tamfont2">Botões e Links</strong><br>
+      Normalmente, use botões para tarefas (ações), principalmente as primárias, e links para navegação. <br><br>
+      <strong class="bold tamfont2">Separe suas tarefas primárias, secundárias e terciárias</strong><br>
+      Dê às tarefas primárias lugar de destaque e foco visual. Tente limitar a uma ou duas tarefas primárias por página. <br><br>
+      <strong class="bold tamfont2">Deixe sua interface rápida</strong><br>
+      A aqui não estamos falando só de tempo de carregamento! Ela deve ser fácil de escanear e ver o que fazer, possibilitar o mínimo de cliques para ir de um lugar a outro ou para completar uma tarefa. <br><br>
+      <strong class="bold tamfont2">Mantenha proximidade</strong><br>
+      Itens relacionados devem se manter próximos. <br><br>
+      <strong class="bold tamfont2">Seletivamente copie interações comuns e já comprovadas</strong><br>
+      Inove só onde há algo único. <br><br>
+      <strong class="bold tamfont2">Design visual deve ter total conexão com o de interação</strong><br>
+      O design visual deve ajudar o de interação a atender os requisitos do produto. Nunca o design visual pode estragar um trabalho de interação bem feito. <br><br>
+      <strong class="bold tamfont2">Menos é mais</strong><br>
+      Interfaces do Usuário incríveis devem ser quase invisíveis.</p>
   </section>
-  <div id="result"></div>
+  <section class="conteudo-body P-400 bg-gradient-1">
+    <p class="tamfont3 font-1 color-1 mx860 text-pages LH3">
+      <strong class="bold tamfont2">Padrões de Design em user interface</strong><br> 
+      Os padrões de design de User Interface são soluções recorrentes que resolvem problemas comuns de um projeto. Os padrões de design são pontos de referência padronizados para o designers de interface.<br>     
+    </p>
+  </section>
+  <section class="conteudo-body bgcolor-6 P-400">
+    <p class="tamfont2 font-1 color-2 mx860 text-pages LH3">
+      <strong class="bold tamfont2">Padrões de Interação Comportamentais</strong><br><br>
+      Padrões de uso normalmente são identificados através da observação de como os usuários usam os elementos de uma interface e em quão útil esses elementos, e seus comportamentos, estão sendo para que o usuário complete suas tarefas mais facilmente e mais eficientemente. Após descobrir esses padrões de uso, criamos os padrões de interações para suportar esses padrões de uso comuns.<br><br>
+      Por exemplo, softwares de CRM normalmente vêm com uma opção "novo" para criar um novo contato. Uma vez clicado em "novo" aparece o formulário com as opções "salvar" e "cancelar".<br><br>
+      Observando como os usuários usavam esse tipo de ferramenta, descobriu-se que o padrão de uso era, na maioria das vezes, após clicar em "salvar", clicar em "novo" para cadastrar mais um contato. Percebendo esse padrão de uso, apareceu um terceiro botão no formulário, o "salvar e novo":<br><br>
+      A partir daí, esse comportamento pôde ser mapeado em um novo padrão de design de interação.<br><br>
+      Aqui citamos alguns padrões conhecidos de design de interação, divididos em sete categorias principais de padrões de uso: <br>
+      <span class="paragraphList tamfont1">Exploratório</span>
+      <span class="paragraphList tamfont1">Navegação em grandes bases de dados</span>
+      <span class="paragraphList tamfont1">Busca avançada</span>
+      <span class="paragraphList tamfont1">Entrada e alteração de dados</span>
+      <span class="paragraphList tamfont1">Informação centralizada</span>
+      <span class="paragraphList tamfont1">Guias</span>
+      <span class="paragraphList tamfont1">Comunidade </span>
+    </p>
+  </section>
+  <section class="conteudo-body DF FW bgcolor-6 P-400">
+    <div class="w-50">
+      <p class="tamfont2 font-1 color-2 mx860 text-pages LH3">
+        <strong class="bold tamfont2">Recursos</strong><br><br>
+        <a class="tamfont1" href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns">
+          <span class="bold tamfont1">10 Sites bons de padroes de Design</span><br>
+        https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns</a><br><br>
+        <a href="https://www.toptal.com/designers/subtlepatterns/" class="tamfont1">
+          <span class="bold tamfont1">Subtle patterns - padõres variados para aplicação em fundos.</span><br> https://www.toptal.com/designers/subtlepatterns/</a><br><br>
+        <a href="https://www.caelum.com.br/apostila-ux-usabilidade-mobile-web/" class="tamfont1">
+          <span class="bold tamfont1">Apostila Caelum - UX e Usabilidade aplicados em Mobile e Web.</span><br> https://www.caelum.com.br/apostila-ux-usabilidade-mobile-web/</a><br><br>
+        <a href="http://www.dubberly.com/concept-maps/3x4grid.html" class="tamfont1">
+          <span class="bold tamfont1">The 892 unique ways to partition a 3 x 4 grid</span><br>http://www.dubberly.com/concept-maps/3x4grid.html</a><br><br>
+        <a href="https://lawsofux.com/" class="tamfont1">
+          <span class="bold tamfont1">LAWS OF UX</span><br>
+          https://lawsofux.com/</a>
+      </p>
+    </div>
+    <div class="w-50">
+      <p class="tamfont2 font-1 color-2 mx860 text-pages LH3">
+        <strong class="bold tamfont2">Matérias</strong><br><br>
+        <a href="https://uxdesign.cc/ai-and-human-centered-design-whats-the-future-5c88f523c07a" class="tamfont1">
+          <span class="bold tamfont1">AI and Human-Centered Design: What’s the Future?</span><br>
+          https://uxdesign.cc/ai-and-human-centered-design-whats-the-future-5c88f523c07a</a><br><br>
+        <a href="http://tiny.cc/xldzsy" class="tamfont1">
+          <span class="bold tamfont1">Design Thinking: a abordagem centrada no ser humano</span><br>http://tiny.cc/xldzsy</a><br><br>
+        <a href="https://www.artefactgroup.com/articles/ai-designer-2025/" class="tamfont1">
+          <span class="bold tamfont1">AI and design: What will the designer of 2025 look like?</span><br>https://www.artefactgroup.com/articles/ai-designer-2025/</a><br><br>
+        <a href="https://airbnb.design/sketching-interfaces/" class="tamfont1">
+          <span class="bold tamfont1">Sketching Interfaces</span><br>https://airbnb.design/sketching-interfaces/</a><br><br>
+        <a href="https://www.wired.com/2016/10/elbo-chair-autodesk-algorithm/" class="tamfont1">
+          <span class="bold tamfont1">SO. ALGORITHMS ARE DESIGNING CHAIRS NOW</span><br>https://www.wired.com/2016/10/elbo-chair-autodesk-algorithm/</a>
+      </p>
+    </div>
+    <div class="w-50 text-center align-center">
+      <p class="tamfont2 font-1 color-2 mx860 text-pages LH3">
+        <strong class="bold tamfont2">Artigos</strong><br><br>
+        <a href="https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns" class="tamfont1">
+          <span class="bold tamfont1">10 Sites bons de padroes de Design</span><br>https://www.interaction-design.org/literature/article/10-great-sites-for-ui-design-patterns</a><br><br>
+        <a href="https://www.toptal.com/designers/subtlepatterns/" class="tamfont1">
+          <span class="bold tamfont1">Subtle patterns - padõres variados para aplicação em fundos.</span><br>https://www.toptal.com/designers/subtlepatterns/</a><br><br>
+        <a href="https://www.caelum.com.br/apostila-ux-usabilidade-mobile-web/" class="tamfont1">
+          <span class="bold tamfont1">Apostila Caelum - UX e Usabilidade aplicados em Mobile e Web</span><br>https://www.caelum.com.br/apostila-ux-usabilidade-mobile-web/</a><br><br>
+        <a href="http://www.dubberly.com/concept-maps/3x4grid.html" class="tamfont1">
+          <span class="bold tamfont1">The 892 unique ways to partition a 3 x 4 grid</span><br>http://www.dubberly.com/concept-maps/3x4grid.html</a>
+      </p>
+    </div>
+  </section>
   <% include ../commom/footer.ejs %>
 </body>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/default.js"></script>
+  <% include ../commom/tags-footer.ejs %>
+  
 </html>
