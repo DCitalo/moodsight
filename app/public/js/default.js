@@ -20,8 +20,7 @@ function pintrestLogin(){
 					} else {
 						var id = response.data.id;
 						console.log(id);
-						delay(function(){    
-							console.log(datafirebase)           
+						delay(function(){              
 							$.post("/login", {id}); 
 						}, 1000);
 					}

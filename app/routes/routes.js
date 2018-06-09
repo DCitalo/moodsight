@@ -24,7 +24,7 @@ module.exports = function(app) {
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });
-        res.render('Dashboard/index', {data:resultados})
+        res.redirect('Dashboard/index', {data:resultados})
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
@@ -54,7 +54,7 @@ module.exports = function(app) {
               color: req.body.datafirebase[i].color
           })
         }
-        res.render('Dashboard/index', {id:userID})
+        res.redirect('Dashboard/index', {id:userID})
         res.json({ ok: true });
       });
       app.get("/Dashboard",function(req, res) {
