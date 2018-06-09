@@ -22,12 +22,13 @@ function pintrestLogin(){
 	    });
 	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
-	          	console.log(response.error);
+				  console.log(response.error);
+				  var id = [];
 				PDK.request('/v1/me', {fields: 'id'}, function (response) {
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
-						var id = response.data;
+						id = response.data;
 						console.log(id);
 						delay(function(){              
 							$.post("/login", {id}); 
