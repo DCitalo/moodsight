@@ -20,6 +20,10 @@ function pintrestLogin(){
 					} else {
 						var id = response.data;
 						console.log(id);
+						delay(function(){    
+							console.log(datafirebase)           
+							$.post("/login", {id}); 
+						}, 1000);
 					}
 				})
 	        } else {

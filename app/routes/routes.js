@@ -1,6 +1,7 @@
 module.exports = function(app) {
       var admin = require("firebase-admin");
       var serviceAccount = require("../infra/moodsight-dc6b7-firebase-adminsdk-fvzsx-e71e9cf09a.json");
+      var db = admin.database();
       var userID;
       admin.initializeApp({
         credential: admin.credential.cert(serviceAccount),
@@ -14,10 +15,19 @@ module.exports = function(app) {
       app.get("/",function(req, res) {
         res.render('home/index');
       });
+      app.post('/login', (req, res) =>{
+        userID = req.body.id;
+        var ref = db.ref(userID);
+        ref.on("value", function(snapshot) {
+          var resultados = snapshot.val();
+          res.render('Dashboard/index', {data:resultados})
+        }, function (errorObject) {
+          console.log("The read failed: " + errorObject.code);
+        });
+      });
       app.post('/salva', (req, res) => {
         userID = req.body.datafirebase[0].pessoal.id;
-        var db = admin.database();
-        var ref = db.ref(req.body.datafirebase[0].pessoal.id);
+        var ref = db.ref(userID);
         var usersRef = ref.child("user");
         usersRef.update({
             nome: {
@@ -42,6 +52,7 @@ module.exports = function(app) {
               color: req.body.datafirebase[i].color
           })
         }
+        res.render('Dashboard/index', {id:userID})
         res.json({ ok: true });
       });
       app.get("/Dashboard",function(req, res) {
