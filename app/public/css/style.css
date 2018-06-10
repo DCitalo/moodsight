@@ -1001,7 +1001,7 @@ button{
 /*---------------------- DASHBOARD -----------------------*/
 .topUserName{
   height: 40px;
-  padding:30px 50px 0 0;
+  padding:30px 0px 0 0;
   width: 10%;
   min-width: 200px;
 }
