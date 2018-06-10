@@ -41,7 +41,7 @@ function pintrestLogin(){
 						var userRef = firebase.database().ref(id);
 						var obj;
 						userRef.on('value', function(snapshot) {
-							obj = JSON.stringify(snapshot.val());
+							obj += JSON.stringify(snapshot.val());
 						});
 						console.log(obj)
 						delay(function(){              
