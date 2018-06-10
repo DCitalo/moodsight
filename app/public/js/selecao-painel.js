@@ -1,18 +1,4 @@
-var config = {
-    apiKey: "AIzaSyBr1s64aEZ1TApJSuod9nIE8-fqjKPdtoo",
-    authDomain: "moodsight-dc6b7.firebaseapp.com",
-    databaseURL: "https://moodsight-dc6b7.firebaseio.com",
-    projectId: "moodsight-dc6b7",
-    storageBucket: "moodsight-dc6b7.appspot.com",
-    messagingSenderId: "755238016909"
-  };
-firebase.initializeApp(config);
-var database = firebase.database(); 
-var data = JSON.parse(Cookies.get("basket-data"));        
-var userRef = firebase.database().ref(id);
-userRef.on('value', function(snapshot) {
-	Cookies.set("basket-data", JSON.stringify(snapshot.val()));
-});  
+var data = JSON.parse(Cookies.get("basket-data")); 
 console.log(data)
 $(document).ready(function(){
     var NomeUsuario = data.user.nome.nome;
