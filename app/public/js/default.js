@@ -1,4 +1,3 @@
-// Initialize Firebase
 var config = {
     apiKey: "AIzaSyBr1s64aEZ1TApJSuod9nIE8-fqjKPdtoo",
     authDomain: "moodsight-dc6b7.firebaseapp.com",
@@ -7,13 +6,9 @@ var config = {
     storageBucket: "moodsight-dc6b7.appspot.com",
     messagingSenderId: "755238016909"
   };
-  firebase.initializeApp(config);
-  var userId = firebase.auth().currentUser.uid;
-return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  // ...
-});
+firebase.initializeApp(config);
 var database = firebase.database();
+
 var delay = (function(){
 	var timer = 0;
 	return function(callback, ms){
@@ -38,20 +33,19 @@ function pintrestLogin(){
 	    });
 	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
-				  console.log(response.error);
-				  	var id = [],
-				  		datafirebase = [];
 				PDK.request('/v1/me', {fields: 'id'}, function (response) {
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
-						id = response.data;
+						var id = response.data.id;
 						datafirebase.push({
 							pessoal : id
 						})
-						delay(function(){      
-							console.log(datafirebase);        
-							$.post("/login", {datafirebase}); 
+						delay(function(){              
+							var starCountRef = firebase.database().ref(id);
+							starCountRef.on('value', function(snapshot) {
+								window.location.replace('/Dashboard', {data: snapshot.val()});
+							}); 
 						}, 1000);
 					}
 				})
@@ -180,7 +174,6 @@ var http = new XMLHttpRequest();
 http.onreadystatechange = function() {
 	if(http.readyState == 4 && http.status == 200) {
 		var palette = JSON.parse(http.responseText).result;
-		console.log(palette)
 	}
 }
 
