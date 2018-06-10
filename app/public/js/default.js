@@ -37,14 +37,13 @@ function pintrestLogin(){
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
-						var id = response.data.id;
-						delay(function(){              
-							var userRef = firebase.database().ref(id);
-							userRef.on('value', function(snapshot) {
-								Cookies.set("basket-data", JSON.stringify(snapshot.val()), { expires: 7 });
-								$.post("/login");					
-							}); 
-						}, 1000);
+						var id = response.data.id; 
+						console.log("ok")           
+						var userRef = firebase.database().ref(id);
+						userRef.on('value', function(snapshot) {
+							Cookies.set("basket-data", JSON.stringify(snapshot.val()), { expires: 7 });
+							$.post("/login");					
+						}); 
 					}
 				})
 	        } else {
