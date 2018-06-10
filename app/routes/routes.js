@@ -13,7 +13,7 @@ module.exports = function(app) {
         next();
       });
       app.get("/",function(req, res) {
-        res.render('home/index');
+        res.render('home/index', {login:login});
       });
       app.post('/login', (req, res) => {
         login = true;     
@@ -54,24 +54,24 @@ module.exports = function(app) {
         res.render('Dashboard/index', {login:login});
       });
       app.get("/Biblioteca-de-Conteudo",function(req, res) {
-        res.render('Biblioteca-de-Conteudo/index');
+        res.render('Biblioteca-de-Conteudo/index', {login:login});
       });
       app.get("/Ajuda",function(req, res) {
-        res.render('Ajuda/index');
+        res.render('Ajuda/index', {login:login});
       });
       app.get("/Contato",function(req, res) {
-        res.render('Contato/index');
+        res.render('Contato/index', {login:login});
       });    
       app.get("/Sobre",function(req, res) {
-        res.render('Sobre/index');
+        res.render('Sobre/index', {login:login});
       });    
       app.get("/Conta",function(req, res) {
-        res.render('Sobre/index');
+        res.render('Sobre/index', {login:login});
       });    
       app.get("/Material-Kits",function(req, res) {
-        res.render('Sobre/index');
+        res.render('Sobre/index', {login:login});
       });    
       app.get("/Projetos-Salvos",function(req, res) {
-        res.render('Sobre/index');
+        res.render('Sobre/index', {login:login});
       });  
 }
