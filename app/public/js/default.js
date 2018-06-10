@@ -33,8 +33,21 @@ function pintrestLogin(){
 	    });
 	    PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 	        if (!response || response.error) {
-				
-				PDK.logout();
+				PDK.request('/v1/me', {fields: 'id'}, function (response) {
+					if (!response || response.error) {
+						console.log(response.error);
+					} else {
+						var id = response.data.id;
+						delay(function(){              
+							var userRef = firebase.database().ref(id);
+							userRef.on('value', function(snapshot) {
+								Cookies.set("basket-data", JSON.stringify(snapshot.val()));
+								$.post("/login");					
+								window.location.replace('/Dashboard');
+							}); 
+						}, 1000);
+					}
+				})
 	        } else {
 				var pins = [],
 					databoard = {},
