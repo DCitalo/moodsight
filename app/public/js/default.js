@@ -41,14 +41,11 @@ function pintrestLogin(){
 						var userRef = firebase.database().ref(id);
 						userRef.on('value', function(snapshot) {
 							console.log(snapshot.val())
-							Cookies.set('dataUser1', JSON.stringify(snapshot.val()));
-							Cookies.set('dataUser2', JSON.stringify(snapshot));
-							Cookies.set('dataUser3', snapshot.val());
-							Cookies.set('dataUser4', snapshot);
-							Cookies.set('dataUser5', {data: snapshot.val()});
-							Cookies.set('dataUser6', {data: snapshot});
-							Cookies.set('dataUser7', {data: JSON.stringify(snapshot)});
-							Cookies.set('dataUser8', {data: JSON.stringify(snapshot.val())});
+							var myvar = 'foo';
+							var obj =  JSON.stringify(snapshot.val()) ;
+							obj[myvar] = 'bar';
+							Cookies.set('name', obj);
+							Cookies.set('name2', 'teste');
 						});
 						delay(function(){              
 							$.post("/login");								
