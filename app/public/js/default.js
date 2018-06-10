@@ -41,9 +41,9 @@ function pintrestLogin(){
 						var userRef = firebase.database().ref(id);
 						userRef.on('value', function(snapshot) {
 							Cookies.set("dataUser", JSON.stringify(snapshot.val()));
-							console.log("ok")    
+							console.log(snapshot.val())    
 							$.post("/login");	
-							window.location.replace('/Dashboard');				
+							//window.location.replace('/Dashboard');				
 						}); 
 					}
 				})
