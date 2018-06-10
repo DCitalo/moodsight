@@ -39,7 +39,7 @@ function pintrestLogin(){
 					} else {
 						var id = response.data.id;
 						var userRef = firebase.database().ref(id);
-						var obj ={};
+						var obj;
 						userRef.on('value', function(snapshot) {
 							obj = JSON.stringify(snapshot.val());
 						});
