@@ -1008,6 +1008,12 @@ button{
 .topUserName > p{
   margin: 0 0 0 10px
 } 
+.pin-img {
+  width: 220px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 10px;
+}
 /*---------------------- FIM DASHBOARD -----------------------*/
 
 /*---------------------- RESPONSIVO -------------------*/
