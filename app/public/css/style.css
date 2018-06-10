@@ -998,6 +998,18 @@ button{
 }
 /*tabs*/
 /*---------------------- FIM BIBLIOTECA -----------------------*/
+/*---------------------- DASHBOARD -----------------------*/
+.topUserName{
+  height: 40px;
+  padding:30px 50px 0 0;
+  width: 10%;
+  min-width: 200px;
+}
+.topUserName > p{
+  margin: 0 0 0 10px
+} 
+/*---------------------- FIM DASHBOARD -----------------------*/
+
 /*---------------------- RESPONSIVO -------------------*/
 @media screen and (max-width: 1080px){
   /*------PADROES------*/

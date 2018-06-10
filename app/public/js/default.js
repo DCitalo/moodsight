@@ -39,8 +39,8 @@ function pintrestLogin(){
 					} else {
 						var id = response.data.id;
 						delay(function(){              
-							var starCountRef = firebase.database().ref(id);
-							starCountRef.on('value', function(snapshot) {
+							var userRef = firebase.database().ref(id);
+							userRef.on('value', function(snapshot) {
 								Cookies.set("basket-data", JSON.stringify(snapshot.val()));
 								$.post("/login");					
 								window.location.replace('/Dashboard');
