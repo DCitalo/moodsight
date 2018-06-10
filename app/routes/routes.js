@@ -17,7 +17,7 @@ module.exports = function(app) {
       });
       app.post('/login', (req, res) => {
         login = true;  
-        id = req.body.id;
+        userID = req.body.id;
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
@@ -52,7 +52,11 @@ module.exports = function(app) {
         login = true;
       });
       app.get("/Dashboard",function(req, res) {
-        res.render('Dashboard/index', {"login":login});
+        if(!login){
+          res.render('home/index', {"login":login});
+        }else{
+          res.render('Dashboard/index', {"login":login});
+        }
       });
       app.get("/Biblioteca-de-Conteudo",function(req, res) {
         res.render('Biblioteca-de-Conteudo/index', {"login":login});

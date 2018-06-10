@@ -50,12 +50,14 @@ function pintrestLogin(){
 					databoard = {},
 					datafirebase = [],
 					obj = [],
-					dataMe = {};
+					dataMe = {},
+					id = {};
 				PDK.request('/v1/me', {fields: 'id,username,first_name,last_name,image,bio'}, function (response) {
 				if (!response || response.error) {
 					console.log(response.error);
 				} else {
 					dataMe = response.data;
+					id = response.data.id;
 					datafirebase.push({
 						pessoal : dataMe
 					})
@@ -94,6 +96,7 @@ function pintrestLogin(){
 					}
 				});
 				delay(function(){    
+					$.cookie('idUser', id);	
 					console.log(datafirebase)           
 					$.post("/salva", {datafirebase}); 
 					$.post("/login"); 

@@ -1,10 +1,7 @@
 var id = $.cookie('idUser'); 
 var userRef = firebase.database().ref(id);
 userRef.on('value', function(snapshot) {
-    console.log(snapshot.val());	
-});	
-console.log(data)
-$(document).ready(function(){
+    var data = snapshot.val();
     var NomeUsuario = data.user.nome.nome;
     $("#UsuarioNome").append(NomeUsuario);
     let numeroBoard = 1;
@@ -18,10 +15,10 @@ $(document).ready(function(){
             painel +="</ul></div>"
         $("#Dashboard").append(painel);
         numeroBoard++               
-    })
+    })	
     $('.pin-car').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3
       });
-})
+});	
