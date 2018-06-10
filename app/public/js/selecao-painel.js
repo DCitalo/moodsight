@@ -6,9 +6,9 @@ let numeroBoard = 1;
 $.each(data.boards,function(i, board){
     let painel ="<div id="+numeroBoard+" class='painel-cont tamfont1'>\
                     <span class='tamfont3 color-2 Upper bold font-1'>Painel "+numeroBoard+"</span>\
-                    <ul>"
+                    <ul class='pin-car '>"
                         $.each(board.pins,function(i, pin){
-                            painel +="<li><img src="+pin.img+"></li>"
+                            painel +="<li class='pin-img'><img src="+pin.img+"></li>"
                         })
         painel +="</ul></div>"
     $("#Dashboard").append(painel);
