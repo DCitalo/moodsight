@@ -18,8 +18,8 @@ module.exports = function(app) {
         var db = admin.database();
         var ref = db.ref(req.body.datafirebase[0].pessoal.id);
         ref.on("value", function(snapshot) {
-          var data = snapshot.val();
-          res.render('/Dashboard', {data : data})
+          console.log(snapshot.val());
+          res.render('/Dashboard')
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });        
