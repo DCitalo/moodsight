@@ -42,7 +42,7 @@ function pintrestLogin(){
 						userRef.on('value', function(snapshot) {
 							console.log(snapshot.val())
 							var data = JSON.stringify(snapshot.val());
-							Cookies.set('dataUser', {data: snapshot.val()});
+							Cookies.set('dataUser', snapshot.val());
 						});
 						delay(function(){              
 							$.post("/login");								
@@ -123,27 +123,23 @@ if(n == 0){
 $('#setaE').click(function() {
 	n--;
 	m += 10;
-	console.log(n)
 	if(n == 0){
 		$('#setaE').css("visibility","hidden")
 	}
 	if(n != 6){
 		$('#setaD').css("visibility","visible")
 	}
-	console.log(m)
 	$('.car-cont').css("transform","translateX("+ m +"%)")
 });
 $('#setaD').click(function() {
 	n++;
 	m -= 10;
-	console.log(n)
 	if(n == 6){
 		$('#setaD').css("visibility","hidden")
 	}
 	if(n != 0){
 		$('#setaE').css("visibility","visible")
 	}
-	console.log(m)
 	$('.car-cont').css("transform","translateX("+ m +"%)")
 });
 $('.tabs').each(function(){
