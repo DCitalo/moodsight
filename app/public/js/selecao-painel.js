@@ -1,4 +1,8 @@
-var data = JSON.parse($.cookie('user')); 
+var id = $.cookie('idUser'); 
+var userRef = firebase.database().ref(id);
+userRef.on('value', function(snapshot) {
+    console.log(snapshot.val());	
+});	
 console.log(data)
 $(document).ready(function(){
     var NomeUsuario = data.user.nome.nome;

@@ -40,11 +40,7 @@ function pintrestLogin(){
 						var id = response.data.id;
 						delay(function(){              
 							$.post("/login", {id});	
-							$.cookie('idUser', id);
-							var userRef = firebase.database().ref(id);
-							userRef.on('value', function(snapshot) {
-								$.cookie('user', JSON.stringify(snapshot.val()));	
-							});						
+							$.cookie('idUser', id);					
 							window.location.replace('/Dashboard');
 						}, 1000);
 					}
