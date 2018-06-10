@@ -17,8 +17,8 @@ userRef.on('value', function(snapshot) {
         numeroBoard++               
     })	
     $('.pin-car').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        infinite: false,
+        slidesToShow: 7,
+        slidesToScroll: 1
       });
 });	
