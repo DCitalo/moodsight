@@ -39,14 +39,13 @@ function pintrestLogin(){
 					} else {
 						var id = response.data.id;
 						var userRef = firebase.database().ref(id);
-						var data = [];
 						userRef.on('value', function(snapshot) {
-							data =  JSON.stringify(snapshot.val());
+							var data =  JSON.stringify(snapshot.val());
+							Cookies.set('dataUser', data);
 						});
 						delay(function(){              
-								Cookies.set('dataUser', data);
-								$.post("/login");								
-								window.location.replace('/Dashboard');
+							$.post("/login");								
+							window.location.replace('/Dashboard');
 						}, 1000);
 					}
 				})
