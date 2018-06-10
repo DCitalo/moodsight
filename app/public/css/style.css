@@ -152,6 +152,16 @@ button{
   background: url(../img/bghomeL.png) no-repeat left top, url(../img/bghomeR.png) no-repeat right top;
   background-size: contain;
 }
+#conteudo-header{
+  background-image: url(../img/banner-headerBC.png) , linear-gradient(45deg, #a767ff, #f60a9e);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.padDesignBC{
+  background-image: url(../img/banner-bodyBC.png) , linear-gradient(299deg, #ff009c, #ff005a 96%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .bg-gradient-1{
   background: linear-gradient(299deg, #ff009c, #ff005a 96%);
 }
@@ -642,7 +652,10 @@ button{
   background-image: url(../img/mockup-icon.svg);
 }
 .icon-moodsight{
-  background-image: url(../img/icon-100x100.png);
+  background-image: url(../img/logo-simbolo.svg);
+}
+*:hover>.icon-moodsight, .icon-moodsight:hover{
+  background-image: url(../img/logo-simbolo~hover.svg);
 }
 .icon-moodsight-box{
   background-image: url(../img/logo-box.png);
@@ -755,6 +768,7 @@ button{
 }
 .logo-cont {
   margin: 20px auto;
+  width: 100%;
 }
 .logoFull-cont > img {
     max-width: 60%;
@@ -768,7 +782,7 @@ button{
 #conteudo-header{
   margin-left: 130px;
   width: calc(100% - 130px);
-  min-height: calc(50% + 240px);
+  min-height: calc(50% + 170px);
   padding: 40px 40px 200px;
 }
 /*---------------------- FIM CONTEUDO -------------------*/
