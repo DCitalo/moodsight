@@ -69,4 +69,13 @@ module.exports = function(app) {
       app.get("/Sobre",function(req, res) {
         res.render('Sobre/index');
       });    
+      app.get("/Conta",function(req, res) {
+        res.render('Sobre/index');
+      });    
+      app.get("/Material-Kits",function(req, res) {
+        res.render('Sobre/index');
+      });    
+      app.get("/Projetos-Salvos",function(req, res) {
+        res.render('Sobre/index');
+      });  
 }

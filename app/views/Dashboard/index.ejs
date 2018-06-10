@@ -4,15 +4,15 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <%  include ../commom/header.ejs%>
+  <%  include ../commom/headerOn.ejs%>
   <section id="conteudo-body">
-      <script>
-        var data = JSON.parse(Cookies.get("basket-data")); 
-        console.log(data)
-      </script>
   </section>
   <div id="result"></div>
   <% include ../commom/footer.ejs %>
 </body>
 <% include ../commom/tags-footer.ejs %>
+<script>
+  var data = JSON.parse(Cookies.get("basket-data")); 
+  console.log(data)
+</script>
 </html>
