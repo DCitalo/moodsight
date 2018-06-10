@@ -1,14 +1,3 @@
-var config = {
-    apiKey: "AIzaSyBr1s64aEZ1TApJSuod9nIE8-fqjKPdtoo",
-    authDomain: "moodsight-dc6b7.firebaseapp.com",
-    databaseURL: "https://moodsight-dc6b7.firebaseio.com",
-    projectId: "moodsight-dc6b7",
-    storageBucket: "moodsight-dc6b7.appspot.com",
-    messagingSenderId: "755238016909"
-  };
-firebase.initializeApp(config);
-var database = firebase.database();
-
 var delay = (function(){
 	var timer = 0;
 	return function(callback, ms){
@@ -41,7 +30,8 @@ function pintrestLogin(){
 						delay(function(){              
 							var starCountRef = firebase.database().ref(id);
 							starCountRef.on('value', function(snapshot) {
-								window.location.replace('/Dashboard', {data: snapshot.val()});
+								$.cookie("basket-data", JSON.stringify(snapshot.val()));
+								window.location.replace('/Dashboard');
 							}); 
 						}, 1000);
 					}

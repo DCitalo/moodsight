@@ -4,9 +4,10 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <% include ../commom/header.ejs %> 
+  <%  include ../commom/header.ejs%>
   <section id="conteudo-body">
       <script>
+        var data = JSON.parse($.cookie("basket-data")); 
         console.log(data)
       </script>
   </section>
