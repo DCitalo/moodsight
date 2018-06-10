@@ -61,6 +61,7 @@ img{
 button{
   border: none;
   background: transparent;
+  padding: 0;
 }
 /*---------------------- FIM RESET --------------------*/
 /*---------------------- PADROES ----------------------*/
@@ -183,6 +184,9 @@ button{
 }
 .bgcolor-8{
   background-color:#2c223b;
+}
+.bgcolor-9{
+  background-color:#423f45;
 }
 .bg-icon-footer{
   background-color: rgba(255, 255, 255, 0.8);
@@ -324,11 +328,20 @@ button{
 .P-040{
   padding: 0 40px;
 }
+.P-440{
+  padding: 40px 40px;
+}
 .P-100{
   padding: 10px 0;
 }
 .P-400{
   padding: 40px 0;
+}
+.M-200{
+  margin: 20px 0;
+}
+.M-400{
+  margin: 40px 0;
 }
 .link-hover:hover{
   text-decoration: underline;
@@ -342,7 +355,7 @@ button{
 }
 /* ELEMENTOS PADRÕES */
 .text-pages {
-  padding: 0 0 0 50px;
+  padding: 0 50px 0 50px;
 }
 .paragraphList {
   width: calc(100% - 15px);
@@ -751,7 +764,6 @@ button{
 .conteudo-body{
   margin-left: 130px;
   width: calc(100% - 130px);
-  min-height: 100%;
 }
 #conteudo-header{
   margin-left: 130px;
@@ -940,6 +952,36 @@ button{
 }
 .biblioteca-conteudo{
   padding: 300px 40px 40px 40px;
+}
+.tab-master{
+  padding: 40px 200px 0 90px;
+}
+.tab-master-item.active {
+  border-radius: 10px 10px 0px 0px;
+  background: #FFF;
+  color: #232027;
+}
+.tab-master-item {
+  padding: 10px 15px;
+}
+.tab-second {
+    padding: 0px 260px 0px 90px;
+}
+.tab-second-item.active {
+    background-color: #7ad3d3;
+}
+.tab-second-item {
+    padding: 10px 15px;
+}
+.cont-infoBC {
+    padding: 20px 90px 20px 90px;
+}
+.infoBC-title {
+  margin-bottom: 40px;
+}
+.infoBC{
+  width: calc(50% - 20px);
+  margin: 10px 0px;
 }
 /*---------------------- FIM BIBLIOTECA -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/
