@@ -38,15 +38,15 @@ function pintrestLogin(){
 						console.log(response.error);
 					} else {
 						var id = response.data.id;
+						var userRef = firebase.database().ref(id);
+						var data = [];
+						userRef.on('value', function(snapshot) {
+							data =  JSON.stringify(snapshot.val());
+						});
 						delay(function(){              
-							var userRef = firebase.database().ref(id);
-							userRef.on('value', function(snapshot) {
-								Cookies.set('name', 'value');
-								var data =  JSON.stringify(snapshot.val());
 								Cookies.set('dataUser', data);
 								$.post("/login");								
 								window.location.replace('/Dashboard');
-							}); 
 						}, 1000);
 					}
 				})
