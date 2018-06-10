@@ -40,10 +40,11 @@ function pintrestLogin(){
 						var id = response.data.id;        
 						var userRef = firebase.database().ref(id);
 						userRef.on('value', function(snapshot) {
-							Cookies.set("dataUser", JSON.stringify(snapshot.val()));
-							console.log(snapshot.val())    
+							var data = snapshot.val(); 
+							Cookies.set("dataUser", data);
+							console.log(data)    
 							$.post("/login");	
-							//window.location.replace('/Dashboard');				
+							window.location.replace('/Dashboard');				
 						}); 
 					}
 				})
