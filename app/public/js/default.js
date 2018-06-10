@@ -156,7 +156,7 @@ $('.tabs').each(function(){
 var url = "http://colormind.io/api/";
 var data = {
 	model : "default",
-	input : [[44,43,44],[90,83,82],"N","N","N"]
+	input : [[44,43,44],[90,83,82],[57,46,44],[34,98,55],[89,32,45],"N","N","N","N"]
 }
 
 var http = new XMLHttpRequest();

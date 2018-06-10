@@ -23,7 +23,6 @@ module.exports = function(app) {
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
         });      
-        res.redirect('/Dashboard', {data:data});  
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
