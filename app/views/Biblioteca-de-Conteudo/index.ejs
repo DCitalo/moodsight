@@ -6,11 +6,15 @@
 </head>
 
 <body>
-  <% include ../commom/header.ejs %>
+    <% if(!login){%>
+      <%  include ../commom/header.ejs %>
+    <% } else { %>
+      <%  include ../commom/headerOn.ejs %>
+    <% } %>
     <section id="conteudo-header" class="PR bg-gradient-3">
       <div class="w-70 h-100 DF FW tamfont1">
         <h1 class="Upper font-1 bold tamfont5 title w-100 DF CS color-1 PR">
-          <i class="icon-medium icon-biblioteca-conteudo-col"></i>BIBLIOTECA DE CONTEÚDO</h1>
+          <i class="icon-medium icon-biblioteca-conteudo-col Upper"></i>Biblioteca de conteúdo</h1>
         <h4 class="Upper font-1 tamfont3 bold sub-title color-1">heurísticas DE USABILIDADE</h4>
         <p class="tamfont2 font-1 color-1 mx860 intro">Usabilidade é um termo usado para definir a facilidade com que as pessoas podem empregar uma ferramenta ou objeto
           a fim de realizar uma tarefa específica e importante. A usabilidade pode também se referir aos métodos de mensuração

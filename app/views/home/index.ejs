@@ -3,7 +3,11 @@
   <% include ../commom/tags-header.ejs %>
 </head>
 <body>
-  <% include ../commom/header.ejs %>
+    <% if(!login){%>
+      <%  include ../commom/header.ejs %>
+    <% } else { %>
+      <%  include ../commom/headerOn.ejs %>
+    <% } %>
     <section class="conteudo-body P-400 bg-pattern-1">
       <div class="w-100 DF FW P-040">
         <div class="w-70 DF FW">

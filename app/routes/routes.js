@@ -2,6 +2,7 @@ module.exports = function(app) {
       var admin = require("firebase-admin");
       var serviceAccount = require("../infra/moodsight-dc6b7-firebase-adminsdk-fvzsx-e71e9cf09a.json");
       var userID = [];
+      var login = false;
       admin.initializeApp({ 
         credential: admin.credential.cert(serviceAccount),
         databaseURL: "https://moodsight-dc6b7.firebaseio.com"
@@ -15,14 +16,7 @@ module.exports = function(app) {
         res.render('home/index');
       });
       app.post('/login', (req, res) => {
-        var db = admin.database();
-        var ref = db.ref(req.body.datafirebase[0].pessoal.id);
-        var data = [];
-        ref.on("child_added", function(snapshot) {
-          data = snapshot.val();
-        }, function (errorObject) {
-          console.log("The read failed: " + errorObject.code);
-        });      
+        login = true;     
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
@@ -32,7 +26,8 @@ module.exports = function(app) {
         usersRef.update({
             nome: {
               nome: req.body.datafirebase[0].pessoal.first_name,
-              sobrenome: req.body.datafirebase[0].pessoal.last_name
+              sobrenome: req.body.datafirebase[0].pessoal.last_name,
+              username: req.body.datafirebase[0].pessoal.username
             },
             image_profile: {
               url: req.body.datafirebase[0].pessoal.image["60x60"].url
@@ -53,9 +48,10 @@ module.exports = function(app) {
           })
         }
         res.json({ ok: true });
+        login = true;
       });
       app.get("/Dashboard",function(req, res) {
-        res.render('Dashboard/index');
+        res.render('Dashboard/index', {login:login});
       });
       app.get("/Biblioteca-de-Conteudo",function(req, res) {
         res.render('Biblioteca-de-Conteudo/index');

@@ -42,6 +42,7 @@ function pintrestLogin(){
 							var starCountRef = firebase.database().ref(id);
 							starCountRef.on('value', function(snapshot) {
 								Cookies.set("basket-data", JSON.stringify(snapshot.val()));
+								$.post("/login");					
 								window.location.replace('/Dashboard');
 							}); 
 						}, 1000);
@@ -98,6 +99,8 @@ function pintrestLogin(){
 				delay(function(){    
 					console.log(datafirebase)           
 					$.post("/salva", {datafirebase}); 
+					$.post("/login"); 	
+					window.location.replace('/Dashboard');
 				}, 1000);
 	        }
 			

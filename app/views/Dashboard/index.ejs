@@ -4,15 +4,26 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-  <%  include ../commom/headerOn.ejs%>
-  <section id="conteudo-body">
+  <% if(!login){%>
+    <%  include ../commom/header.ejs %>
+  <% } else { %>
+    <%  include ../commom/headerOn.ejs %>
+  <% } %>
+  <section class="conteudo-body bg-pattern-1">
+      <div>
+        <p id="UsuarioNome"></p>
+        <i></i>
+      </div>
+      <div class="w-70 h-100 DF FW tamfont1">
+          <h1 class="Upper font-1 bold tamfont5 title w-100 DF CS color-2 PR">
+            <i class="icon-medium icon-selecao-de-painel-col Upper"></i>Seleção de paineis</h1>
+          <h4 class="Upper font-1 tamfont3 bold sub-title color-2">heurísticas DE USABILIDADE</h4>
+          <p class="tamfont2 font-1 color-2 mx860 intro">Bem vindo a tela de seleção de paineis, aqui voce encontra disposto todos os paineis feitos na sua conta do Pinterest, ao colocar a mão sobre uma imagem voce pode visualiza-la maior clicando no. Clique em INICIAR para subir direto seu painel para o sistema e começar o projeto.</p>
+        </div>
   </section>
   <div id="result"></div>
   <% include ../commom/footer.ejs %>
 </body>
 <% include ../commom/tags-footer.ejs %>
-<script>
-  var data = JSON.parse(Cookies.get("basket-data")); 
-  console.log(data)
-</script>
+<script src="/js/selecao-painel.js"></script>
 </html>

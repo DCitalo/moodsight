@@ -671,7 +671,7 @@ button{
 .icon-selecao-de-painel{
   background-image: url(../img/selecao-de-paineis.svg);
 }
-*:hover>.icon-selecao-de-painel, .icon-selecao-de-painel:hover{
+*:hover>.icon-selecao-de-painel, .icon-selecao-de-painel:hover, .icon-selecao-de-painel-col{
   background-image: url(../img/selecao-de-paineis~hover.svg);
 }
 .icon-seta-direita{
