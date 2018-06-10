@@ -38,9 +38,6 @@ function pintrestLogin(){
 						console.log(response.error);
 					} else {
 						var id = response.data.id;
-						datafirebase.push({
-							pessoal : id
-						})
 						delay(function(){              
 							var starCountRef = firebase.database().ref(id);
 							starCountRef.on('value', function(snapshot) {
