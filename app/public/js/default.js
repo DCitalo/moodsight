@@ -1,3 +1,19 @@
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyBr1s64aEZ1TApJSuod9nIE8-fqjKPdtoo",
+    authDomain: "moodsight-dc6b7.firebaseapp.com",
+    databaseURL: "https://moodsight-dc6b7.firebaseio.com",
+    projectId: "moodsight-dc6b7",
+    storageBucket: "moodsight-dc6b7.appspot.com",
+    messagingSenderId: "755238016909"
+  };
+  firebase.initializeApp(config);
+  var userId = firebase.auth().currentUser.uid;
+return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+  // ...
+});
+var database = firebase.database();
 var delay = (function(){
 	var timer = 0;
 	return function(callback, ms){
@@ -156,7 +172,7 @@ $('.tabs').each(function(){
 var url = "http://colormind.io/api/";
 var data = {
 	model : "default",
-	input : [[44,43,44],[90,83,82],[57,46,44],[34,98,55],[89,32,45],"N","N","N","N"]
+	input : [[44,43,44],[90,83,82],[57,46,44],[34,98,55],[89,32,45],[56,37,00],[43,31,16],[78,43,55]]
 }
 
 var http = new XMLHttpRequest();
