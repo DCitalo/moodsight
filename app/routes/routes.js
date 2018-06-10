@@ -17,6 +17,7 @@ module.exports = function(app) {
       });
       app.post('/login', (req, res) => {
         login = true;  
+        id = req.body.id;
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
