@@ -38,10 +38,10 @@ function pintrestLogin(){
 						console.log(response.error);
 					} else {
 						var id = response.data.id; 
-						console.log("ok")           
+						console.log(id)           
 						var userRef = firebase.database().ref(id);
 						userRef.on('value', function(snapshot) {
-							Cookies.set("basket-data", JSON.stringify(snapshot.val()), { expires: 7 });
+							Cookies.set("dataUser", JSON.stringify(snapshot.val()));
 							$.post("/login");					
 						}); 
 					}
