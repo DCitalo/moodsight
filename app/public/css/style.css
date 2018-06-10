@@ -953,6 +953,7 @@ button{
 .biblioteca-conteudo{
   padding: 300px 40px 40px 40px;
 }
+/*tabs*/
 .tab-master{
   padding: 40px 200px 0 90px;
 }
@@ -967,8 +968,20 @@ button{
 .tab-second {
     padding: 0px 260px 0px 90px;
 }
-.tab-second-item.active {
-    background-color: #7ad3d3;
+#pegando-input > .tab-second > .tab-second-item.active {
+    background-color:#f60a9d;
+}
+#navegacao > .tab-second > .tab-second-item.active {
+    background-color:#7ad3d3;
+}
+#lidando-dados > .tab-second > .tab-second-item.active {
+    background-color:#f8235b;
+}
+#social > .tab-second > .tab-second-item.active {
+    background-color:#a766fe;
+}
+#onboarding > .tab-second > .tab-second-item.active {
+    background-color:#0ee0b9;
 }
 .tab-second-item {
     padding: 10px 15px;
@@ -983,6 +996,7 @@ button{
   width: calc(50% - 20px);
   margin: 10px 0px;
 }
+/*tabs*/
 /*---------------------- FIM BIBLIOTECA -----------------------*/
 /*---------------------- RESPONSIVO -------------------*/
 @media screen and (max-width: 1080px){

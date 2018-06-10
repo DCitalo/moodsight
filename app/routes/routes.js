@@ -19,10 +19,8 @@ module.exports = function(app) {
         var ref = db.ref(req.body.datafirebase[0].pessoal.id);
         var usersRef = ref.child("teste");
         usersRef.update({
-          oi : foi
-        })
-        res.json({ ok: true });
-        
+          oi : "foi"
+        })        
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
