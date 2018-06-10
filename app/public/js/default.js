@@ -37,15 +37,15 @@ function pintrestLogin(){
 					if (!response || response.error) {
 						console.log(response.error);
 					} else {
-						var id = response.data.id;        
-						var userRef = firebase.database().ref(id);
-						userRef.on('value', function(snapshot) {
-							var data = snapshot.val(); 
-							Cookies.set('dataUser', data);
-							console.log(data)    
-							$.post("/login");	
-							window.location.replace('/Dashboard');				
-						}); 
+						var id = response.data.id;
+						delay(function(){              
+							var starCountRef = firebase.database().ref(id);
+							starCountRef.on('value', function(snapshot) {
+								Cookies.set("dataUser", JSON.stringify(snapshot.val()));
+								$.post("/login");								
+								window.location.replace('/Dashboard');
+							}); 
+						}, 1000);
 					}
 				})
 	        } else {
@@ -99,8 +99,7 @@ function pintrestLogin(){
 				delay(function(){    
 					console.log(datafirebase)           
 					$.post("/salva", {datafirebase}); 
-					$.post("/login"); 	
-					window.location.replace('/Dashboard');
+					$.post("/login"); 
 				}, 1000);
 	        }
 			
@@ -163,3 +162,20 @@ $('.tabs').each(function(){
         e.preventDefault();
     });
 });
+
+var url = "http://colormind.io/api/";
+var data = {
+	model : "default",
+	input : [[44,43,44],[90,83,82],[57,46,44],[34,98,55],[89,32,45],[56,37,00],[43,31,16],[78,43,55]]
+}
+
+var http = new XMLHttpRequest();
+
+http.onreadystatechange = function() {
+	if(http.readyState == 4 && http.status == 200) {
+		var palette = JSON.parse(http.responseText).result;
+	}
+}
+
+http.open("POST", url, true);
+http.send(JSON.stringify(data));
