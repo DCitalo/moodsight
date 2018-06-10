@@ -17,12 +17,13 @@ module.exports = function(app) {
       app.post('/login', (req, res) => {
         var db = admin.database();
         var ref = db.ref(req.body.datafirebase[0].pessoal.id);
+        var data = [];
         ref.on("child_added", function(snapshot) {
-          var data = snapshot.val();
-          res.redirect('/Dashboard', {data:data})
+          data = snapshot.val();
         }, function (errorObject) {
           console.log("The read failed: " + errorObject.code);
-        });        
+        });      
+        res.redirect('/Dashboard', {data:data});  
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
