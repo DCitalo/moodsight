@@ -11,5 +11,6 @@ $.each(data.boards,function(i, board){
                             painel +="<li><img src="+pin.img+"></li>"
                         })
         painel +="</ul></div>"
-    numeroBoard++
+    $("#Dashboard").append(painel);
+    numeroBoard++               
 })
