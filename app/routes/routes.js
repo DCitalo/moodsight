@@ -17,7 +17,6 @@ module.exports = function(app) {
       });
       app.post('/login', (req, res) => {
         login = true;  
-        res.render('Dashboard/index', {"login":login})   
       });
       app.post('/salva', (req, res) => {
         var db = admin.database();
