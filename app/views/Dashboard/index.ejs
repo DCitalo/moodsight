@@ -7,7 +7,7 @@
   <%  include ../commom/header.ejs%>
   <section id="conteudo-body">
       <script>
-        var data = JSON.parse($.cookie("basket-data")); 
+        var data = JSON.parse(Cookies.get("basket-data")); 
         console.log(data)
       </script>
   </section>

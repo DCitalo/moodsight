@@ -41,7 +41,7 @@ function pintrestLogin(){
 						delay(function(){              
 							var starCountRef = firebase.database().ref(id);
 							starCountRef.on('value', function(snapshot) {
-								$.cookie("basket-data", JSON.stringify(snapshot.val()));
+								Cookies.set("basket-data", JSON.stringify(snapshot.val()));
 								window.location.replace('/Dashboard');
 							}); 
 						}, 1000);
