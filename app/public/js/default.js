@@ -42,7 +42,7 @@ function pintrestLogin(){
 						userRef.on('value', function(snapshot) {
 							console.log(snapshot.val())
 							var data = JSON.stringify(snapshot.val());
-							Cookies.set('dataUser', snapshot.val());
+							Cookies.set('dataUser', {data});
 						});
 						delay(function(){              
 							$.post("/login");								
