@@ -41,7 +41,7 @@ function pintrestLogin(){
 						var userRef = firebase.database().ref(id);
 						userRef.on('value', function(snapshot) {
 							var data = snapshot.val(); 
-							Cookies.set("dataUser", data);
+							Cookies.set('dataUser', data);
 							console.log(data)    
 							$.post("/login");	
 							window.location.replace('/Dashboard');				
