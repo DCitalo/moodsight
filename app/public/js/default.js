@@ -40,8 +40,7 @@ function pintrestLogin(){
 						var id = response.data.id;
 						var userRef = firebase.database().ref(id);
 						userRef.on('value', function(snapshot) {
-							var data =  JSON.stringify(snapshot.val());
-							Cookies.set('dataUser', data);
+							Cookies.set('dataUser', snapshot.val());
 						});
 						delay(function(){              
 							$.post("/login");								
