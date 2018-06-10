@@ -39,14 +39,11 @@ function pintrestLogin(){
 					} else {
 						var id = response.data.id;
 						var userRef = firebase.database().ref(id);
-						var obj;
 						userRef.on('value', function(snapshot) {
-							obj += JSON.stringify(snapshot.val());
+							$.cookie('user', JSON.stringify(snapshot.val()));	
 						});
-						console.log(obj)
 						delay(function(){              
-							$.post("/login");	
-							Cookies.set('name', obj);							
+							$.post("/login");							
 							window.location.replace('/Dashboard');
 						}, 1000);
 					}

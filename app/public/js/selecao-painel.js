@@ -1,4 +1,4 @@
-var data = Cookies.getJSON('dataUser'); 
+var data = JSON.parse($.cookie('user')); 
 console.log(data)
 $(document).ready(function(){
     var NomeUsuario = data.user.nome.nome;
