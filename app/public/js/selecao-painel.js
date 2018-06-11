@@ -1,24 +1,34 @@
 var id = $.cookie('idUser'); 
-var userRef = firebase.database().ref(id);
+var userRef = firebase.database().ref("441704813361685551");
 userRef.on('value', function(snapshot) {
     var data = snapshot.val();
     var NomeUsuario = data.user.nome.nome;
     $("#UsuarioNome").append(NomeUsuario);
     let numeroBoard = 1;
     $.each(data.boards,function(i, board){
-        let painel ="<div id="+numeroBoard+" class='painel-cont tamfont1'>\
-                        <span class='tamfont3 color-2 Upper bold font-1'>Painel "+numeroBoard+"</span>\
-                        <ul class='pin-car DF FW CSS'>"
+        if( numeroBoard % 4 == 0 ) {
+            let banner ="<div class='painel-cont'><img src='/img/banner-BC.png' src='' /></div>"
+            $("#Dashboard").append(banner)
+        }
+        let painel ="<div id="+numeroBoard+" class='painel-cont DF FW CSP tamfont1'>\
+                        <span class='tamfont3 bg-gradient-3 color-1 Upper bold font-1 text-center title-board'>Painel "+numeroBoard+"</span>\
+                        <ul class='pin-car w-80 DF FW CSS'>"
                             $.each(board.pins,function(i, pin){
                                 painel +="<li class='pin-img'><img src="+pin.img+"></li>"
                             })
-            painel +="</ul></div>"
+            painel +="  </ul>\
+                        <button class='btn-start btn-round DF FW CSS  color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
+                    </div>"
         $("#Dashboard").append(painel);
         numeroBoard++               
     })	
     $('.pin-car').slick({
-        infinite: false,
-        slidesToShow: 7,
-        slidesToScroll: 1
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 5,
+        infinite: true,
+        slidesToScroll: 1,
+        prevArrow: "<button type='button' class='slick-prev'><i class='bgcolor-6 icon-seta-esquerda icon-small'></i></button>",
+        nextArrow: "<button type='button' class='slick-next'><i class='bgcolor-6 icon-seta-direita icon-small'></i></button>"
       });
 });	
