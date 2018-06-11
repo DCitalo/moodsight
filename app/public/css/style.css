@@ -279,6 +279,10 @@ button{
 .FR{
   float: right;
 }
+.v-hide{
+  visibility: hidden;
+  
+}
 .hide{
   visibility: hidden;
   display: none;
@@ -369,7 +373,8 @@ button{
   margin-left: 130px;
   width: calc(100% - 130px);
   min-height: 100%;
-  position: relative;
+  position: fixed;
+  z-index: 999999999;
 } 
 #Camada_2 {
   width: 160px;

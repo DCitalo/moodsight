@@ -1,13 +1,13 @@
 var id = $.cookie('idUser'); 
-var userRef = firebase.database().ref("441704813361685551");
+var userRef = firebase.database().ref(id);
 userRef.on('value', function(snapshot) {
     var data = snapshot.val();
-    var NomeUsuario = data.user.nome.nome;
+    var NomeUsuario = data.user.nome.username;
     $("#UsuarioNome").append(NomeUsuario);
     let numeroBoard = 1;
     $.each(data.boards,function(i, board){
         if( numeroBoard % 4 == 0 ) {
-            let banner ="<div class='painel-cont'><img src='/img/banner-BC.png' src='' /></div>"
+            let banner ="<div class='painel-cont'><img src='/img/Banner-premium-AD.png' src='' /></div>"
             $("#Dashboard").append(banner)
         }
         let painel ="<div id="+numeroBoard+" class='painel-cont DF FW CSP tamfont1'>\
@@ -20,8 +20,16 @@ userRef.on('value', function(snapshot) {
                         <button class='btn-start btn-round DF FW CSS  color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
                     </div>"
         $("#Dashboard").append(painel);
-        numeroBoard++               
+        numeroBoard++
+        if(numeroBoard == Object.keys(data.boards).length){
+            delay(function(){              
+                $('#loading').toggleClass('hide');
+            }, 1000);
+        }               
     })	
+    function getPinData(id){
+        
+    }
     $('.pin-car').slick({
         centerMode: true,
         centerPadding: '60px',

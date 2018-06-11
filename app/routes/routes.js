@@ -52,11 +52,11 @@ module.exports = function(app) {
         login = true;
       });
       app.get("/Dashboard",function(req, res) {
-        //if(!login){
-          //res.render('home/index', {"login":login});
-        //}else{
+        if(!login){
+          res.render('home/index', {"login":login});
+        }else{
           res.render('Dashboard/index', {"login":login});
-        //}
+        }
       });
       app.get("/Biblioteca-de-Conteudo",function(req, res) {
         res.render('Biblioteca-de-Conteudo/index', {"login":login});

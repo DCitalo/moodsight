@@ -96,7 +96,7 @@ function pintrestLogin(){
 						}
 					});
 					delay(function(){    
-						$.cookie('idUser', id);	
+						$.cookie('idUser', datafirebase[0].pessoal.id);	
 						console.log(datafirebase)           
 						$.post("/salva", {datafirebase});		
 						window.location.replace('/Dashboard');  
