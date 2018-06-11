@@ -16,15 +16,7 @@ var delay = (function(){
 	  timer = setTimeout(callback, ms);
 	};
   })(); 
-function pintrestLogout(){
-	window.pAsyncInit = function() { 
-	PDK.init({
-		appId: "4956315507922840393",
-		cookie: true
-	});
-	PDK.logout();
-	}
-}
+
 function pintrestLogin(){
 	window.pAsyncInit = function() { 
 	    PDK.init({
@@ -35,18 +27,7 @@ function pintrestLogin(){
 		if(!id){
 			PDK.login({ scope : 'read_relationships,read_public' }, function(response){
 				if (!response || response.error) {
-					PDK.request('/v1/me', {fields: 'id'}, function (response) {
-						if (!response || response.error) {
-							console.log(response.error);
-						} else {
-							var id = response.data.id;
-							delay(function(){              
-								$.post("/login", {id});	
-								$.cookie('idUser', id);					
-								window.location.replace('/Dashboard');
-							}, 1000);
-						}
-					})
+					PDK.logout();
 				} else {
 					var pins = [],
 						databoard = {},
@@ -105,8 +86,18 @@ function pintrestLogin(){
 				
 			});
 		}else{
-			$.post("/login", {id});	
-			window.location.replace('/Dashboard');
+			PDK.request('/v1/me', {fields: 'id'}, function (response) {
+				if (!response || response.error) {
+					console.log(response.error);
+				} else {
+					var id = response.data.id;
+					delay(function(){              
+						$.post("/login", {id});	
+						$.cookie('idUser', id);					
+						window.location.replace('/Dashboard');
+					}, 1000);
+				}
+			})
 		}
 	};
 	(function(d, s, id){
