@@ -17,14 +17,8 @@ var delay = (function(){
 	};
   })(); 
 function pintrestLogout(){
-	window.pAsyncInit = function() { 
-	    PDK.init({
-	        appId: "4956315507922840393",
-	        cookie: true
-		});
 		PDK.logout();
 	}
-}
 function pintrestLogin(){
 	window.pAsyncInit = function() { 
 	    PDK.init({
