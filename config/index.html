@@ -1,0 +1,172 @@
+<style>
+    .PA {
+        position: absolute;
+    }
+
+    li.slick-active button {
+        opacity: 1 !important;
+    }
+
+    .slick-dots li button {
+        font-size: 0 !important;
+        line-height: 0 !important;
+        display: block !important;
+        width: 20px !important;
+        border-radius: 50px !important;
+        height: 20px !important;
+        opacity: 0.25;
+        padding: 5px !important;
+        cursor: pointer !important;
+        border: 0 !important;
+        outline: none !important;
+        background: #000 !important;
+    }
+
+    .slick-dots li button:before {
+        font-size: 0px !important;
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .modal {
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        z-index: 9999;
+        top: 0px;
+        left: 0;
+    }
+
+    .w-100.cont-acao {
+        background: #FFF;
+        height: 400px;
+    }
+
+    button.close-modal {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+    }
+
+    .slick-initialized .slick-slide {
+        display: block;
+        height: 700px !important;
+    }
+</style>
+<div id="modal">
+    <button class='close-modal'>X</button>
+    <div class='w-100 cont-acao'>
+        <div id='step-1' class='w-100'>
+            <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/welcome-fantasma.png' alt='' style='width:100%;height:auto'
+            /> </div>
+        <div id='step-2' class='w-100' style='display:none;'>
+            <p class='w-100' style='text-align: center;font-size: 30px;margin: 0;'>Escolha uma imagem para compartilhar</p>
+            <ul class='carousel' style='padding: 0; min-height: 700px;'>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-1-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb1' class='fb - share - button' style='text-align: center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-2-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb2' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-3-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb3' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-4-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb4' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-5-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb5' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-6-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb6' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-7-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb7' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-8-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb8' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-9-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb9' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+                <li class='thumb'>
+                    <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/arte-fb-10-FO.png' style='width:100%;height:auto'
+                        alt=''>
+                    <div id='fb10' class='fb-share-button' style='text-align:center' data-href='http://premier.ticketsforfun.com.br/shows/show.aspx?sh=FANTOSP18'
+                        data-layout='button' data-size='small' data-mobile-iframe='true'>
+                        <a target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fpremier.ticketsforfun.com.br%2Fshows%2Fshow.aspx%3Fsh%3DFANTOSP18&amp;src=sdkpreparse'
+                            class='fb-xfbml-parse-ignore'>Compartilhar</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id='step-3' style='visibility:hidden;display:none;'>
+            <img src='http://premier.ticketsforfun.com.br/images/fantasma-namorados/sucesso-fantasma.png' style='width:100%;height:auto'
+            /> </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://premier.ticketsforfun.com.br/hotsite/dia-dos-namorados/js/slick.css"
+/>
+<script type="text/javascript" src="http://premier.ticketsforfun.com.br/hotsite/dia-dos-namorados/js/slick.min.js"></script>
+<script type="text/javascript" src="http://premier.ticketsforfun.com.br/hotsite/dia-dos-namorados/js/fant.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css"
+/>
+<link rel="stylesheet" type="text/css" href="http://premier.ticketsforfun.com.br/hotsite/dia-dos-namorados/js/slick-theme.css"
+/>

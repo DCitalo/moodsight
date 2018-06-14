@@ -1,0 +1,15 @@
+<head>
+    <title>MoodSigth</title>
+    <% include ../commom/tags-header.ejs %>
+</head>
+
+<body>
+    <% if(!login){%>
+        <%  include ../commom/header.ejs %>
+            <% } else { %>
+                <%  include ../commom/headerOn.ejs %>
+                    <% } %>
+
+                        <% include ../commom/footer.ejs %>
+</body>
+<% include ../commom/tags-footer.ejs %>
