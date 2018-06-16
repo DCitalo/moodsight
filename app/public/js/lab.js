@@ -37,7 +37,7 @@ userRef.on('value', function (snapshot) {
 		console.log(JSON.stringify(colors))
 	}, 1000);*/
 	var url = "http://colormind.io/api/";
-	var data = {
+	var colors = {
 		model: "default",
 		input: ""
 	}
@@ -56,7 +56,7 @@ userRef.on('value', function (snapshot) {
 	}
 
 	http.open("POST", url, true);
-	http.send(JSON.stringify(data));
+	http.send(JSON.stringify(colors));
 })
 
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
