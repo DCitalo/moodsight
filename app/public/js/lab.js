@@ -14,7 +14,7 @@ function hexToRgb(hex) {
 	} : null;
 }
 userRef.on('value', function (snapshot) {
-	var url = "http://colormind.io/api/";
+	/*var url = "http://colormind.io/api/";
 	var colors = {
 		model: "default",
 		input: ""
@@ -35,7 +35,24 @@ userRef.on('value', function (snapshot) {
 		http.open("POST", url, true);
 		http.send(JSON.stringify(colors));
 		console.log(JSON.stringify(colors))
-	}, 1000);
+	}, 1000);*/
+	var url = "http://colormind.io/api/";
+	var data = {
+		model: "default",
+		input: [[44, 43, 44], [90, 83, 82], [90, 83, 82], [90, 83, 82], [90, 83, 82]]
+	}
+
+	var http = new XMLHttpRequest();
+
+	http.onreadystatechange = function () {
+		if (http.readyState == 4 && http.status == 200) {
+			var palette = JSON.parse(http.responseText).result;
+			console.log(palette)
+		}
+	}
+
+	http.open("POST", url, true);
+	http.send(JSON.stringify(data));
 })
 
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
