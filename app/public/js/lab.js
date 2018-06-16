@@ -14,28 +14,6 @@ function hexToRgb(hex) {
 	} : null;
 }
 userRef.on('value', function (snapshot) {
-	/*var url = "http://colormind.io/api/";
-	var colors = {
-		model: "default",
-		input: ""
-	}
-	var snapshot = snapshot.val();
-	$.each(snapshot.pins, function (i, pin) {
-		var rgbColor = hexToRgb(pin.color)
-		data.input += '[' + rgbColor.rgb + ']';
-	})
-	delay(function () {
-		var http = new XMLHttpRequest();
-		http.onreadystatechange = function () {
-			if (http.readyState == 4 && http.status == 200) {
-				console.log((http.responseText))
-				//var palette = JSON.parse(http.responseText).result;
-			}
-		}
-		http.open("POST", url, true);
-		http.send(JSON.stringify(colors));
-		console.log(JSON.stringify(colors))
-	}, 1000);*/
 	var url = "http://colormind.io/api/";
 	var snapshot = snapshot.val();
 	var input = [];
@@ -43,11 +21,11 @@ userRef.on('value', function (snapshot) {
 		var rgbColor = hexToRgb(pin.color)
 		input += "[" + rgbColor.rgb + "]";
 	})
-	console.log(JSON.stringify(input))
 	var data = {
 		model: "default",
-		input: input
+		input: []
 	}
+	data.input += input
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
