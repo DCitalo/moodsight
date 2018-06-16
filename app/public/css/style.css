@@ -285,6 +285,10 @@ button {
   background: linear-gradient(45deg, #a767ff, #f60a9e);
 }
 
+.bg-gradient-4 {
+  background: linear-gradient(45deg, #4eb7b7, #72b798 99%);
+}
+
 .bgcolor-1 {
   background-color: #f60a9d;
 }
