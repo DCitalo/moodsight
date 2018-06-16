@@ -28,8 +28,8 @@ userRef.on('value', function (snapshot) {
 		var http = new XMLHttpRequest();
 		http.onreadystatechange = function () {
 			if (http.readyState == 4 && http.status == 200) {
-				console.log(JSON.parse(http.responseText))
-				var palette = JSON.parse(http.responseText).result;
+				console.log((http.responseText))
+				//var palette = JSON.parse(http.responseText).result;
 			}
 		}
 		http.open("POST", url, true);
