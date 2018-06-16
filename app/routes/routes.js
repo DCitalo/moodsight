@@ -13,9 +13,16 @@ module.exports = function (app) {
     next();
   });
   app.get("/", function (req, res) {
-    res.render('home/index', {
-      "login": login
-    });
+
+    if (/mobile/i.test(ua)) {
+      res.render('m-home/index', {
+        "login": login
+      });
+    } else {
+      res.render('home/index', {
+        "login": login
+      });
+    }
   });
   app.post('/login', (req, res) => {
     login = true;
