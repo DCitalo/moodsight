@@ -24,17 +24,18 @@ userRef.on('value', function (snapshot) {
 		var rgbColor = hexToRgb(pin.color)
 		colors.input += '[' + rgbColor.rgb + ']';
 	})
-})
-delay(function () {
-	var http = new XMLHttpRequest();
-	http.onreadystatechange = function () {
-		if (http.readyState == 4 && http.status == 200) {
-			console.log(JSON.parse(http.responseText))
-			var palette = JSON.parse(http.responseText).result;
+	delay(function () {
+		var http = new XMLHttpRequest();
+		http.onreadystatechange = function () {
+			if (http.readyState == 4 && http.status == 200) {
+				console.log(JSON.parse(http.responseText))
+				var palette = JSON.parse(http.responseText).result;
+			}
 		}
-	}
-	http.open("POST", url, true);
-	http.send(JSON.stringify(colors));
-	console.log(JSON.stringify(colors))
-}, 1000);
+		http.open("POST", url, true);
+		http.send(JSON.stringify(colors));
+		console.log(JSON.stringify(colors))
+	}, 1000);
+})
+
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
