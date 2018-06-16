@@ -13,12 +13,12 @@ function hexToRgb(hex) {
 		rgb: [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)]
 	} : null;
 }
-var url = "http://colormind.io/api/";
-var colors = {
-	model: "default",
-	input: ""
-}
 userRef.on('value', function (snapshot) {
+	var url = "http://colormind.io/api/";
+	var colors = {
+		model: "default",
+		input: ""
+	}
 	var data = snapshot.val();
 	$.each(data.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
