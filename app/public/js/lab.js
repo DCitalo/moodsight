@@ -19,10 +19,10 @@ userRef.on('value', function (snapshot) {
 		model: "default",
 		input: ""
 	}
-	var data = snapshot.val();
-	$.each(data.pins, function (i, pin) {
+	var snapshot = snapshot.val();
+	$.each(snapshot.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
-		colors.input += '[' + rgbColor.rgb + ']';
+		data.input += '[' + rgbColor.rgb + ']';
 	})
 	delay(function () {
 		var http = new XMLHttpRequest();
@@ -39,13 +39,9 @@ userRef.on('value', function (snapshot) {
 	var url = "http://colormind.io/api/";
 	var data = {
 		model: "default",
-		input: ""
+		input: [[44, 43, 44], [90, 83, 82], [90, 83, 82], [90, 83, 82], [90, 83, 82]]
 	}
-	var snapshot = snapshot.val();
-	$.each(snapshot.pins, function (i, pin) {
-		var rgbColor = hexToRgb(pin.color)
-		data.input += '[' + rgbColor.rgb + ']';
-	})
+
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
@@ -54,7 +50,7 @@ userRef.on('value', function (snapshot) {
 			console.log(palette)
 		}
 	}
-
+	console.log(JSON.stringify(data))
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));
 })
