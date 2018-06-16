@@ -1,6 +1,6 @@
 var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
-var userRef = firebase.database().ref(id + "/boards/" + idBoard);
+var boardRef = firebase.database().ref(id + "/boards/" + idBoard);
 function hexToRgb(hex) {
 	// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 	var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -13,18 +13,21 @@ function hexToRgb(hex) {
 		rgb: [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)]
 	} : null;
 }
-userRef.on('value', function (snapshot) {
+boardRef.on('value', function (snapshot) {
 	var url = "http://colormind.io/api/";
 	var snapshot = snapshot.val();
 	var input = [];
-	$.each(snapshot.pins, function (i, pin) {
-		var rgbColor = hexToRgb(pin.color)
-		input += "[" + rgbColor.rgb + "]";
-	})
 	var data = {
 		model: "default",
-		input: [[44, 43, 44], [90, 83, 82], "N", "N", "N"]
+		input: []
 	}
+	var k = 0;
+	$.each(snapshot.pins, function (i, pin) {
+		var rgbColor = hexToRgb(pin.color)
+		data.input[k] = rgbColor.rgb;
+		k++;
+		data.input.join();
+	})
 	//data.input += "[" + input + "]";
 	var http = new XMLHttpRequest();
 
