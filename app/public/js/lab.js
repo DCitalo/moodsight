@@ -26,16 +26,16 @@ userRef.on('value', function (snapshot) {
 		var rgbColor = hexToRgb(pin.color)
 		colors.input += '[' + rgbColor.rgb + ']';
 	})
-	console.log(colors)
+	console.log(JSON.stringify(colors))
 	var http = new XMLHttpRequest();
+	http.open("POST", url, true);
+	http.send(JSON.stringify(colors));
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var palette = JSON.parse(http.responseText).result;
 			console.log(palette)
 		}
 	}
-	http.open("POST", url, true);
-	http.send(JSON.stringify(colors));
 })
 
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
