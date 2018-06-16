@@ -39,8 +39,11 @@ boardRef.on('value', function (snapshot) {
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var palette = JSON.parse(http.responseText).result;
+			var p = 1;
 			$.each(palette, function (i, color) {
+				$('.c-bg-color-' + p).css("background-color", "rgb(" + color["0"] + "," + color["1"] + "," + color["2"] + ")")
 				console.log(color)
+				p++
 			})
 		}
 	}
