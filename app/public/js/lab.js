@@ -1,7 +1,6 @@
 var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
 var userRef = firebase.database().ref(id + "/boards/" + idBoard);
-console.log(id + "/boards/" + idBoard)
 function hexToRgb(hex) {
 	// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 	var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -27,13 +26,15 @@ userRef.on('value', function (snapshot) {
 	})
 	console.log(colors)
 })
-var http = new XMLHttpRequest();
-http.onreadystatechange = function () {
-	if (http.readyState == 4 && http.status == 200) {
-		var palette = JSON.parse(http.responseText).result;
-		console.log(palette)
+delay(function () {
+	var http = new XMLHttpRequest();
+	http.onreadystatechange = function () {
+		if (http.readyState == 4 && http.status == 200) {
+			var palette = JSON.parse(http.responseText).result;
+			console.log(palette)
+		}
 	}
-}
-http.open("POST", url, true);
-http.send(JSON.stringify(colors));
+	http.open("POST", url, true);
+	http.send(JSON.stringify(colors));
+}, 1000);
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
