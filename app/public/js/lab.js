@@ -24,8 +24,7 @@ userRef.on('value', function (snapshot) {
 	}
 	$.each(data.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
-		console.log(rgbColor.rgb)
-		colors.input += [rgbColor.rgb];
+		colors.input += '[' + rgbColor.rgb + ']';
 	})
 	console.log(colors)
 	var http = new XMLHttpRequest();
