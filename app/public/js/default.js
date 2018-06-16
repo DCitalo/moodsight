@@ -97,25 +97,22 @@ function pintrestLogin() {
 				}
 			});
 		} else {
-			delay(function () {
-				$.post("/login", {
-					id
-				});
-				window.location.replace('/Dashboard');
-			}, 1000);
+			$.post("/login", {
+				id
+			});
+			window.location.replace('/Dashboard');
 		}
-	}
-};
-(function (d, s, id) {
-	var js, pjs = d.getElementsByTagName(s)[0];
-	if (d.getElementById(id)) {
-		return;
-	}
-	js = d.createElement(s);
-	js.id = id;
-	js.src = "//assets.pinterest.com/sdk/sdk.js";
-	pjs.parentNode.insertBefore(js, pjs);
-}(document, 'script', 'pinterest-jssdk'));
+	};
+	(function (d, s, id) {
+		var js, pjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {
+			return;
+		}
+		js = d.createElement(s);
+		js.id = id;
+		js.src = "//assets.pinterest.com/sdk/sdk.js";
+		pjs.parentNode.insertBefore(js, pjs);
+	}(document, 'script', 'pinterest-jssdk'));
 }
 var n = $('.car-cont').data("car");
 var m = 0;
