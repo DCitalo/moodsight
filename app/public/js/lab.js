@@ -1,6 +1,7 @@
 var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
-var userRef = firebase.database().ref(id + "/boards" + idBoard);
+var userRef = firebase.database().ref(id + "/boards/" + idBoard);
+console.log(id + "/boards/" + idBoard)
 userRef.on('value', function (snapshot) {
 	var data = snapshot.val();
 	console.log(data)
