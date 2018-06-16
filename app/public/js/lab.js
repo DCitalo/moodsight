@@ -37,14 +37,14 @@ userRef.on('value', function (snapshot) {
 		console.log(JSON.stringify(colors))
 	}, 1000);*/
 	var url = "http://colormind.io/api/";
-	var colors = {
+	var data = {
 		model: "default",
 		input: ""
 	}
-	var data = snapshot.val();
-	$.each(data.pins, function (i, pin) {
+	var snapshot = snapshot.val();
+	$.each(snapshot.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
-		colors.input += '[' + rgbColor.rgb + ']';
+		data.input += '[' + rgbColor.rgb + ']';
 	})
 	var http = new XMLHttpRequest();
 
@@ -56,7 +56,7 @@ userRef.on('value', function (snapshot) {
 	}
 
 	http.open("POST", url, true);
-	http.send(JSON.stringify(colors));
+	http.send(JSON.stringify(data));
 })
 
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
