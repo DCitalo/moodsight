@@ -37,16 +37,17 @@ userRef.on('value', function (snapshot) {
 		console.log(JSON.stringify(colors))
 	}, 1000);*/
 	var url = "http://colormind.io/api/";
-	var data = {
-		model: "default",
-		input: []
-	}
 	var snapshot = snapshot.val();
+	var snapshotColors = [];
 	$.each(snapshot.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
-		data.input += '[' + rgbColor.rgb + ']';
+		snapshotColors += '[' + rgbColor.rgb + ']';
 	})
-
+	console.log(snapshotColors)
+	var data = {
+		model: "default",
+		input: snapshotColors
+	}
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
