@@ -20,7 +20,7 @@ userRef.on('value', function (snapshot) {
 	var url = "http://colormind.io/api/";
 	var colors = {
 		model: "default",
-		input: []
+		input: ""
 	}
 	$.each(data.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
