@@ -1,5 +1,10 @@
 var id = $.cookie('idUser');
-var userRef = firebase.database().ref(id);
+var idBoard = $.cookie('idBoard');
+var userRef = firebase.database().ref(id + "/boards" + idBoard);
+userRef.on('value', function (snapshot) {
+	var data = snapshot.val();
+	console.log(data)
+})
 var url = "http://colormind.io/api/";
 var data = {
 	model: "default",

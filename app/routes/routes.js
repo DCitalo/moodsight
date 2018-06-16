@@ -48,6 +48,7 @@ module.exports = function (app) {
       boardRef.update({
         boardName: req.body.datafirebase[i].boardName,
         boardUrl: req.body.datafirebase[i].boardUrl,
+        boardId: req.body.datafirebase[i].boardId
       });
       var pinRef = boardRef.child("pins/" + req.body.datafirebase[i].id)
       pinRef.update({
@@ -64,9 +65,7 @@ module.exports = function (app) {
   });
   app.get("/Dashboard", function (req, res) {
     if (!login) {
-      res.render('home/index', {
-        "login": login
-      });
+      res.redirect('/')
     } else {
       res.render('Dashboard/index', {
         "login": login
