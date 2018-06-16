@@ -25,7 +25,9 @@ userRef.on('value', function (snapshot) {
 		input: []
 	}
 	$.each(data.pins, function (i, pin) {
-		colors.input += hexToRgb(pin.color);
+		var rgbColor = hexToRgb(pin.color)
+		console.log(rgbColor)
+		colors.input += rgbColor;
 	})
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
@@ -37,3 +39,5 @@ userRef.on('value', function (snapshot) {
 	http.open("POST", url, true);
 	http.send(JSON.stringify(colors));
 })
+
+//'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
