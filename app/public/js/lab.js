@@ -2,32 +2,38 @@ var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
 var userRef = firebase.database().ref(id + "/boards/" + idBoard);
 console.log(id + "/boards/" + idBoard)
+function hexToRgb(hex) {
+	// Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+	var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+	hex = hex.replace(shorthandRegex, function (m, r, g, b) {
+		return r + r + g + g + b + b;
+	});
+
+	var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	return result ? {
+		r: parseInt(result[1], 16),
+		g: parseInt(result[2], 16),
+		b: parseInt(result[3], 16)
+	} : null;
+}
 userRef.on('value', function (snapshot) {
 	var data = snapshot.val();
 	console.log(data)
-})
-var url = "http://colormind.io/api/";
-var data = {
-	model: "default",
-	input: [
-		[44, 43, 44],
-		[90, 83, 82],
-		[57, 46, 44],
-		[34, 98, 55],
-		[89, 32, 45],
-		[56, 37, 00],
-		[43, 31, 16],
-		[78, 43, 55]
-	]
-}
-
-var http = new XMLHttpRequest();
-
-http.onreadystatechange = function () {
-	if (http.readyState == 4 && http.status == 200) {
-		var palette = JSON.parse(http.responseText).result;
+	var url = "http://colormind.io/api/";
+	var colors = {
+		model: "default",
+		input: []
 	}
-}
-
-http.open("POST", url, true);
-http.send(JSON.stringify(data));
+	$.each(data.pins, function (i, pin) {
+		colors.input += hexToRgb(pin.color);
+	})
+	var http = new XMLHttpRequest();
+	http.onreadystatechange = function () {
+		if (http.readyState == 4 && http.status == 200) {
+			var palette = JSON.parse(http.responseText).result;
+			console.log(palette)
+		}
+	}
+	http.open("POST", url, true);
+	http.send(JSON.stringify(colors));
+})

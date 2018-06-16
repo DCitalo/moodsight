@@ -32,7 +32,7 @@ userRef.on('value', function (snapshot) {
     $('.btn-start').click(function () {
         var idBoard = $(this).data("lab");
         $.cookie('idBoard', idBoard);
-        window.location.replace('/Laboratorio');
+        window.location.replace('http://www.moodsight.com.br/Laboratorio');
     })
     $('.pin-car').slick({
         centerMode: true,
