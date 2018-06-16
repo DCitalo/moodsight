@@ -13,7 +13,7 @@ module.exports = function (app) {
     next();
   });
   app.get("/", function (req, res) {
-
+    var ua = req.header('user-agent');
     if (/mobile/i.test(ua)) {
       res.render('m-home/index', {
         "login": login
