@@ -46,7 +46,7 @@ userRef.on('value', function (snapshot) {
 	console.log(snapshotColors)
 	var data = {
 		model: "default",
-		input: '[' + snapshotColors + ']'
+		input: [snapshotColors]
 	}
 	var http = new XMLHttpRequest();
 
