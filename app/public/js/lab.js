@@ -25,7 +25,7 @@ userRef.on('value', function (snapshot) {
 		model: "default",
 		input: []
 	}
-	data.input += input
+	data.input += "[" + input + "]";
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
