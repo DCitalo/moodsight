@@ -43,6 +43,8 @@ userRef.on('value', function (snapshot) {
 		var rgbColor = hexToRgb(pin.color)
 		snapshotColors += JSON.stringify(rgbColor.rgb);
 	})
+	console.log(JSON.stringify(snapshotColors))
+	console.log(JSON.parse(snapshotColors))
 	var data = {
 		model: "default",
 		input: [snapshotColors]
