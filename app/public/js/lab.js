@@ -11,9 +11,7 @@ function hexToRgb(hex) {
 
 	var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 	return result ? {
-		r: parseInt(result[1], 16),
-		g: parseInt(result[2], 16),
-		b: parseInt(result[3], 16)
+		rgb: [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)]
 	} : null;
 }
 userRef.on('value', function (snapshot) {
@@ -26,9 +24,10 @@ userRef.on('value', function (snapshot) {
 	}
 	$.each(data.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
-		console.log(rgbColor)
-		colors.input += rgbColor;
+		console.log(rgbColor.rgb)
+		colors.input += rgbColor.rgb;
 	})
+	console.log(colors)
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
