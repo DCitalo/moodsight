@@ -19,7 +19,7 @@ userRef.on('value', function (snapshot) {
             painel += "<li class='pin-img'><img src=" + pin.img + "></li>"
         })
         painel += "  </ul>\
-                        <button onclick='goToLab(441704744642831426)' href='http://wwww.moodsight.com.br/Laboratorio' class='btn-start btn-round DF FW CSS color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
+                        <button data-lab='441704744642831426' href='http://wwww.moodsight.com.br/Laboratorio' class='btn-start btn-round DF FW CSS color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
                     </div>"
         $("#Dashboard").append(painel);
         numeroBoard++
@@ -29,11 +29,11 @@ userRef.on('value', function (snapshot) {
             }, 1000);
         }
     })
-
-    function goToLab(id) {
-        $.cookie('idBoard', id);
+    $('.btn-start').click(function () {
+        var idBoard = $(this).data("lab");
+        $.cookie('idBoard', idBoard);
         window.location.replace('/Laboratorio');
-    }
+    })
     $('.pin-car').slick({
         centerMode: true,
         centerPadding: '60px',
