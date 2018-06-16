@@ -39,9 +39,13 @@ userRef.on('value', function (snapshot) {
 	var url = "http://colormind.io/api/";
 	var data = {
 		model: "default",
-		input: [[44, 43, 44], [90, 83, 82], [90, 83, 82], [90, 83, 82], [90, 83, 82]]
+		input: ""
 	}
-
+	var data = snapshot.val();
+	$.each(data.pins, function (i, pin) {
+		var rgbColor = hexToRgb(pin.color)
+		colors.input += '[' + rgbColor.rgb + ']';
+	})
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
