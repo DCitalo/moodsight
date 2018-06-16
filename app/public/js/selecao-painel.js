@@ -1,5 +1,7 @@
-var id = $.cookie('idUser');
-var userRef = firebase.database().ref(id);
+//var id = $.cookie('idUser');
+//retirar proxima linha para funcionar com login
+$.cookie('idUser', '441704813361685551');
+var userRef = firebase.database().ref('441704813361685551');
 userRef.on('value', function (snapshot) {
     var data = snapshot.val();
     var NomeUsuario = data.user.nome.username;
@@ -17,7 +19,7 @@ userRef.on('value', function (snapshot) {
             painel += "<li class='pin-img'><img src=" + pin.img + "></li>"
         })
         painel += "  </ul>\
-                        <button onclick='goToLab(" + board.id + ")' href='http://wwww.moodsight.com.br/Laboratorio' class='btn-start btn-round DF FW CSS color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
+                        <button onclick='goToLab(441704744642831426)' href='http://wwww.moodsight.com.br/Laboratorio' class='btn-start btn-round DF FW CSS color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
                     </div>"
         $("#Dashboard").append(painel);
         numeroBoard++
