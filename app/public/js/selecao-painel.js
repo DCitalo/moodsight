@@ -10,6 +10,8 @@ userRef.on('value', function (snapshot) {
             let banner = "<div class='painel-cont'><img src='/img/Banner-premium-AD.png' src='' /></div>"
             $("#Dashboard").append(banner)
         }
+        var boardId = board.id;
+        console.log(boardId)
         let painel = "<div id=" + numeroBoard + " class='painel-cont DF FW CSP tamfont1'>\
                         <span class='tamfont3 bg-gradient-3 color-1 Upper bold font-1 text-center title-board'>Painel " + numeroBoard + "</span>\
                         <ul class='pin-car w-80 DF FW CSS'>"
@@ -17,7 +19,7 @@ userRef.on('value', function (snapshot) {
             painel += "<li class='pin-img'><img src=" + pin.img + "></li>"
         })
         painel += "  </ul>\
-                        <button data-lab="+ board.id + " href='http://wwww.moodsight.com.br/Laboratorio' class='btn-start btn-round DF FW CSS color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
+                        <button data-lab="+ boardId + " href='http://wwww.moodsight.com.br/Laboratorio' class='btn-start btn-round DF FW CSS color-4'><i class='icon-small icon-upload'></i><span class='start-text font-1 tamfont3 bold'>Iniciar</span></button>\
                     </div>"
         $("#Dashboard").append(painel);
         numeroBoard++
