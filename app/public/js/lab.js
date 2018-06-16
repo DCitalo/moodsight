@@ -23,9 +23,9 @@ userRef.on('value', function (snapshot) {
 	})
 	var data = {
 		model: "default",
-		input: []
+		input: [[44, 43, 44], [90, 83, 82], "N", "N", "N"]
 	}
-	data.input += JSON.stringify(input);
+	//data.input += "[" + input + "]";
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
