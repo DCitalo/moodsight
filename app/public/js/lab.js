@@ -41,12 +41,12 @@ userRef.on('value', function (snapshot) {
 	var snapshotColors = [];
 	$.each(snapshot.pins, function (i, pin) {
 		var rgbColor = hexToRgb(pin.color)
-		snapshotColors += [rgbColor.rgb];
+		snapshotColors += JSON.stringify(rgbColor.rgb);
 	})
-	var colors = JSON.stringify(snapshotColors)
+	var colors = snapshotColors
 	var data = {
 		model: "default",
-		input: colors
+		input: [colors]
 	}
 	var http = new XMLHttpRequest();
 
