@@ -46,7 +46,7 @@ userRef.on('value', function (snapshot) {
 	console.log([JSON.stringify(input)])
 	var data = {
 		model: "default",
-		input
+		input: input
 	}
 	var http = new XMLHttpRequest();
 
@@ -57,6 +57,7 @@ userRef.on('value', function (snapshot) {
 		}
 	}
 	console.log(JSON.stringify(data))
+	console.log(data)
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));
 })
