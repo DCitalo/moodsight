@@ -1768,6 +1768,7 @@ button {
 
 .title-lab {
   line-height: 50px;
+  margin-left: 15px;
 }
 
 .topo-lab {
@@ -1794,6 +1795,25 @@ button {
   padding: 10px 20px;
   margin-left: 10%;
   margin-top: 30px;
+}
+
+.textcont-lab {
+  width: 550px;
+  margin-bottom: 30px;
+}
+
+.tab-lab {
+  box-shadow: -3.5px 11.5px 9px 0 rgba(0, 0, 0, 0.18);
+}
+
+.tab-lab.w {
+  background-color: #ffffff;
+  border: solid 1.8px #ffffff;
+}
+
+.tab-lab.b {
+  background-color: #232027;
+  border: solid 1.8px #ffffff;
 }
 
 /*---------------------- FIM LABORATORIO -----------------------*/
