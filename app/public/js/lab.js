@@ -99,7 +99,9 @@ boardRef.on('value', function (snapshot) {
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var paletteResult = JSON.parse(http.responseText).result;
-			var paleta = {};
+			var paleta = {
+				color: {}
+			};
 			var p = 1;
 			$.each(paletteResult, function (i, color) {
 				var r = color["0"],
