@@ -101,10 +101,10 @@ boardRef.on('value', function (snapshot) {
 				var r = color["0"],
 					g = color["1"],
 					b = color["2"],
-					rgb = rgbToHex(r, g, b);
+					hex = rgbToHex(r, g, b);
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
 				$('.c-text-' + p).append("#" + rgb);
-				$('.c-text-' + p).val(rgb);
+				$('.c-text-' + p).val("f4bcbd");
 				p++
 				if (p == Object.keys(palette).length) {
 					delay(function () {
@@ -131,6 +131,6 @@ $('.btn-generate').click(function () {
 	}
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));*/
-	console.log(rgbToHex($('.c-bg-color-1').css('background-color')))
+	console.log($('.c-bg-color-1').css('background-color'))
 })
 
