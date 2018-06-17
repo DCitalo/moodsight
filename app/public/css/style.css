@@ -1845,6 +1845,14 @@ button {
   color: #FFF !important;
 }
 
+/* C-elementos */
+
+.c-btn {
+  padding: 10px 15px;
+}
+
+/* FIM C-elementos */
+
 /*---------------------- FIM LABORATORIO -----------------------*/
 
 /*---------------------- RESPONSIVO -------------------*/
