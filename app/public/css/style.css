@@ -1759,13 +1759,13 @@ button {
 }
 
 .title-lab {
-  margin-bottom: 20px;
-  line-height: 20px;
+  line-height: 50px;
 }
 
 .topo-lab {
   width: calc(100% - 130px);
-  /* box-shadow: 0px 0px 40px #0000007a; */
+  height: 60px;
+  z-index: 99999;
 }
 
 .nav-top {
