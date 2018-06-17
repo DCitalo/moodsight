@@ -132,11 +132,33 @@ $('.btn-generate').click(function () {
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var palette = JSON.parse(http.responseText).result;
+			var p = 1;
+			$.each(palette, function (i, color) {
+				var r = color["0"],
+					g = color["1"],
+					b = color["2"],
+					RGB = [r, g, b],
+					hex = rgbToHex(r, g, b);
+				$('.c-bg-color-' + p).css("background-color", hex)
+				$('.c-color-' + p).css("color", hex)
+				$('.c-text-' + p).val(hex);
+				console.log(RGB)
+				p++
+				if (p == Object.keys(palette).length) {
+					delay(function () {
+						$('#loading').toggleClass('hide');
+					}, 1000);
+				}
+			})
 		}
 	}
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));*/
-	console.log($('.c-bg-color-1').css('background-color'))
+	console.log($('.c-text-1').val())
+	console.log($('.c-text-2').val())
+	console.log($('.c-text-3').val())
+	console.log($('.c-text-4').val())
+	console.log($('.c-text-5').val())
 })
 $('.btn-reset').click(function () {
 	boardRef.on('value', function (snapshot) {
