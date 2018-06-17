@@ -9,149 +9,150 @@
             <% } else { %>
                 <%  include ../commom/headerOn.ejs %>
                     <% } %>
-                        <section class="conteudo-body bg-pattern-1 tamfont1">
-                            <div class="PF DF CSP FW topo-lab bg-pattern-1">
-                                <nav class="DF FW nav-top CSP">
-                                    <a href="#Pal-cores">
-                                        <i class="icon-medium icon-paleta"></i>
-                                    </a>
-                                    <a href="#Ele-ui">
-                                        <i class="icon-medium icon-formas"></i>
-                                    </a>
-                                    <a href="#Icons">
-                                        <i class="icon-medium icon-bars"></i>
-                                    </a>
-                                    <a href="#Tipo">
-                                        <i class="icon-medium icon-font"></i>
-                                    </a>
-                                    <a href="#Mock">
-                                        <i class="icon-medium icon-mockup"></i>
-                                    </a>
-                                </nav>
-                                <div class="topUserName DF FW CSS">
-                                    <i class="icon-small icon-user-circle"></i>
-                                    <p id="UsuarioNome" class="bold font-1 tamfont4 color-2">Ítalo</p>
+                        <%  include ../commom/loading.ejs %>
+                            <section class="conteudo-body bg-pattern-1 tamfont1">
+                                <div class="PF DF CSP FW topo-lab bg-pattern-1">
+                                    <nav class="DF FW nav-top CSP">
+                                        <a href="#Pal-cores">
+                                            <i class="icon-medium icon-paleta"></i>
+                                        </a>
+                                        <a href="#Ele-ui">
+                                            <i class="icon-medium icon-formas"></i>
+                                        </a>
+                                        <a href="#Icons">
+                                            <i class="icon-medium icon-bars"></i>
+                                        </a>
+                                        <a href="#Tipo">
+                                            <i class="icon-medium icon-font"></i>
+                                        </a>
+                                        <a href="#Mock">
+                                            <i class="icon-medium icon-mockup"></i>
+                                        </a>
+                                    </nav>
+                                    <div class="topUserName DF FW CSS">
+                                        <i class="icon-small icon-user-circle"></i>
+                                        <p id="UsuarioNome" class="bold font-1 tamfont4 color-2">Ítalo</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="header-lab DF FW tamfont1">
-                                <h3 class="Upper bold font-1 DF FW tamfont5 logoFull-cont w-100 color-2">Projeto gerado - Painel 1</h3>
-                                <span class="tamfont3 bg-gradient-3 color-1 Upper bold font-1 text-center title-board DB">Painel 1</span>
-                                <div class="text-lab">
-                                    <p class="font-1 tamfont4 color-2 LH2">Agora que seu painel ja passou pelo nossa sistema, nossa I.A. ”Ocho” identificou as cores
-                                        predominantes nas imagens e gerou uma paleta de cores, esse é o momento para experimentar
-                                        e testar, fornecemos aqui uma biblioteca de elementos de interface, icones e tipografias
-                                        assim como um framework de css para aplicação e teste, nesse ambiente para você pode
-                                        utilizar e testar ideias das cores geradas! </p>
-                                    <button class="Upper bg-gradient-4 btn btn-round btn-save color-1">Salvar Projeto</button>
-                                </div>
+                                <div class="header-lab DF FW tamfont1">
+                                    <h3 class="Upper bold font-1 DF FW tamfont5 logoFull-cont w-100 color-2">Projeto gerado - Painel 1</h3>
+                                    <span class="tamfont3 bg-gradient-3 color-1 Upper bold font-1 text-center title-board DB">Painel 1</span>
+                                    <div class="text-lab">
+                                        <p class="font-1 tamfont4 color-2 LH2">Agora que seu painel ja passou pelo nossa sistema, nossa I.A. ”Ocho” identificou
+                                            as cores predominantes nas imagens e gerou uma paleta de cores, esse é o momento
+                                            para experimentar e testar, fornecemos aqui uma biblioteca de elementos de interface,
+                                            icones e tipografias assim como um framework de css para aplicação e teste, nesse
+                                            ambiente para você pode utilizar e testar ideias das cores geradas! </p>
+                                        <button class="Upper bg-gradient-4 btn btn-round btn-save color-1">Salvar Projeto</button>
+                                    </div>
 
-                            </div>
-                        </section>
-                        <section id="Pal-cores" class="conteudo-body P-440  bgcolor-8">
-                            <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
-                                <i class="icon-medium icon-paleta-col bgcolor-6"></i>
-                                <span class="Upper font-1 title-lab">Paleta de Cores</span>
-                            </h4>
-                            <div class="textcont-lab">
-                                <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você pode
-                                    realizar experimentações dos modelos gerados de UI.</p>
-                            </div>
-                            <ul class="DF FW CSP w-80 align-center">
-                                <li class="cont-pal-lab">
-                                    <div class="pal-lab w-100 c-bg-color-1"></div>
-                                    <div class="w-100 leg-pal-lab">
-                                        <input class="w-80 c-text-1 jscolor {onFineChange:'update(this,1)'}" value="">
-                                    </div>
-                                </li>
-                                <li class="cont-pal-lab">
-                                    <div class="pal-lab w-100 c-bg-color-2"></div>
-                                    <div class="w-100 leg-pal-lab">
-                                        <input class="w-80 c-text-2 jscolor {onFineChange:'update(this,2)'}" value="">
-                                    </div>
-                                </li>
-                                <li class="cont-pal-lab">
-                                    <div class="pal-lab w-100 c-bg-color-3"></div>
-                                    <div class="w-100 leg-pal-lab">
-                                        <input class="w-80 c-text-3 jscolor {onFineChange:'update(this,3)'}" value="">
-                                    </div>
-                                </li>
-                                <li class="cont-pal-lab">
-                                    <div class="pal-lab w-100 c-bg-color-4"></div>
-                                    <div class="w-100 leg-pal-lab">
-                                        <input class="w-80 c-text-4 jscolor {onFineChange:'update(this,4)'}" value="">
-                                    </div>
-                                </li>
-                                <li class="cont-pal-lab">
-                                    <div class="pal-lab w-100 c-bg-color-5"></div>
-                                    <div class="w-100 leg-pal-lab">
-                                        <input class="w-80 c-text-5 jscolor {onFineChange:'update(this,5)'}" value="">
-                                    </div>
-                                </li>
-                            </ul>
-                            <button class="btn-round btn-generate DF FW Upper bold bg-gradient-1 color-1 ">
-                                <i class="icon-small icon-formas"></i>
-                                <span class="generate-text font-1 tamfont2">Gerar Paleta</span>
-                            </button>
-                        </section>
-                        <section id="Ele-ui" class="conteudo-body P-440  bg-gradient-1">
-                            <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
-                                <i class="icon-medium icon-formas-col bgcolor-6"></i>
-                                <span class="Upper font-1 title-lab color-1">Elementos UI</span>
-                            </h4>
-                            <div class="textcont-lab">
-                                <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você pode
-                                    realizar experimentações dos modelos gerados de UI.</p>
-                            </div>
-                            <div class="tabs tabs-lab tamfont1">
-                                <a class="font-1 tamfont2 tab-lab-master" href="#Buttons">Buttons</a>
-                                <a class="font-1 tamfont2 tab-lab-master" href="#Select">Select</a>
-                                <a class="font-1 tamfont2 tab-lab-master" href="#Inputs">Inputs</a>
-                                <a class="font-1 tamfont2 tab-lab-master" href="#CheckRad">Checkboxes & Radios</a>
-                            </div>
-                            <div id="Buttons" class="tab-lab w-100">
-                                <p class="title-tab-lab">Buttons</p>
-                            </div>
-                            <div id="Select" class="tab-lab w-100">
-                                <p class="title-tab-lab">Select</p>
-                            </div>
-                            <div id="Inputs" class="tab-lab w-100">
-                                <p class="title-tab-lab">Inputs</p>
-                            </div>
-                            <div id="CheckRad" class="tab-lab w-100">
-                                <p class="title-tab-lab">Checkboxes & Radios</p>
-                            </div>
-                        </section>
-                        <section id="Icons" class="bgcolor-8 conteudo-body P-440">
-                            <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
-                                <i class="icon-medium icon-bars-col bgcolor-3"></i>
-                                <span class="Upper font-1 title-lab color-1">Icones</span>
-                            </h4>
-                            <div class="textcont-lab">
-                                <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você pode
-                                    realizar experimentações dos modelos gerados de UI.</p>
-                            </div>
-                        </section>
-                        <section id="Tipo" class="bg-tipograf conteudo-body P-440">
-                            <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
-                                <i class="icon-medium icon-font-col bgcolor-8"></i>
-                                <span class="Upper font-1 color-2 title-lab">Tipografia</span>
-                            </h4>
-                            <div class="textcont-lab">
-                                <p class="font-1 color-2 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você pode
-                                    realizar experimentações dos modelos gerados de UI.</p>
-                            </div>
-                        </section>
-                        <section id="Mock" class="bg-pattern-1 conteudo-body P-440">
-                            <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
-                                <i class="icon-medium icon-mockup-col bgcolor-8"></i>
-                                <span class="Upper font-1 color-2 title-lab">Mockup UI Interativo</span>
-                            </h4>
-                            <div class="textcont-lab">
-                                <p class="font-1 color-2 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você pode
-                                    realizar experimentações dos modelos gerados de UI.</p>
-                            </div>
-                        </section>
-                        <% include ../commom/footer.ejs %>
+                                </div>
+                            </section>
+                            <section id="Pal-cores" class="conteudo-body P-440  bgcolor-8">
+                                <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
+                                    <i class="icon-medium icon-paleta-col bgcolor-6"></i>
+                                    <span class="Upper font-1 title-lab">Paleta de Cores</span>
+                                </h4>
+                                <div class="textcont-lab">
+                                    <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você
+                                        pode realizar experimentações dos modelos gerados de UI.</p>
+                                </div>
+                                <ul class="DF FW CSP w-80 align-center">
+                                    <li class="cont-pal-lab">
+                                        <div class="pal-lab w-100 c-bg-color-1"></div>
+                                        <div class="w-100 leg-pal-lab">
+                                            <input class="w-80 c-text-1 jscolor {onFineChange:'update(this,1)'}" value="">
+                                        </div>
+                                    </li>
+                                    <li class="cont-pal-lab">
+                                        <div class="pal-lab w-100 c-bg-color-2"></div>
+                                        <div class="w-100 leg-pal-lab">
+                                            <input class="w-80 c-text-2 jscolor {onFineChange:'update(this,2)'}" value="">
+                                        </div>
+                                    </li>
+                                    <li class="cont-pal-lab">
+                                        <div class="pal-lab w-100 c-bg-color-3"></div>
+                                        <div class="w-100 leg-pal-lab">
+                                            <input class="w-80 c-text-3 jscolor {onFineChange:'update(this,3)'}" value="">
+                                        </div>
+                                    </li>
+                                    <li class="cont-pal-lab">
+                                        <div class="pal-lab w-100 c-bg-color-4"></div>
+                                        <div class="w-100 leg-pal-lab">
+                                            <input class="w-80 c-text-4 jscolor {onFineChange:'update(this,4)'}" value="">
+                                        </div>
+                                    </li>
+                                    <li class="cont-pal-lab">
+                                        <div class="pal-lab w-100 c-bg-color-5"></div>
+                                        <div class="w-100 leg-pal-lab">
+                                            <input class="w-80 c-text-5 jscolor {onFineChange:'update(this,5)'}" value="">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="btn-round btn-generate DF FW Upper bold bg-gradient-1 color-1 ">
+                                    <i class="icon-small icon-formas"></i>
+                                    <span class="generate-text font-1 tamfont2">Gerar Paleta</span>
+                                </button>
+                            </section>
+                            <section id="Ele-ui" class="conteudo-body P-440  bg-gradient-1">
+                                <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
+                                    <i class="icon-medium icon-formas-col bgcolor-6"></i>
+                                    <span class="Upper font-1 title-lab color-1">Elementos UI</span>
+                                </h4>
+                                <div class="textcont-lab">
+                                    <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você
+                                        pode realizar experimentações dos modelos gerados de UI.</p>
+                                </div>
+                                <div class="tabs tabs-lab tamfont1">
+                                    <a class="font-1 tamfont2 tab-lab-master" href="#Buttons">Buttons</a>
+                                    <a class="font-1 tamfont2 tab-lab-master" href="#Select">Select</a>
+                                    <a class="font-1 tamfont2 tab-lab-master" href="#Inputs">Inputs</a>
+                                    <a class="font-1 tamfont2 tab-lab-master" href="#CheckRad">Checkboxes & Radios</a>
+                                </div>
+                                <div id="Buttons" class="tab-lab w-100">
+                                    <p class="title-tab-lab">Buttons</p>
+                                </div>
+                                <div id="Select" class="tab-lab w-100">
+                                    <p class="title-tab-lab">Select</p>
+                                </div>
+                                <div id="Inputs" class="tab-lab w-100">
+                                    <p class="title-tab-lab">Inputs</p>
+                                </div>
+                                <div id="CheckRad" class="tab-lab w-100">
+                                    <p class="title-tab-lab">Checkboxes & Radios</p>
+                                </div>
+                            </section>
+                            <section id="Icons" class="bgcolor-8 conteudo-body P-440">
+                                <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
+                                    <i class="icon-medium icon-bars-col bgcolor-3"></i>
+                                    <span class="Upper font-1 title-lab color-1">Icones</span>
+                                </h4>
+                                <div class="textcont-lab">
+                                    <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você
+                                        pode realizar experimentações dos modelos gerados de UI.</p>
+                                </div>
+                            </section>
+                            <section id="Tipo" class="bg-tipograf conteudo-body P-440">
+                                <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
+                                    <i class="icon-medium icon-font-col bgcolor-8"></i>
+                                    <span class="Upper font-1 color-2 title-lab">Tipografia</span>
+                                </h4>
+                                <div class="textcont-lab">
+                                    <p class="font-1 color-2 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você
+                                        pode realizar experimentações dos modelos gerados de UI.</p>
+                                </div>
+                            </section>
+                            <section id="Mock" class="bg-pattern-1 conteudo-body P-440">
+                                <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
+                                    <i class="icon-medium icon-mockup-col bgcolor-8"></i>
+                                    <span class="Upper font-1 color-2 title-lab">Mockup UI Interativo</span>
+                                </h4>
+                                <div class="textcont-lab">
+                                    <p class="font-1 color-2 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você
+                                        pode realizar experimentações dos modelos gerados de UI.</p>
+                                </div>
+                            </section>
+                            <% include ../commom/footer.ejs %>
 </body>
 <% include ../commom/tags-footer.ejs %>
     <script src="/js/jscolor.js "></script>

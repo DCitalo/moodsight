@@ -101,12 +101,17 @@ boardRef.on('value', function (snapshot) {
 				var r = color["0"],
 					g = color["1"],
 					b = color["2"],
-					rgb = rgbToHex(r, g, b);
+					rgb = rgbToHex(r, g, b),
+					Lrgb = rgb.replace(/#/g, "");
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
 				$('.c-text-' + p).append("#" + rgb);
-				console.log(rgb)
-				$('.c-text-' + p).val(rgb.replace(/#/g, ""));
+				$('.c-text-' + p).val(Lrgb);
 				p++
+				if (p == Object.keys(palette).length) {
+					delay(function () {
+						$('#loading').toggleClass('hide');
+					}, 1000);
+				}
 			})
 		}
 	}
