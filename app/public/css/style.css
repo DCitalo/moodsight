@@ -1812,6 +1812,13 @@ button {
   cursor: pointer;
 }
 
+.btn-atualizar {
+  padding: 10px 20px;
+  margin-left: 10%;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
 .textcont-lab {
   width: 550px;
   margin-bottom: 30px;

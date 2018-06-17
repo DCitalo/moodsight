@@ -76,6 +76,7 @@ function smoothScrollTo(endX, endY, duration) {
 userRef.on('value', function (snapshot) {
 	var data = snapshot.val();
 	var NomeUsuario = data.user.nome.username;
+	$("#UsuarioNome").append(NomeUsuario);
 })
 boardRef.on('value', function (snapshot) {
 	var url = "http://colormind.io/api/";
@@ -132,5 +133,42 @@ $('.btn-generate').click(function () {
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));*/
 	console.log($('.c-bg-color-1').css('background-color'))
+})
+$('.btn-reset').click(function () {
+	boardRef.on('value', function (snapshot) {
+		var url = "http://colormind.io/api/";
+		var snapshot = snapshot.val();
+		var input = [];
+		var data = {
+			model: "default",
+			input: []
+		}
+		var k = 0;
+		$.each(snapshot.pins, function (i, pin) {
+			var rgbColor = hexToRgb(pin.color)
+			data.input[k] = rgbColor.rgb;
+			k++;
+			data.input.join();
+		})
+		var http = new XMLHttpRequest();
+
+		http.onreadystatechange = function () {
+			if (http.readyState == 4 && http.status == 200) {
+				var palette = JSON.parse(http.responseText).result;
+				var p = 1;
+				$.each(palette, function (i, color) {
+					var r = color["0"],
+						g = color["1"],
+						b = color["2"],
+						hex = rgbToHex(r, g, b);
+					$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
+					$('.c-text-' + p).val(hex);
+					p++
+				})
+			}
+		}
+		http.open("POST", url, true);
+		http.send(JSON.stringify(data));
+	})
 })
 
