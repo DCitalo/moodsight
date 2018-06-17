@@ -98,22 +98,24 @@ boardRef.on('value', function (snapshot) {
 
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
-			var palette = JSON.parse(http.responseText).result;
+			var paletteResult = JSON.parse(http.responseText).result;
+			var paleta = {};
 			var p = 1;
-			$.each(palette, function (i, color) {
+			$.each(paletteResult, function (i, color) {
 				var r = color["0"],
 					g = color["1"],
 					b = color["2"],
 					RGB = [r, g, b],
 					hex = rgbToHex(r, g, b);
+				paleta.color[p] = hex;
 				$('.c-bg-color-' + p).css("background-color", hex)
 				$('.c-color-' + p).css("color", hex)
 				$('.c-text-' + p).val(hex);
-				console.log(RGB)
 				p++
-				if (p == Object.keys(palette).length) {
+				if (p == Object.keys(paletteResult).length) {
 					delay(function () {
 						$('#loading').toggleClass('hide');
+						console.log(paleta)
 					}, 1000);
 				}
 			})
