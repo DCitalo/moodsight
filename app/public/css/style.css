@@ -1857,6 +1857,10 @@ button {
   color: #FFF !important;
 }
 
+.title-tab-lab {
+  margin: 20px 0px
+}
+
 /* C-elementos */
 
 .c-btn {
