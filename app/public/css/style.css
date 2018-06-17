@@ -1275,6 +1275,16 @@ button {
   background-repeat: no-repeat;
 }
 
+.icon-upload-col {
+  -webkit-mask: url(../img/upload.svg);
+  mask: url(../img/upload.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  display: inline-block;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
 *:hover>.icon-upload,
 .icon-upload:hover {
   background-image: url(../img/upload~hover.svg);

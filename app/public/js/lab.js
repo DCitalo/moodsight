@@ -103,7 +103,7 @@ boardRef.on('value', function (snapshot) {
 					b = color["2"],
 					hex = rgbToHex(r, g, b);
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
-				$('.c-text-' + p).val("f4bcbd");
+				$('.c-text-' + p).val(hex);
 				p++
 				if (p == Object.keys(palette).length) {
 					delay(function () {
