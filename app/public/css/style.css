@@ -1812,10 +1812,11 @@ button {
 }
 
 .btn-generate {
-  padding: 10px 20px;
+  padding: 0px 20px;
   margin-left: 10%;
   margin-top: 30px;
   cursor: pointer;
+  height: 50px;
 }
 
 .btn-atualizar {
@@ -1868,14 +1869,16 @@ button {
 }
 
 .btn-reset {
-  padding: 10px 20px;
+  padding: 0px 20px;
   margin-left: 20px;
   margin-top: 30px;
   cursor: pointer;
+  height: 50px;
 }
 
 .generate-text {
   margin-left: 10px;
+  line-height: 50px;
 }
 
 /* C-elementos */
