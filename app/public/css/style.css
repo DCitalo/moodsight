@@ -2072,6 +2072,14 @@ input:checked+.c-slider:before {
   border-bottom: 1px solid #ffffff;
 }
 
+.c-font-1 {
+  font-family: 'Paytone One', sans-serif;
+}
+
+.c-font-2 {
+  font-family: 'Quicksand', sans-serif;
+}
+
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/
