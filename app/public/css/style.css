@@ -2024,6 +2024,12 @@ input:checked+.c-slider:before {
   padding: 15px 25px;
 }
 
+.lab-icon {
+  margin-right: 0;
+  margin-left: auto;
+  height: 40px;
+}
+
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/
