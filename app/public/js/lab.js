@@ -22,7 +22,7 @@ function rgbToHex(r, g, b) {
 }
 function update(jscolor, n) {
 	$('.c-bg-color-' + n).css("background-color", "#" + jscolor)
-	console.log($(this).css("color"))
+	console.log(jscolor)
 }
 
 const menuItems = document.querySelectorAll('.nav-top a[href^="#"]');
