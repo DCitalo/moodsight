@@ -931,6 +931,14 @@ button {
   background-repeat: no-repeat;
 }
 
+.icon-bars-col {
+  -webkit-mask: url(../img/bars.svg);
+  mask: url(../img/bars.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+}
+
 .icon-behance {
   background-image: url(../img/BEhance.svg);
   background-repeat: no-repeat;
@@ -1107,6 +1115,14 @@ button {
 .icon-mockup {
   background-image: url(../img/mockup-icon.svg);
   background-repeat: no-repeat;
+}
+
+.icon-mockup-col {
+  -webkit-mask: url(../img/mockup-icon.svg);
+  mask: url(../img/mockup-icon.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
 }
 
 .icon-moodsight {
