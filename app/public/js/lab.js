@@ -47,10 +47,11 @@ boardRef.on('value', function (snapshot) {
 			$.each(palette, function (i, color) {
 				var r = color["0"],
 					g = color["1"],
-					b = color["2"];
-				console.log(rgbToHex(r, g, b))
+					b = color["2"],
+					rgb = rgbToHex(r, g, b);
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
-				$('.c-text-' + p).append("#")
+				$('.c-text-' + p).append("#" + rgb);
+				$('.c-text-' + p).val(rgb);
 				p++
 			})
 		}
