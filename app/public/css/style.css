@@ -1331,8 +1331,18 @@ button {
   background-repeat: no-repeat;
 }
 
+.icon-paleta {
+  background-image: url(../img/icone-paleta-gerar.svg);
+  background-repeat: no-repeat;
+}
+
 .icon-random {
   background-image: url(../img/random.svg);
+  background-repeat: no-repeat;
+}
+
+.icon-help {
+  background-image: url(../img/-ICONE-macoste-dica-rapida.svg);
   background-repeat: no-repeat;
 }
 
@@ -2035,6 +2045,7 @@ input:checked+.c-slider:before {
   height: 50px;
   position: relative;
   margin-left: 50px;
+  width: calc(100% - 50px);
   text-transform: uppercase;
   font-size: 16px;
 }
@@ -2052,7 +2063,7 @@ input:checked+.c-slider:before {
 
 .title-aplica::after {
   content: '';
-  width: 100%;
+  width: calc(100% + 50px);
   height: 50px;
   position: absolute;
   top: -16px;

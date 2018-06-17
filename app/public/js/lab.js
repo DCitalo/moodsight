@@ -205,3 +205,7 @@ $('.btn-reset').click(function () {
 $('.c-switch').click(function () {
 	$(this).toggleClass('c-bg-color-1')
 })
+function setFont1(selectObject) {
+	var value = selectObject.value;
+	console.log(value)
+}
