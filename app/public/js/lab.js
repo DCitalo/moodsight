@@ -54,7 +54,8 @@ boardRef.on('value', function (snapshot) {
 					rgb = rgbToHex(r, g, b);
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
 				$('.c-text-' + p).append("#" + rgb);
-				$('.c-text-' + p).val(rgb);
+				console.log(rgb)
+				$('.c-text-' + p).val(rgb.replace(/#/g, ""));
 				p++
 			})
 		}
