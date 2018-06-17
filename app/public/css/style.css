@@ -1813,12 +1813,12 @@ button {
 
 .tab-lab.w {
   background-color: #ffffff;
-  border: solid 1.8px #ffffff;
+  border: 1.8px solid #ffffff;
 }
 
 .tab-lab.b {
   background-color: #232027;
-  border: solid 1.8px #ffffff;
+  border: 1.8px solid #ffffff;
 }
 
 /*---------------------- FIM LABORATORIO -----------------------*/
