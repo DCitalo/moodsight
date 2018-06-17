@@ -261,6 +261,16 @@ button {
   background-size: contain;
 }
 
+.bg-tipograf {
+  background: url(../img/banners-output_06.png) no-repeat;
+  background-size: contain;
+}
+
+.banner-lab {
+  background: url(../img/banners-output_03.png) no-repeat;
+  background-size: contain;
+}
+
 #conteudo-header {
   background-image: url(../img/banner-headerBC.png), linear-gradient(45deg, #a767ff, #f60a9e);
   background-repeat: no-repeat;

@@ -207,5 +207,6 @@ $('.c-switch').click(function () {
 })
 function setFont1(selectObject, i) {
 	var value = selectObject.value;
-	$('.c-font-' + i).css("font-family", value)
+	$('.c-font-' + i).css("font-family", value);
+	$('.name-font-' + i).html(value)
 }
