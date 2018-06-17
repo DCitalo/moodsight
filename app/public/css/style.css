@@ -1607,6 +1607,10 @@ button {
 
 /*tabs*/
 
+.tabs-biblio {
+  height: 400px;
+}
+
 .tab-master {
   padding: 40px 200px 0 90px;
 }
