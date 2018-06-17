@@ -19,8 +19,8 @@ function componentToHex(c) {
 function rgbToHex(r, g, b) {
 	return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
-function update(jscolor, n) {
-	$('.c-bg-color-' + n).css("background-color", "#" + jscolor)
+function update(jscolor) {
+	$('.cont-pal-lab').closest('.pal-lab').css("background-color", "#" + jscolor)
 }
 userRef.on('value', function (snapshot) {
 	var data = snapshot.val();
