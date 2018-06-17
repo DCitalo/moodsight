@@ -1608,7 +1608,7 @@ button {
 /*tabs*/
 
 .tabs-biblio {
-  height: 400px;
+  height: 460px;
 }
 
 .tab-master {
@@ -1649,7 +1649,8 @@ button {
   background-color: #0ee0b9;
 }
 
-.tab-second-item {
+.tab-second-item,
+.c-tab-second-item {
   padding: 10px 15px;
 }
 
@@ -1903,6 +1904,26 @@ button {
 
 .c-border-radius {
   border-radius: 10px;
+}
+
+#pegando-input>.tab-second>.c-tab-second-item.active {
+  background-color: #f60a9d;
+}
+
+#navegacao>.tab-second>.c-tab-second-item.active {
+  background-color: #7ad3d3;
+}
+
+#lidando-dados>.tab-second>.c-tab-second-item.active {
+  background-color: #f8235b;
+}
+
+#social>.tab-second>.c-tab-second-item.active {
+  background-color: #a766fe;
+}
+
+#onboarding>.tab-second>.c-tab-second-item.active {
+  background-color: #0ee0b9;
 }
 
 /* FIM C-elementos */
