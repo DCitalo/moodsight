@@ -3,7 +3,8 @@
     <% include ../commom/tags-header.ejs %>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
             crossorigin="anonymous">
-            <link href="https://fonts.googleapis.com/css?family=Anton|Arimo|Cabin|Eater|Exo+2|Fira+Sans|Fjalla+One|Inconsolata|Josefin+Sans|Lato|Libre+Baskerville|Lora|Montserrat|Muli|Noto+Sans|Nunito|Odor+Mean+Chey|Open+Sans|Oxygen|PT+Sans|PT+Serif|Paytone+One|Playfair+Display|Poppins|Quicksand|Roboto|Shrikhand|Song+Myung|Titillium+Web|Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton|Arimo|Cabin|Eater|Exo+2|Fira+Sans|Fjalla+One|Inconsolata|Josefin+Sans|Lato|Libre+Baskerville|Lora|Montserrat|Muli|Noto+Sans|Nunito|Odor+Mean+Chey|Open+Sans|Oxygen|PT+Sans|PT+Serif|Paytone+One|Playfair+Display|Poppins|Quicksand|Roboto|Shrikhand|Song+Myung|Titillium+Web|Ubuntu"
+            rel="stylesheet">
 </head>
 
 <body>
@@ -53,6 +54,11 @@
                                     </div>
 
                                 </div>
+                            </section>
+                            <section class="banner-lab conteudo-body">
+                                <button class="btn Upper bg-gradient-1 btn-down">
+                                    <a href="/MATERIAL-KIT.rar" download>Material Kit</a>
+                                </button>
                             </section>
                             <section id="Pal-cores" class="conteudo-body P-440  bgcolor-8">
                                 <h4 class="Upper bold font-1 DF FW tamfont5 logoFull-cont color-1">
@@ -1312,85 +1318,96 @@
                                     <span class="Upper font-1 color-2 title-lab">Tipografia</span>
                                 </h4>
                                 <div class="textcont-lab">
-                                    <p class="font-1 color-2 tamfont3">Selecione aqui as tipografias primárias e secundárias para seu layout, lembre-se de criar um contraste entre elas harmonizando ambas com seu layout. Pense também na usabilidade para seus layouts sempre usando fontes com uma boa capacidade de leitura.</p>
+                                    <p class="font-1 color-2 tamfont3">Selecione aqui as tipografias primárias e secundárias para seu layout, lembre-se de criar
+                                        um contraste entre elas harmonizando ambas com seu layout. Pense também na usabilidade
+                                        para seus layouts sempre usando fontes com uma boa capacidade de leitura.</p>
                                 </div>
-                                <div class="w-50">
-                                    <p class="title-font c-font-1">Primaria</p>
-                                    <select name="" id="Font1" onchange="setFont1(this)">
-                                        <option value="Anton">Anton, sans-serif</option>
-                                        <option value="Arimo">Arimo, sans-serif</option>
-                                        <option value="Cabin">Cabin, sans-serif</option>
-                                        <option value="Eater">Eater, cursive</option>
-                                        <option value="Exo 2">Exo 2, sans-serif</option>
-                                        <option value="Fira Sans">Fira Sans, sans-serif</option>
-                                        <option value="Fjalla One">Fjalla One, sans-serif</option>
-                                        <option value="Inconsolata">Inconsolata, monospace</option>
-                                        <option value="Josefin Sans">Josefin Sans, sans-serif</option>
-                                        <option value="Lato">Lato, sans-serif</option>
-                                        <option value="Libre Baskerville">Libre Baskerville, serif</option>
-                                        <option value="Lora">Lora, serif</option>
-                                        <option value="Montserrat">Montserrat, sans-serif</option>
-                                        <option value="Muli">Muli, sans-serif</option>
-                                        <option value="Noto Sans">Noto Sans, sans-serif</option>
-                                        <option value="Nunito">Nunito, sans-serif</option>
-                                        <option value="Odor Mean Chey">Odor Mean Chey, cursive</option>
-                                        <option value="Open Sans">Open Sans, sans-serif</option>
-                                        <option value="Oxygen">Oxygen, sans-serif</option>
-                                        <option value="PT Sans">PT Sans, sans-serif</option>
-                                        <option value="PT Serif">PT Serif, serif</option>
-                                        <option value="Paytone One">Paytone One, sans-serif</option>
-                                        <option value="Playfair Display">Playfair Display, serif</option>
-                                        <option value="Poppins">Poppins, sans-serif</option>
-                                        <option value="Quicksand">Quicksand, sans-serif</option>
-                                        <option value="Roboto">Roboto, sans-serif</option>
-                                        <option value="Shrikhand">Shrikhand, cursive</option>
-                                        <option value="Song Myung">Song Myung, serif</option>
-                                        <option value="Titillium Web">Titillium Web, sans-serif</option>
-                                        <option value="Ubuntu">Ubuntu, sans-serif</option>
-                                    </select>
-                                    <p class="name-font-1 tamfont4 c-font-1"></p>
-                                    <p class="tamfont3 c-font-1">A B C D E F G H I J K L M N O P Q R S T U V X</p>
-                                    <p class="tamfont3 c-font-1">1 2 3 4 5 6 7 8 9 0</p>
-                                    <p class="tamfont3 c-font-1">Minim veniam ad eu qui deserunt et et deserunt quis tempor. Aliqua laborum laboris magna proident nisi sint incididunt. Deserunt do in cupidatat pariatur. Laborum ea laboris esse tempor officia aute sint. Sunt aliqua proident quis ut tempor dolor officia non eu non amet. Fugiat veniam elit fugiat in proident et sunt.</p>
-                                </div>
-                                <div class="w-50">
-                                    <p class="title-font c-font-2">Secundaria</p>
-                                    <select name="" id="">
-                                        <option value="Anton">Anton, sans-serif</option>
-                                        <option value="Arimo">Arimo, sans-serif</option>
-                                        <option value="Cabin">Cabin, sans-serif</option>
-                                        <option value="Eater">Eater, cursive</option>
-                                        <option value="Exo 2">Exo 2, sans-serif</option>
-                                        <option value="Fira Sans">Fira Sans, sans-serif</option>
-                                        <option value="Fjalla One">Fjalla One, sans-serif</option>
-                                        <option value="Inconsolata">Inconsolata, monospace</option>
-                                        <option value="Josefin Sans">Josefin Sans, sans-serif</option>
-                                        <option value="Lato">Lato, sans-serif</option>
-                                        <option value="Libre Baskerville">Libre Baskerville, serif</option>
-                                        <option value="Lora">Lora, serif</option>
-                                        <option value="Montserrat">Montserrat, sans-serif</option>
-                                        <option value="Muli">Muli, sans-serif</option>
-                                        <option value="Noto Sans">Noto Sans, sans-serif</option>
-                                        <option value="Nunito">Nunito, sans-serif</option>
-                                        <option value="Odor Mean Chey">Odor Mean Chey, cursive</option>
-                                        <option value="Open Sans">Open Sans, sans-serif</option>
-                                        <option value="Oxygen">Oxygen, sans-serif</option>
-                                        <option value="PT Sans">PT Sans, sans-serif</option>
-                                        <option value="PT Serif">PT Serif, serif</option>
-                                        <option value="Paytone One">Paytone One, sans-serif</option>
-                                        <option value="Playfair Display">Playfair Display, serif</option>
-                                        <option value="Poppins">Poppins, sans-serif</option>
-                                        <option value="Quicksand">Quicksand, sans-serif</option>
-                                        <option value="Roboto">Roboto, sans-serif</option>
-                                        <option value="Shrikhand">Shrikhand, cursive</option>
-                                        <option value="Song Myung">Song Myung, serif</option>
-                                        <option value="Titillium Web">Titillium Web, sans-serif</option>
-                                        <option value="Ubuntu">Ubuntu, sans-serif</option>
-                                    </select>
-                                    <p class="name-font-2 c-font-2"></p>
-                                    <p>A B C D E F G H I J K L M N O P Q R S T U V X</p>
-                                    <p>1 2 3 4 5 6 7 8 9 0</p>
-                                    <p>Minim veniam ad eu qui deserunt et et deserunt quis tempor. Aliqua laborum laboris magna proident nisi sint incididunt. Deserunt do in cupidatat pariatur. Laborum ea laboris esse tempor officia aute sint. Sunt aliqua proident quis ut tempor dolor officia non eu non amet. Fugiat veniam elit fugiat in proident et sunt.</p>
+                                <div class="w-100 DF FW tamfont3">
+                                    <div class="w-50">
+                                        <p class="title-font c-font-1 tamfont4">Primaria</p>
+                                        <select name="" id="Font1" onchange="setFont1(this)">
+                                            <option value="'Anton', sans-serif">Anton, sans-serif</option>
+                                            <option value="'Arimo', sans-serif">Arimo, sans-serif</option>
+                                            <option value="'Cabin', sans-serif">Cabin, sans-serif</option>
+                                            <option value="'Eater', cursive">Eater, cursive</option>
+                                            <option value="'Exo 2', sans-serif">Exo 2, sans-serif</option>
+                                            <option value="'Fira Sans', sans-serif">Fira Sans, sans-serif</option>
+                                            <option value="'Fjalla One', sans-serif">Fjalla One, sans-serif</option>
+                                            <option value="'Inconsolata', monospace">Inconsolata, monospace</option>
+                                            <option value="'Josefin Sans', sans-serif">Josefin Sans, sans-serif</option>
+                                            <option value="'Lato', sans-serif">Lato, sans-serif</option>
+                                            <option value="'Libre Baskerville', serif">Libre Baskerville, serif</option>
+                                            <option value="'Lora', serif">Lora, serif</option>
+                                            <option value="'Montserrat', sans-serif">Montserrat, sans-serif</option>
+                                            <option value="'Muli', sans-serif">Muli, sans-serif</option>
+                                            <option value="'Noto Sans', sans-serif">Noto Sans, sans-serif</option>
+                                            <option value="'Nunito', sans-serif">Nunito, sans-serif</option>
+                                            <option value="'Odor Mean Chey', cursive">Odor Mean Chey, cursive</option>
+                                            <option value="'Open Sans', sans-serif">Open Sans, sans-serif</option>
+                                            <option value="'Oxygen', sans-serif">Oxygen, sans-serif</option>
+                                            <option value="'PT Sans', sans-serif">PT Sans, sans-serif</option>
+                                            <option value="'PT Serif', serif">PT Serif, serif</option>
+                                            <option value="'Paytone One', sans-serif">Paytone One, sans-serif</option>
+                                            <option value="'Playfair Display', serif">Playfair Display, serif</option>
+                                            <option value="'Poppins', sans-serif">Poppins, sans-serif</option>
+                                            <option value="'Quicksand', sans-serif">Quicksand, sans-serif</option>
+                                            <option value="'Roboto', sans-serif">Roboto, sans-serif</option>
+                                            <option value="'Shrikhand', cursive">Shrikhand, cursive</option>
+                                            <option value="'Song Myung', serif">Song Myung, serif</option>
+                                            <option value="'Titillium Web', sans-serif">Titillium Web, sans-serif</option>
+                                            <option value="'Ubuntu', sans-serif">Ubuntu, sans-serif</option>
+                                        </select>
+                                        <p class="name-font-1 tamfont4 c-font-1"></p>
+                                        <p class="tamfont3 c-font-1">A B C D E F G H I J K L M N O P Q R S T U V X</p>
+                                        <p class="tamfont3 c-font-1">1 2 3 4 5 6 7 8 9 0</p>
+                                        <p class="tamfont3 c-font-1">Minim veniam ad eu qui deserunt et et deserunt quis tempor. Aliqua laborum laboris
+                                            magna proident nisi sint incididunt. Deserunt do in cupidatat pariatur. Laborum
+                                            ea laboris esse tempor officia aute sint. Sunt aliqua proident quis ut tempor
+                                            dolor officia non eu non amet. Fugiat veniam elit fugiat in proident et sunt.</p>
+                                    </div>
+                                    <div class="w-50">
+                                        <p class="title-font c-font-2 tamfont4">Secundaria</p>
+                                        <select name="" id="">
+
+                                            <option value="'Anton', sans-serif">Anton, sans-serif</option>
+                                            <option value="'Arimo', sans-serif">Arimo, sans-serif</option>
+                                            <option value="'Cabin', sans-serif">Cabin, sans-serif</option>
+                                            <option value="'Eater', cursive">Eater, cursive</option>
+                                            <option value="'Exo 2', sans-serif">Exo 2, sans-serif</option>
+                                            <option value="'Fira Sans', sans-serif">Fira Sans, sans-serif</option>
+                                            <option value="'Fjalla One', sans-serif">Fjalla One, sans-serif</option>
+                                            <option value="'Inconsolata', monospace">Inconsolata, monospace</option>
+                                            <option value="'Josefin Sans', sans-serif">Josefin Sans, sans-serif</option>
+                                            <option value="'Lato', sans-serif">Lato, sans-serif</option>
+                                            <option value="'Libre Baskerville', serif">Libre Baskerville, serif</option>
+                                            <option value="'Lora', serif">Lora, serif</option>
+                                            <option value="'Montserrat', sans-serif">Montserrat, sans-serif</option>
+                                            <option value="'Muli', sans-serif">Muli, sans-serif</option>
+                                            <option value="'Noto Sans', sans-serif">Noto Sans, sans-serif</option>
+                                            <option value="'Nunito', sans-serif">Nunito, sans-serif</option>
+                                            <option value="'Odor Mean Chey', cursive">Odor Mean Chey, cursive</option>
+                                            <option value="'Open Sans', sans-serif">Open Sans, sans-serif</option>
+                                            <option value="'Oxygen', sans-serif">Oxygen, sans-serif</option>
+                                            <option value="'PT Sans', sans-serif">PT Sans, sans-serif</option>
+                                            <option value="'PT Serif', serif">PT Serif, serif</option>
+                                            <option value="'Paytone One', sans-serif">Paytone One, sans-serif</option>
+                                            <option value="'Playfair Display', serif">Playfair Display, serif</option>
+                                            <option value="'Poppins', sans-serif">Poppins, sans-serif</option>
+                                            <option value="'Quicksand', sans-serif">Quicksand, sans-serif</option>
+                                            <option value="'Roboto', sans-serif">Roboto, sans-serif</option>
+                                            <option value="'Shrikhand', cursive">Shrikhand, cursive</option>
+                                            <option value="'Song Myung', serif">Song Myung, serif</option>
+                                            <option value="'Titillium Web', sans-serif">Titillium Web, sans-serif</option>
+                                            <option value="'Ubuntu', sans-serif">Ubuntu, sans-serif</option>
+                                        </select>
+                                        <p class="name-font-2 c-font-2"></p>
+                                        <p class="tamfont3 c-font-2">A B C D E F G H I J K L M N O P Q R S T U V X</p>
+                                        <p class="tamfont3 c-font-2">1 2 3 4 5 6 7 8 9 0</p>
+                                        <p class="tamfont3 c-font-2">Minim veniam ad eu qui deserunt et et deserunt quis tempor. Aliqua laborum laboris
+                                            magna proident nisi sint incididunt. Deserunt do in cupidatat pariatur. Laborum
+                                            ea laboris esse tempor officia aute sint. Sunt aliqua proident quis ut tempor
+                                            dolor officia non eu non amet. Fugiat veniam elit fugiat in proident et sunt.</p>
+                                    </div>
                                 </div>
                             </section>
                             <section id="Mock" class="bg-pattern-1 conteudo-body P-440">
