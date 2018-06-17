@@ -2017,6 +2017,11 @@ input:checked+.c-slider:before {
 
 .cont-check {
   align-items: center;
+  margin: 10px 0;
+}
+
+.c-fieldset {
+  padding: 15px 25px;
 }
 
 /* FIM C-elementos */

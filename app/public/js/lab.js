@@ -111,7 +111,6 @@ boardRef.on('value', function (snapshot) {
 					hex = rgbToHex(r, g, b);
 				paleta.color[p] = hex;
 				$('.c-bg-color-' + p).css("background-color", hex)
-				$('.tab-second-item.active').css("background-color", hex)
 				$('.c-color-' + p).css("color", hex)
 				$('.c-text-' + p).val(hex);
 				p++
@@ -155,7 +154,6 @@ $('.btn-generate').click(function () {
 					hex = rgbToHex(r, g, b);
 				paleta.color[p] = hex;
 				$('.c-bg-color-' + p).css("background-color", hex)
-				$('.tab-second-item.active').css("background-color", hex)
 				$('.c-color-' + p).css("color", hex)
 				$('.c-text-' + p).val(hex);
 				p++
