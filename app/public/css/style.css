@@ -1757,7 +1757,7 @@ button {
 
 .title-lab {
   margin-bottom: 20px;
-  width: 300px;
+  line-height: 20px;
 }
 
 .topo-lab {
@@ -1777,6 +1777,12 @@ button {
   text-align: center;
   width: 100%;
   margin: 5px 0;
+}
+
+.btn-generate {
+  padding: 10px 20px;
+  margin-left: 10%;
+  margin-top: 30px;
 }
 
 /*---------------------- FIM LABORATORIO -----------------------*/
