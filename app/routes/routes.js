@@ -62,6 +62,7 @@ module.exports = function (app) {
       ok: true
     });
     login = true;
+    res.redirect('/Dashboard')
   });
   app.get("/Dashboard", function (req, res) {
     if (!login) {

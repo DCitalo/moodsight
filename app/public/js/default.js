@@ -92,7 +92,6 @@ function pintrestLogin() {
 						$.post("/salva", {
 							datafirebase
 						});
-						window.location.replace('/Dashboard');
 					}, 1000);
 				}
 			});
