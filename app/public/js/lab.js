@@ -2,7 +2,9 @@ var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
 var boardRef = firebase.database().ref(id + "/boards/" + idBoard);
 var userRef = firebase.database().ref(id);
-var color1, color2, color3, color4, color5;
+var paleta = {
+	color: {}
+};
 function hexToRgb(hex) {
 	var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
 	hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -99,9 +101,6 @@ boardRef.on('value', function (snapshot) {
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var paletteResult = JSON.parse(http.responseText).result;
-			var paleta = {
-				color: {}
-			};
 			var p = 1;
 			$.each(paletteResult, function (i, color) {
 				var r = color["0"],
@@ -142,9 +141,6 @@ $('.btn-generate').click(function () {
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var paletteResult = JSON.parse(http.responseText).result;
-			var paleta = {
-				color: {}
-			};
 			var p = 1;
 			$.each(paletteResult, function (i, color) {
 				var r = color["0"],
@@ -189,9 +185,11 @@ $('.btn-reset').click(function () {
 					var r = color["0"],
 						g = color["1"],
 						b = color["2"],
+						RGB = [r, g, b],
 						hex = rgbToHex(r, g, b);
-					$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
-					$('.c-color-' + p).css("color", "rgb(" + r + "," + g + "," + b + ")")
+					paleta.color[p] = hex;
+					$('.c-bg-color-' + p).css("background-color", hex)
+					$('.c-color-' + p).css("color", hex)
 					$('.c-text-' + p).val(hex);
 					p++
 				})
