@@ -38,7 +38,6 @@ boardRef.on('value', function (snapshot) {
 		k++;
 		data.input.join();
 	})
-	//data.input += "[" + input + "]";
 	var http = new XMLHttpRequest();
 
 	http.onreadystatechange = function () {
@@ -46,17 +45,15 @@ boardRef.on('value', function (snapshot) {
 			var palette = JSON.parse(http.responseText).result;
 			var p = 1;
 			$.each(palette, function (i, color) {
+				console.log(color)
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + color["0"] + "," + color["1"] + "," + color["2"] + ")")
 				$('.c-text-' + p).append("#" + rgbToHex(color["0"] + "," + color["1"] + "," + color["2"]))
 				p++
 			})
 		}
 	}
-	console.log(JSON.stringify(data))
-	console.log(data)
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));
 })
 
 //'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
-//{"model":"default","input":[[44,43,44],[90,83,82],[90,83,82],[90,83,82],[90,83,82]]}
