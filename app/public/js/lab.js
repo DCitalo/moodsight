@@ -105,6 +105,7 @@ boardRef.on('value', function (snapshot) {
 					b = color["2"],
 					hex = rgbToHex(r, g, b);
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
+				$('.c-color-' + p).css("color", "rgb(" + r + "," + g + "," + b + ")")
 				$('.c-text-' + p).val(hex);
 				p++
 				if (p == Object.keys(palette).length) {
@@ -162,6 +163,7 @@ $('.btn-reset').click(function () {
 						b = color["2"],
 						hex = rgbToHex(r, g, b);
 					$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
+					$('.c-color-' + p).css("color", "rgb(" + r + "," + g + "," + b + ")")
 					$('.c-text-' + p).val(hex);
 					p++
 				})
