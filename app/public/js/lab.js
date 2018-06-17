@@ -45,9 +45,12 @@ boardRef.on('value', function (snapshot) {
 			var palette = JSON.parse(http.responseText).result;
 			var p = 1;
 			$.each(palette, function (i, color) {
-				console.log(color)
-				$('.c-bg-color-' + p).css("background-color", "rgb(" + color["0"] + "," + color["1"] + "," + color["2"] + ")")
-				$('.c-text-' + p).append("#" + rgbToHex(color["0"] + "," + color["1"] + "," + color["2"]))
+				var r = color["0"],
+					g = color["1"],
+					b = color["2"];
+				console.log(rgbToHex(r, g, b))
+				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
+				$('.c-text-' + p).append("#")
 				p++
 			})
 		}
