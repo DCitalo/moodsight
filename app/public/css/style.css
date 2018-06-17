@@ -1732,6 +1732,10 @@ button {
 
 .header-lab {
   padding: 70px 25% 40px 40px;
+  -webkit-align-items: center;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .pal-lab {
@@ -1745,9 +1749,8 @@ button {
 }
 
 .text-lab {
-  width: calc(100% - 260px);
-  height: 120px;
-  padding: 10px 0;
+  width: calc(100% - 230px);
+  margin-left: 30px;
 }
 
 .btn-save {
