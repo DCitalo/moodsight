@@ -1063,6 +1063,14 @@ button {
   background-repeat: no-repeat;
 }
 
+.icon-font-col {
+  -webkit-mask: url(../img/fonte-icone.svg);
+  mask: url(../img/fonte-icone.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+}
+
 .icon-formas {
   background-image: url(../img/formas.svg);
   background-repeat: no-repeat;
