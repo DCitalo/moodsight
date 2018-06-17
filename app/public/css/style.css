@@ -268,7 +268,9 @@ button {
 
 .banner-lab {
   background: url(../img/banners-output_03.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
+  height: 450px;
+  position: relative;
 }
 
 #conteudo-header {
@@ -2088,6 +2090,18 @@ input:checked+.c-slider:before {
 
 .c-font-2 {
   font-family: 'Quicksand', sans-serif;
+}
+
+.btn-down {
+  padding: 20px 50px;
+  border: solid 1.8px #ffffff;
+  border-radius: 50px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 40px;
+  font-size: 20px;
+  box-shadow: -0.9px 2.9px 13px 0 rgba(0, 0, 0, 0.36);
 }
 
 /* FIM C-elementos */
