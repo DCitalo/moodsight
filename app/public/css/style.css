@@ -1906,24 +1906,24 @@ button {
   border-radius: 10px;
 }
 
-#pegando-input>.tab-second>.c-tab-second-item.active {
-  background-color: #f60a9d;
+.c-input {
+  border: 1px solid;
+  padding: 5px 10px;
 }
 
-#navegacao>.tab-second>.c-tab-second-item.active {
-  background-color: #7ad3d3;
+.c-input:focus {
+  box-shadow: 0px 0px 10px;
 }
 
-#lidando-dados>.tab-second>.c-tab-second-item.active {
-  background-color: #f8235b;
+fieldset {
+  background: cyan;
+  border: 5px solid blue;
 }
 
-#social>.tab-second>.c-tab-second-item.active {
-  background-color: #a766fe;
-}
-
-#onboarding>.tab-second>.c-tab-second-item.active {
-  background-color: #0ee0b9;
+legend {
+  padding: 10px;
+  background: blue;
+  color: cyan;
 }
 
 /* FIM C-elementos */

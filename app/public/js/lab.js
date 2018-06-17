@@ -160,7 +160,6 @@ $('.btn-generate').click(function () {
 			})
 		}
 	}
-	console.log(JSON.stringify(data))
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));
 })
