@@ -1060,6 +1060,14 @@ button {
   background-repeat: no-repeat;
 }
 
+.icon-formas-col {
+  -webkit-mask: url(../img/formas.svg);
+  mask: url(../img/formas.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+}
+
 .icon-info {
   background-image: url(../img/Info.svg);
   background-repeat: no-repeat;
@@ -1130,6 +1138,16 @@ button {
 .icon-paleta {
   background-image: url(../img/paletadecor.svg);
   background-repeat: no-repeat;
+}
+
+.icon-paleta-col {
+  -webkit-mask: url(../img/paletadecor.svg);
+  mask: url(../img/paletadecor.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  display: inline-block;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .icon-pinterest {
@@ -1735,6 +1753,14 @@ button {
   width: 80%;
   max-width: calc(100% - 100px);
   padding: 0 25%;
+}
+
+.jscolor {
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  margin: 5px 0;
 }
 
 /*---------------------- FIM LABORATORIO -----------------------*/

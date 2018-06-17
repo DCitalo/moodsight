@@ -12,10 +12,10 @@
                         <section class="conteudo-body bg-pattern-1 tamfont1">
                             <div class="PF DF CSP FW topo-lab bg-pattern-1">
                                 <nav class="DF FW nav-top CSP">
-                                    <a href="#">
+                                    <a href="#pal-cores">
                                         <i class="icon-medium icon-font"></i>
                                     </a>
-                                    <a href="#">
+                                    <a href="#ele-ui">
                                         <i class="icon-medium icon-font"></i>
                                     </a>
                                     <a href="#">
@@ -49,7 +49,7 @@
                         </section>
                         <section id="pal-cores" class="conteudo-body P-040  bgcolor-8">
                             <h4 class="Upper bold font-1 tamfont5 DF CSP FW title-lab color-1">
-                                <i class="icon-large icon-paleta"></i>
+                                <i class="icon-medium icon-paleta-col bgcolor-6"></i>
                                 <span class="Upper font-1">Paleta de Cores</span>
                             </h4>
                             <ul class="DF FW CSP w-80 align-center">
@@ -57,57 +57,57 @@
                                     <div class="pal-lab w-100 c-bg-color-1"></div>
                                     <div class="w-100 leg-pal-lab">
                                         <input class="w-80 c-text-1 jscolor {onFineChange:'update(this,1)'}" value="">
-                                        <div class="DF FW CSP">
-                                            <i class="icon-small icon-brain"></i>
-                                            <i class="icon-small icon-brain"></i>
-                                        </div>
                                     </div>
                                 </li>
                                 <li class="cont-pal-lab">
                                     <div class="pal-lab w-100 c-bg-color-2"></div>
                                     <div class="w-100 leg-pal-lab">
                                         <input class="w-80 c-text-2 jscolor {onFineChange:'update(this,2)'}" value="">
-                                        <div class="DF FW CSP">
-                                            <i class="icon-small icon-brain"></i>
-                                            <i class="icon-small icon-brain"></i>
-                                        </div>
                                     </div>
                                 </li>
                                 <li class="cont-pal-lab">
                                     <div class="pal-lab w-100 c-bg-color-3"></div>
                                     <div class="w-100 leg-pal-lab">
                                         <input class="w-80 c-text-3 jscolor {onFineChange:'update(this,3)'}" value="">
-                                        <div class="DF FW CSP">
-                                            <i class="icon-small icon-brain"></i>
-                                            <i class="icon-small icon-brain"></i>
-                                        </div>
                                     </div>
                                 </li>
                                 <li class="cont-pal-lab">
                                     <div class="pal-lab w-100 c-bg-color-4"></div>
                                     <div class="w-100 leg-pal-lab">
                                         <input class="w-80 c-text-4 jscolor {onFineChange:'update(this,4)'}" value="">
-                                        <div class="DF FW CSP">
-                                            <i class="icon-small icon-brain"></i>
-                                            <i class="icon-small icon-brain"></i>
-                                        </div>
                                     </div>
                                 </li>
                                 <li class="cont-pal-lab">
                                     <div class="pal-lab w-100 c-bg-color-5"></div>
                                     <div class="w-100 leg-pal-lab">
                                         <input class="w-80 c-text-5 jscolor {onFineChange:'update(this,5)'}" value="">
-                                        <div class="DF FW CSP">
-                                            <i class="icon-small icon-brain"></i>
-                                            <i class="icon-small icon-brain"></i>
-                                        </div>
                                     </div>
                                 </li>
                             </ul>
-                            <button class="btn-round btn btn-generate DF FW Upper bold bg-gradient-1 color-1 ">
+                            <button class="btn-round btn-generate DF FW Upper bold bg-gradient-1 color-1 ">
                                 <i class="icon-small icon-formas"></i>
                                 <span class="generate-text font-1 tamfont3">Gerar Paleta</span>
                             </button>
+                        </section>
+                        <section id="ele-ui" class="conteudo-body P-040  bg-gradient-1">
+                            <h4 class="Upper bold font-1 tamfont5 DF CSP FW title-lab color-1">
+                                <i class="icon-medium icon-formas-col bgcolor-6"></i>
+                                <span class="Upper font-1">Elementos UI</span>
+                            </h4>
+                            <div class="text-ele">
+                                <p class="font-1 color-1 tamfont3">Veja como as cores se comportam nesses elementos de interação com o usuário. Aqui você pode
+                                    realizar experimentações dos modelos gerados de UI.</p>
+                            </div>
+                            <div class="tabs tabs-lab">
+                                <a class="font-1" href="#Buttons">Buttons</a>
+                                <a class="font-1" href="#Select">Select</a>
+                                <a class="font-1" href="#Inputs">Inputs</a>
+                                <a class="font-1" href="#CheckRad">Checkboxes & Radios</a>
+                            </div>
+                            <div id="Buttons"></div>
+                            <div id="Select"></div>
+                            <div id="Inputs"></div>
+                            <div id="CheckRad"></div>
                         </section>
                         <% include ../commom/footer.ejs %>
 </body>
