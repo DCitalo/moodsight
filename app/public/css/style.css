@@ -1825,6 +1825,8 @@ button {
 }
 
 .tab-lab {
+  padding: 20px 40px;
+  border-radius: 10px;
   box-shadow: -3.5px 11.5px 9px 0 rgba(0, 0, 0, 0.18);
 }
 
@@ -1835,12 +1837,15 @@ button {
 
 .tab-lab.b {
   background-color: #232027;
+  color: #FFFFFF;
   border: 1.8px solid #ffffff;
 }
 
 .tab-lab-master {
   background: #FFF;
   padding: 10px 15px;
+  border: 1px solid;
+  border-radius: 5px;
 }
 
 .tabs-lab {
@@ -1848,7 +1853,7 @@ button {
 }
 
 .tab-lab-master.active {
-  background: #2c223b !important;
+  background: #232027 !important;
   color: #FFF !important;
 }
 
