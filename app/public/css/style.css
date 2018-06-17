@@ -2041,12 +2041,24 @@ input:checked+.c-slider:before {
 
 .title-aplica::before {
   content: '';
-  width: 50px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -67px;
+  top: -9px;
+  border: 11px solid #FFF;
+  transform: rotate(45deg);
+}
+
+.title-aplica::after {
+  content: '';
+  width: 100%;
   height: 50px;
   position: absolute;
-  left: -57px;
-  border: 15px solid #FFF;
-  transform: rotate(45deg) translateX(-50%);
+  top: -16px;
+  left: -50px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 /* FIM C-elementos */
