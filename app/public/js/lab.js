@@ -101,11 +101,10 @@ boardRef.on('value', function (snapshot) {
 				var r = color["0"],
 					g = color["1"],
 					b = color["2"],
-					rgb = rgbToHex(r, g, b),
-					Lrgb = rgb.replace(/#/g, "");
+					rgb = rgbToHex(r, g, b);
 				$('.c-bg-color-' + p).css("background-color", "rgb(" + r + "," + g + "," + b + ")")
 				$('.c-text-' + p).append("#" + rgb);
-				$('.c-text-' + p).val(Lrgb);
+				$('.c-text-' + p).val(rgb);
 				p++
 				if (p == Object.keys(palette).length) {
 					delay(function () {
@@ -118,5 +117,20 @@ boardRef.on('value', function (snapshot) {
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));
 })
+$('.btn-generate').click(function () {
+	/*var url = "http://colormind.io/api/";
+	var data = {
+		model: "default",
+		input: [[44, 43, 44], [90, 83, 82], "N", "N", "N"]
+	}
+	var http = new XMLHttpRequest();
+	http.onreadystatechange = function () {
+		if (http.readyState == 4 && http.status == 200) {
+			var palette = JSON.parse(http.responseText).result;
+		}
+	}
+	http.open("POST", url, true);
+	http.send(JSON.stringify(data));*/
+	console.log($('.c-bg-color-1').css('background-color'))
+})
 
-//'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyAHcRZekasi - l8mC0Uj_eTweB_AM0NLpDc'
