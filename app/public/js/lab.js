@@ -131,11 +131,11 @@ $('.btn-generate').click(function () {
 		model: "default",
 		input: []
 	}
-	data.input[1] = hexToRgb($('.c-text-1').val()).rgb;
-	data.input[2] = hexToRgb($('.c-text-2').val()).rgb;
-	data.input[3] = hexToRgb($('.c-text-3').val()).rgb;
-	data.input[4] = hexToRgb($('.c-text-4').val()).rgb;
-	data.input[5] = hexToRgb($('.c-text-5').val()).rgb;
+	data.input[0] = hexToRgb($('.c-text-1').val()).rgb;
+	data.input[1] = hexToRgb($('.c-text-2').val()).rgb;
+	data.input[2] = hexToRgb($('.c-text-3').val()).rgb;
+	data.input[3] = hexToRgb($('.c-text-4').val()).rgb;
+	data.input[4] = hexToRgb($('.c-text-5').val()).rgb;
 	data.input.join();
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
