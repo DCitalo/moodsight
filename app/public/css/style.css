@@ -1897,6 +1897,10 @@ button {
   margin-left: 10px;
 }
 
+.c-border-radius {
+  border-radius: 10px;
+}
+
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/

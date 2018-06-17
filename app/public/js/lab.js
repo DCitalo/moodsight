@@ -22,7 +22,6 @@ function rgbToHex(r, g, b) {
 }
 function update(jscolor, n) {
 	$('.c-bg-color-' + n).css("background-color", "#" + jscolor)
-	console.log(jscolor)
 }
 
 const menuItems = document.querySelectorAll('.nav-top a[href^="#"]');
@@ -158,11 +157,11 @@ $('.btn-generate').click(function () {
 	}
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));*/
-	console.log($('.c-text-1').val())
-	console.log($('.c-text-2').val())
-	console.log($('.c-text-3').val())
-	console.log($('.c-text-4').val())
-	console.log($('.c-text-5').val())
+	console.log(hexToRgb($('.c-text-1').val()))
+	console.log(hexToRgb($('.c-text-2').val()))
+	console.log(hexToRgb($('.c-text-3').val()))
+	console.log(hexToRgb($('.c-text-4').val()))
+	console.log(hexToRgb($('.c-text-5').val()))
 })
 $('.btn-reset').click(function () {
 	boardRef.on('value', function (snapshot) {
