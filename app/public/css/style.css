@@ -1331,6 +1331,11 @@ button {
   background-repeat: no-repeat;
 }
 
+.icon-random {
+  background-image: url(../img/random.svg);
+  background-repeat: no-repeat;
+}
+
 /*---------------------- FIM SPRITE -------------------*/
 
 /*---------------------- MENU -----------------------*/
@@ -1383,7 +1388,8 @@ button {
 
 /*---------------------- HOME ---------------------------*/
 
-.logoFull-cont {
+.logoFull-cont,
+.mbtom-20 {
   margin-bottom: 20px;
 }
 
@@ -1489,7 +1495,7 @@ button {
   box-shadow: 10px 10px 80px 10px rgba(0, 0, 0, 0.8);
 }
 
-.-mood-box>icon-moodsight-box {
+.-mood-box>.icon-moodsight-box {
   z-index: 2;
   position: absolute;
 }
@@ -1861,6 +1867,17 @@ button {
   margin: 20px 0px
 }
 
+.btn-reset {
+  padding: 10px 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.generate-text {
+  margin-left: 10px;
+}
+
 /* C-elementos */
 
 .c-btn {
@@ -1870,7 +1887,7 @@ button {
 }
 
 .c-btn-border {
-  border: 1px solid;
+  border: 2px solid;
 }
 
 /* FIM C-elementos */
