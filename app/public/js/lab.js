@@ -22,6 +22,7 @@ function rgbToHex(r, g, b) {
 }
 function update(jscolor, n) {
 	$('.c-bg-color-' + n).css("background-color", "#" + jscolor)
+	$('.c-color-' + n).css("background-color", "#" + jscolor)
 }
 
 const menuItems = document.querySelectorAll('.nav-top a[href^="#"]');
@@ -140,7 +141,10 @@ $('.btn-generate').click(function () {
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
-			var palette = JSON.parse(http.responseText).result;
+			var paletteResult = JSON.parse(http.responseText).result;
+			var paleta = {
+				color: {}
+			};
 			var p = 1;
 			$.each(paletteResult, function (i, color) {
 				var r = color["0"],
