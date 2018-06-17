@@ -202,3 +202,6 @@ $('.btn-reset').click(function () {
 	})
 })
 
+$('.c-switch').click(function () {
+	$(this).toggleClass('c-bg-color-1')
+})
