@@ -72,6 +72,12 @@ function smoothScrollTo(endX, endY, duration) {
 		window.scroll(newX, newY);
 	}, 1000 / 60); // 60 fps
 };
+$('.tabs-lab').slick({
+	slidesToShow: 5,
+	infinite: false,
+	prevArrow: "<button type='button' class='slick-prev'><i class='bgcolor-6 icon-seta-esquerda icon-small'></i></button>",
+	nextArrow: "<button type='button' class='slick-next'><i class='bgcolor-6 icon-seta-direita icon-small'></i></button>"
+});
 userRef.on('value', function (snapshot) {
 	var data = snapshot.val();
 	var NomeUsuario = data.user.nome.username;

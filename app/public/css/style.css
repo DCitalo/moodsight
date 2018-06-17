@@ -1831,6 +1831,20 @@ button {
   border: 1.8px solid #ffffff;
 }
 
+.tab-lab-master {
+  background: #FFF;
+  padding: 10px 15px;
+}
+
+.tabs-lab {
+  margin: 20px 0;
+}
+
+.tab-lab-master.active {
+  background: #2c223b !important;
+  color: #FFF !important;
+}
+
 /*---------------------- FIM LABORATORIO -----------------------*/
 
 /*---------------------- RESPONSIVO -------------------*/
