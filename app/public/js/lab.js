@@ -22,7 +22,7 @@ function rgbToHex(r, g, b) {
 }
 function update(jscolor, n) {
 	$('.c-bg-color-' + n).css("background-color", "#" + jscolor)
-	$('.c-color-' + n).css("background-color", "#" + jscolor)
+	$('.c-color-' + n).css("color", "#" + jscolor)
 }
 
 const menuItems = document.querySelectorAll('.nav-top a[href^="#"]');
@@ -157,12 +157,6 @@ $('.btn-generate').click(function () {
 				$('.c-color-' + p).css("color", hex)
 				$('.c-text-' + p).val(hex);
 				p++
-				if (p == Object.keys(paletteResult).length) {
-					delay(function () {
-						$('#loading').toggleClass('hide');
-						console.log(paleta)
-					}, 1000);
-				}
 			})
 		}
 	}
