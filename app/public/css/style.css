@@ -2030,6 +2030,14 @@ input:checked+.c-slider:before {
   height: 40px;
 }
 
+.title-aplica {
+  margin-bottom: 20px;
+  height: 50px;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/
