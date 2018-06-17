@@ -131,6 +131,6 @@ $('.btn-generate').click(function () {
 	}
 	http.open("POST", url, true);
 	http.send(JSON.stringify(data));*/
-	console.log($('.c-bg-color-1').css('background-color'))
+	console.log(rgbToHex($('.c-bg-color-1').css('background-color')))
 })
 
