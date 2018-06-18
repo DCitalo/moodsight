@@ -2229,7 +2229,9 @@ input:checked+.c-slider:before {
   margin: 10px auto;
   text-align: center;
 }
-
+.btn-change{
+  padding:10px 15px;
+}
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/
