@@ -229,5 +229,5 @@ $('#persp').click(function () {
 $('.btn-save').click(function () {
 	console.log(id)
 	console.log(paleta)
-	$.post("/salvaPaleta", { id: id });
+	$.post("/salvaPaleta", { id });
 })
