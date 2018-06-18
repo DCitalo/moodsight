@@ -209,7 +209,7 @@ function setFont(selectObject, i) {
 	$('.name-font-' + i).html(value)
 }
 $('.show-menu').click(function(){
-	$('.menu-mb').css('left', '100%')
+	$('.menu-mb').css('left', '0%')
 })
 $('.hide-menu').click(function(){
 	$('.menu-mb').css('left', '-100%')
