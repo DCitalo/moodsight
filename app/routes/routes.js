@@ -28,6 +28,19 @@ module.exports = function (app) {
     login = true;
     userID = req.body.id;
   });
+  app.post('/salvaPaleta', (req, res) => {
+    var db = admin.database();
+    userID = req.body.id;
+    var ref = db.ref(userID);
+    var usersRef = ref.child("paletas");
+    userRef.push().set({
+      color1: req.body.color[1],
+      color2: req.body.color[2],
+      color3: req.body.color[3],
+      color4: req.body.color[4],
+      color5: req.body.color[5],
+    })
+  });
   app.post('/salva', (req, res) => {
     var db = admin.database();
     userID = req.body.datafirebase[0].pessoal.id;
