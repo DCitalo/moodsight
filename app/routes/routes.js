@@ -34,11 +34,11 @@ module.exports = function (app) {
     var ref = db.ref(userID);
     var usersRef = ref.child("paletas");
     userRef.push().set({
-      color1: req.body.paleta.color[1],
-      color2: req.body.paleta.color[2],
-      color3: req.body.paleta.color[3],
-      color4: req.body.paleta.color[4],
-      color5: req.body.paleta.color[5],
+      color1: 'req.body.paleta.color[0]',
+      color2: 'req.body.paleta.color[0]',
+      color3: 'req.body.paleta.color[0]',
+      color4: 'req.body.paleta.color[0]',
+      color5: 'req.body.paleta.color[0]',
     })
   });
   app.post('/salva', (req, res) => {
