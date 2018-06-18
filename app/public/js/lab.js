@@ -1,7 +1,7 @@
 var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
 var numberBoard = $.cookie('NumberBoard');
-$('#title-board').append('Painel' + numberBoard)
+$('.title-board').append('Painel' + numberBoard)
 var boardRef = firebase.database().ref(id + "/boards/" + idBoard);
 var userRef = firebase.database().ref(id);
 var paleta = {
@@ -229,5 +229,5 @@ $('#persp').click(function () {
 $('.btn-save').click(function () {
 	console.log(id)
 	console.log(paleta)
-	$.post("/salvaPaleta", { paleta: paleta, id: id });
+	$.post("/salvaPaleta", { id: id });
 })
