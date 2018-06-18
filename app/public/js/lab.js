@@ -1,5 +1,7 @@
 var id = $.cookie('idUser');
 var idBoard = $.cookie('idBoard');
+var numberBoard = $.cookie('NumberBoard');
+$('#title-board').append('Painel' + numberBoard)
 var boardRef = firebase.database().ref(id + "/boards/" + idBoard);
 var userRef = firebase.database().ref(id);
 var paleta = {
@@ -84,6 +86,8 @@ userRef.on('value', function (snapshot) {
 boardRef.on('value', function (snapshot) {
 	var url = "http://colormind.io/api/";
 	var snapshot = snapshot.val();
+	var NomeBoard = snapshot.boardName;
+	$('#nomeBoard').append(NomeBoard);
 	var input = [];
 	var data = {
 		model: "default",
@@ -222,8 +226,8 @@ $('#flat').click(function () {
 $('#persp').click(function () {
 	$('.topFace').css("transform", "rotateX(50deg) rotateY(10deg) rotateZ(-45deg)")
 })
-$('.btn-save').click(function(){
+$('.btn-save').click(function () {
 	console.log(id)
 	console.log(paleta)
-	$.post("/salvaPaleta", {paleta:paleta,id:id});
+	$.post("/salvaPaleta", { paleta: paleta, id: id });
 })
