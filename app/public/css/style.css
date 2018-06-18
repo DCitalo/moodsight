@@ -2137,6 +2137,7 @@ input:checked+.c-slider:before {
   background: #000;
   padding-top: 80px;
   text-align: center;
+  transition: 2s linear 1s;
 }
 
 .mb-menu-item {

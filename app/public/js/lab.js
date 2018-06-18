@@ -208,3 +208,9 @@ function setFont(selectObject, i) {
 	$('.c-font-' + i).css("font-family", value);
 	$('.name-font-' + i).html(value)
 }
+$('.show-menu').click(function(){
+	$('.menu-mb').css('left', '100%')
+})
+$('.hide-menu').click(function(){
+	$('.menu-mb').css('left', '-100%')
+})
