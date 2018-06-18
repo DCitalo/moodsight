@@ -154,7 +154,7 @@ $('.btn-generate').click(function () {
 				$('.c-text-' + p).val(hex);
 				p++
 			})
-			console.log(color)
+			console.log(paleta)
 		}
 	}
 	http.open("POST", url, true);
@@ -194,7 +194,7 @@ $('.btn-reset').click(function () {
 					$('.c-text-' + p).val(hex);
 					p++
 				})
-				console.log(color)
+				console.log(paleta)
 			}
 		}
 		http.open("POST", url, true);
@@ -223,5 +223,7 @@ $('#persp').click(function () {
 	$('.topFace').css("transform", "rotateX(50deg) rotateY(10deg) rotateZ(-45deg)")
 })
 $('.btn-save').click(function(){
-	$.post("/salvaPaleta", {color,id});
+	console.log(id)
+	console.log(paleta)
+	$.post("/salvaPaleta", {paleta,id});
 })
