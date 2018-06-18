@@ -12,19 +12,23 @@
 <body>
 
     <button onclick="btmbchange()" id="desktop" class="bt-change6">ALTERNAR-MOCKUP UI</button>
-        <button onclick="changefont()" id="fontetrocar-bt" class="font-trocada">TROCAR FONT</button>
-                <button onclick="changefonte()" id="fontetrocar-bt2" class="font-trocada">TROCAR FONT</button>
-<p id="info1ft" class="fontinfo">Font primária</p>
-<p id="info2ft" class="fontinfo">Font secundária</p>
+    <button onclick="changefont()" id="fontetrocar-bt" class="font-trocada">TROCAR FONT</button>
+    <button onclick="changefonte()" id="fontetrocar-bt2" class="font-trocada">TROCAR FONT</button>
+    <p id="info1ft" class="fontinfo">Font primária</p>
+    <p id="info2ft" class="fontinfo">Font secundária</p>
 
 
     <div class="bg-info">
-    <h1 class="h1-mockup">MOCKUP UI <br>INTERATIVO</h1>
-    <section class="sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ipsum saepe iusto vitae quia quae voluptas, ad libero officia esse dicta assumenda! Illo ratione facere nostrum nihil, et voluptatem nemo.</section>
+        <h1 class="h1-mockup">MOCKUP UI
+            <br>INTERATIVO</h1>
+        <section class="sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ipsum saepe iusto vitae quia quae voluptas, ad libero
+            officia esse dicta assumenda! Illo ratione facere nostrum nihil, et voluptatem nemo.</section>
     </div>
-    <a href="#" class="tamfonte" onclick="setActiveStyleSheet('fontegrande','fontegrande'); return false;" id="aumentar" title="Aumentar Tamanho do Texto">CHAOS REIGNS </a> <br>
-    <a href="#" class="tamfonte2" onclick="setActiveStyleSheet('fontenormal','fontegrande'); return false;" id="voltar" title="Tamanho do Texto Normal"> PIXEL PERFECT</a>
-   
+    <a href="#" class="tamfonte" onclick="setActiveStyleSheet('fontegrande','fontegrande'); return false;" id="aumentar" title="Aumentar Tamanho do Texto">CHAOS REIGNS </a>
+    <br>
+    <a href="#" class="tamfonte2" onclick="setActiveStyleSheet('fontenormal','fontegrande'); return false;" id="voltar" title="Tamanho do Texto Normal">
+    PIXEL PERFECT</a>
+
     <!-- INICIO - MOBILE-WIREFRAME -->
     <div id="mb-hide" class="">
         <button id="change" class="bt-change">FLAT</button>
@@ -32,15 +36,23 @@
         <div id="virar" class="rotate">
             <div class="wrap">
                 <main class="container-wrap">
-                    <div class="logo"><img src="brain.png" height="150px" width="150px" /></div>
+                    <div class="logo">
+                        <img src="brain.png" height="150px" width="150px" />
+                    </div>
                     <button class="bt-home">
-                        <div class="list"><img src="list.png" height="60px" width="60px" /></div>
+                        <div class="list">
+                            <img src="list.png" height="60px" width="60px" />
+                        </div>
                     </button>
                     <h1 id="primaria" class="h1">PAYTONE</h1>
                     <h2 id="texto3" class="title">QUICKSAND TITLE</h2>
-                    <p id="texto4" class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet atque dolorem deserunt praesentium unde debitis, corporis quas quasi perspiciatis eum qui, repellat totam sequi asperiores error dolores voluptatibus harum corrupti.</p>
+                    <p id="texto4" class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet atque dolorem deserunt praesentium
+                        unde debitis, corporis quas quasi perspiciatis eum qui, repellat totam sequi asperiores error dolores
+                        voluptatibus harum corrupti.</p>
                     <button class="bt-sub">SUBMIT</button>
-                    <div class="heart"><img src="heart.png" height="60px" width="60px" /></div>
+                    <div class="heart">
+                        <img src="heart.png" height="60px" width="60px" />
+                    </div>
                     <div class="linha-gp">
                         <p class="fav">Lista de Favoritos</p>
                         <hr id="linha">
@@ -64,87 +76,90 @@
         <div id="virar2" class="rotate-dk">
             <div class="wrap-dk">
                 <main class="container-wrap-dk">
-                    <div class="logo-dk"><img src="brain.png" height="150px" width="150px"></div>
+                    <div class="logo-dk">
+                        <img src="brain.png" height="150px" width="150px">
+                    </div>
                     <button class="bt-home-dk">
-                                            </button>
+                    </button>
                     <h1 id="primaria2" class="h1-dk">PAYTONE</h1>
                     <h2 id="texto2" class="title-dk">QUICKSAND TITLE</h2>
-                    <p id="texto1" class="txt-dk">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet atque dolorem deserunt praesentium unde debitis, corporis quas quasi perspiciatis eum qui, repellat totam sequi asperiores error dolores voluptatibus harum corrupti.</p>
+                    <p id="texto1" class="txt-dk">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet atque dolorem deserunt praesentium
+                        unde debitis, corporis quas quasi perspiciatis eum qui, repellat totam sequi asperiores error dolores
+                        voluptatibus harum corrupti.</p>
                     <button class="bt-sub-dk">SUBMIT</button>
                     <div class="linha-gp-dk">
-                       
+
                     </div>
-                 
+
                 </main>
             </div>
         </div>
     </div>
     <!-- FIM - DESKTOP-WIREFRAME -->
     <script>
-    /*INICIO BOTAO PERSPECTIVA MOBILE*/
-    document.getElementById("change").addEventListener("click", btflat);
+        /*INICIO BOTAO PERSPECTIVA MOBILE*/
+        document.getElementById("change").addEventListener("click", btflat);
 
-    function btflat() {
-        document.getElementById("virar").className = "MyClass";
-        document.getElementById("change").innerHTML = "FLAT";
-    }
+        function btflat() {
+            document.getElementById("virar").className = "MyClass";
+            document.getElementById("change").innerHTML = "FLAT";
+        }
 
-    document.getElementById("change-back").addEventListener("click", btperspec);
+        document.getElementById("change-back").addEventListener("click", btperspec);
 
-    function btperspec() {
-        document.getElementById("virar").className = "rotate";
-        document.getElementById("change-back").innerHTML = "PERSPECTIVA";
-    }
+        function btperspec() {
+            document.getElementById("virar").className = "rotate";
+            document.getElementById("change-back").innerHTML = "PERSPECTIVA";
+        }
 
-    /*FIM BOTAO PERSPECTIVA MOBILE*/
+        /*FIM BOTAO PERSPECTIVA MOBILE*/
 
-    /*INICIO BOTAO PERSPECTIVA DESKTOP*/
-    document.getElementById("change2").addEventListener("click", btflatdk);
+        /*INICIO BOTAO PERSPECTIVA DESKTOP*/
+        document.getElementById("change2").addEventListener("click", btflatdk);
 
-    function btflatdk() {
-        document.getElementById("virar2").className = "MyClass-dk";
-        document.getElementById("change2").innerHTML = "FLAT";
-    }
+        function btflatdk() {
+            document.getElementById("virar2").className = "MyClass-dk";
+            document.getElementById("change2").innerHTML = "FLAT";
+        }
 
-    document.getElementById("change-back2").addEventListener("click", btperspecdk);
+        document.getElementById("change-back2").addEventListener("click", btperspecdk);
 
-    function btperspecdk() {
-        document.getElementById("virar2").className = "rotate-dk";
-        document.getElementById("change-back2").innerHTML = "PERSPECTIVA";
-    }
-
-
-    /*FIM BOTAO PERSPECTIVA DESKTOP*/
-
-    /* BOTAO ALTERNAR MOCKUPUI */
+        function btperspecdk() {
+            document.getElementById("virar2").className = "rotate-dk";
+            document.getElementById("change-back2").innerHTML = "PERSPECTIVA";
+        }
 
 
-    function btmbchange() {
-        document.getElementById("mb-hide").classList.toggle("mb-hide")
-        document.getElementById("dk-hide").classList.toggle("hide")
-       
-      }
+        /*FIM BOTAO PERSPECTIVA DESKTOP*/
 
-function changefont() {
-        document.getElementById("texto1").style.fontFamily = "courgette";
-                document.getElementById("texto2").style.fontFamily = "courgette";
-                                document.getElementById("texto3").style.fontFamily = "courgette";
-
-                document.getElementById("texto4").style.fontFamily = "courgette";
+        /* BOTAO ALTERNAR MOCKUPUI */
 
 
-     
-    }
-    function changefonte() {
-        document.getElementById("primaria").style.fontFamily = "Anton"
-                document.getElementById("primaria2").style.fontFamily = "Anton"
-                           
+        function btmbchange() {
+            document.getElementById("mb-hide").classList.toggle("mb-hide")
+            document.getElementById("dk-hide").classList.toggle("hide")
+
+        }
+
+        function changefont() {
+            document.getElementById("texto1").style.fontFamily = "courgette";
+            document.getElementById("texto2").style.fontFamily = "courgette";
+            document.getElementById("texto3").style.fontFamily = "courgette";
+
+            document.getElementById("texto4").style.fontFamily = "courgette";
 
 
-     
-    }
+
+        }
+
+        function changefonte() {
+            document.getElementById("primaria").style.fontFamily = "Anton"
+            document.getElementById("primaria2").style.fontFamily = "Anton"
 
 
+
+
+        }
     </script>
     <script async src="styleswitcher.js"></script>
 </body>
