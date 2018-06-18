@@ -208,9 +208,15 @@ function setFont(selectObject, i) {
 	$('.c-font-' + i).css("font-family", value);
 	$('.name-font-' + i).html(value)
 }
-$('.show-menu').click(function(){
+$('.show-menu').click(function () {
 	$('.menu-mb').css('left', '0%')
 })
-$('.hide-menu').click(function(){
+$('.hide-menu').click(function () {
 	$('.menu-mb').css('left', '-100%')
+})
+$('#flat').click(function () {
+	$('.topFace').css("transform", "rotateX(0deg) rotateY(0deg) rotateZ(0deg)")
+})
+$('#persp').click(function () {
+	$('.topFace').css("transform", "rotateX(50deg) rotateY(10deg) rotateZ(-45deg)")
 })

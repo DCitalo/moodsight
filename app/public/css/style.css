@@ -1343,7 +1343,7 @@ button {
   background-repeat: no-repeat;
 }
 
-.icon-paleta {
+.icon-paleta-gerar {
   background-image: url(../img/icone-paleta-gerar.svg);
   background-repeat: no-repeat;
 }
@@ -1983,7 +1983,7 @@ legend {
 }
 
 input:checked+.c-slider {
-  background-color: #2196F3;
+  background: linear-gradient(45deg, #a766fe, #0fe0ba);
 }
 
 input:focus+.c-slider {
@@ -2052,6 +2052,14 @@ input:checked+.c-slider:before {
   height: 40px;
 }
 
+.lab-icon.c-bg-color-1 {
+  border-radius: 10px 0 0 0;
+}
+
+.lab-icon.c-bg-color-5 {
+  border-radius: 0 0 0 10px;
+}
+
 .title-aplica {
   margin-bottom: 20px;
   height: 50px;
@@ -2113,10 +2121,11 @@ input:checked+.c-slider:before {
 }
 
 .topFace {
-  transform: rotateX(50deg) rotateY(10deg) rotateZ(-45deg); 
+  /* transform: rotateX(50deg) rotateY(10deg) rotateZ(-45deg); */
   overflow: auto;
   height: 570px;
 }
+
 .mb-layout {
   width: 450px;
 }
@@ -2127,7 +2136,7 @@ input:checked+.c-slider:before {
 
 .mb-header {
   padding: 20px;
-  height: 110px;
+  /* height: 110px; */
 }
 
 .menu-mb {
@@ -2152,12 +2161,14 @@ input:checked+.c-slider:before {
   font-size: 30px;
   color: #FFF;
 }
+
 .mbh1 {
   width: 100%;
   font-size: 30px;
   height: 40px;
   text-align: center;
 }
+
 .mb-body {
   height: 100%;
 }
@@ -2168,6 +2179,7 @@ input:checked+.c-slider:before {
   text-align: center;
   margin: 20px 0;
 }
+
 .mb-txt {
   width: 90%;
   padding: 70px 10px;
@@ -2178,6 +2190,7 @@ input:checked+.c-slider:before {
   border-radius: 10px;
   border: 1px solid;
 }
+
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/
