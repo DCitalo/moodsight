@@ -27,6 +27,9 @@ module.exports = function (app) {
   app.post('/login', (req, res) => {
     login = true;
     userID = req.body.id;
+    res.json({
+      ok: true
+    });
   });
   app.post('/salvaPaleta', (req, res) => {
     var db = admin.database();
@@ -40,6 +43,9 @@ module.exports = function (app) {
       color4: 'req.body.paleta.color[0]',
       color5: 'req.body.paleta.color[0]',
     })
+    res.json({
+      ok: true
+    });
   });
   app.post('/salva', (req, res) => {
     var db = admin.database();
