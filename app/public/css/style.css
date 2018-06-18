@@ -1346,6 +1346,10 @@ button {
 .icon-paleta-gerar {
   background-image: url(../img/icone-paleta-gerar.svg);
   background-repeat: no-repeat;
+  width: 50px;
+  display: block;
+  height: 50px;
+  background-size: 30px 50px;
 }
 
 .icon-random {

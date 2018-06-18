@@ -30,15 +30,15 @@ module.exports = function (app) {
   });
   app.post('/salvaPaleta', (req, res) => {
     var db = admin.database();
-    userID = req.body[1].id;
+    userID = req.body.id;
     var ref = db.ref(userID);
     var usersRef = ref.child("paletas");
     userRef.push().set({
-      color1: req.body[0].paleta.color[1],
-      color2: req.body[0].paleta.color[2],
-      color3: req.body[0].paleta.color[3],
-      color4: req.body[0].paleta.color[4],
-      color5: req.body[0].paleta.color[5],
+      color1: req.body.paleta.color[1],
+      color2: req.body.paleta.color[2],
+      color3: req.body.paleta.color[3],
+      color4: req.body.paleta.color[4],
+      color5: req.body.paleta.color[5],
     })
   });
   app.post('/salva', (req, res) => {
