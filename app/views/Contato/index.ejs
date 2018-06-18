@@ -43,13 +43,20 @@ input[type=submit]:hover {
   color: #a767ff;}
 
 .containercontato {
+  margin-left: -190px;
     border-radius: 10px;
     background:none;
     padding: 20px;
     max-width: 720px;
     padding-left: 190px;
     padding-bottom: 80px;
+    
 }
+
+.icon-contato-col
+ {
+  background-image: url(../img/contato~hover.svg);
+  background-repeat: no-repeat;}
 
 /*---------------------- FIM CONTATO -----------------------*/
 </style>
@@ -59,10 +66,11 @@ input[type=submit]:hover {
 
 </div>
   <% include ../commom/header.ejs %> 
-  <section id="conteudo-body">
+  <section class="conteudo-body P-400 bg-pattern-1">
+    <div class="text-pages">
 
 
-<h1 id="padnaofoi" class="Upper font-1 bold tamfont5 title w-100 DF CS color-2"> <i class="icone-medium icon-contato Upper"></i>Contato</h1>
+      <h1 class="Upper font-1 bold tamfont5 title w-100 DF CS color-2 PR"><i class="icon-medium  icon-contato-col "></i>Contato</h1>
 
 <div class="containercontato">
   <form action="/action_page.php">
@@ -77,6 +85,7 @@ input[type=submit]:hover {
 
     <input type="submit" value="Enviar" class="font-1 tamfont6 bold ">
   </form>
+</div>
   </section>
   <div id="result"></div>
   <% include ../commom/footer.ejs %>
