@@ -1805,8 +1805,10 @@ button {
 }
 
 .btn-save {
-  padding: 10px 20px;
+  padding: 0px 20px;
   margin: 10px 0;
+  height: 50px;
+  line-height: 50px;
 }
 
 .title-lab {
