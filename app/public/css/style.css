@@ -1540,20 +1540,22 @@ button {
 .intro {
   margin: 10px 0px 10px 50px;
 }
+
 .autorNome {
-    padding: 10px 0px 10px 50px;
-    display: flex;
-    flex-wrap:  wrap;
-    align-items: center;
+  padding: 10px 0px 10px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .autorNome b {
-    margin: 10px;
-    font-size: 1.7em;
-    border: 2px solid;
-    padding: 10px 15px;
-    border-radius: 30px;
+  margin: 10px;
+  font-size: 1.7em;
+  border: 2px solid;
+  padding: 10px 15px;
+  border-radius: 30px;
 }
+
 .car {
   overflow: hidden;
   bottom: -260px;
@@ -2138,7 +2140,7 @@ input:checked+.c-slider:before {
 }
 
 .topFace {
-  transform: rotateX(50deg) rotateY(10deg) rotateZ(-45deg); 
+  transform: rotateX(50deg) rotateY(10deg) rotateZ(-45deg);
   overflow: auto;
   height: 570px;
 }
@@ -2183,9 +2185,9 @@ input:checked+.c-slider:before {
   font-size: 30px;
   height: 40px;
   text-align: center;
-} 
+}
 
-.mb-title{   
+.mb-title {
   width: 100%;
   font-size: 15px;
   text-align: center;
@@ -2241,14 +2243,17 @@ input:checked+.c-slider:before {
 }
 
 .mb-footer {
-  width: 80%;
+  width: 100%;
   font-size: 18px;
   margin: 10px auto;
   text-align: center;
+  padding: 20px 60px;
 }
-.btn-change{
-  padding:10px 15px;
+
+.btn-change {
+  padding: 10px 15px;
 }
+
 /* FIM C-elementos */
 
 /*---------------------- FIM LABORATORIO -----------------------*/
