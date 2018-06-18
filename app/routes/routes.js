@@ -30,10 +30,10 @@ module.exports = function (app) {
   });
   app.post('/salvaPaleta', (req, res) => {
     var db = admin.database();
-    userID = req.body.data.id;
+    userID = req.body.data[0].id;
     var ref = db.ref(userID);
     var usersRef = ref.child("paletas");
-    userRef.push().set({
+    userRef.update({
       color1: 'req.body.paleta.color[0]',
       color2: 'req.body.paleta.color[0]',
       color3: 'req.body.paleta.color[0]',
