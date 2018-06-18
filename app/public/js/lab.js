@@ -227,7 +227,10 @@ $('#persp').click(function () {
 	$('.topFace').css("transform", "rotateX(50deg) rotateY(10deg) rotateZ(-45deg)")
 })
 $('.btn-save').click(function () {
-	console.log(id)
-	console.log(paleta)
-	$.post("/salvaPaleta", { id });
+	var data = [
+		id: id,
+		paleta: paleta
+	]
+	console.log(data)
+	$.post("/salvaPaleta", { data });
 })
