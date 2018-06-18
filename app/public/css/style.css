@@ -254,6 +254,8 @@ button {
 .bg-footer-BC {
   background: url('/img/banner-BC.png') no-repeat;
   background-size: cover;
+  margin: 20px 0;
+  padding: 20px 0;
 }
 
 .bg-home {
@@ -1346,10 +1348,6 @@ button {
 .icon-paleta-gerar {
   background-image: url(../img/icone-paleta-gerar.svg);
   background-repeat: no-repeat;
-  width: 50px;
-  display: block;
-  height: 50px;
-  background-size: 30px 50px;
 }
 
 .icon-random {
@@ -1542,7 +1540,20 @@ button {
 .intro {
   margin: 10px 0px 10px 50px;
 }
+.autorNome {
+    padding: 10px 0px 10px 50px;
+    display: flex;
+    flex-wrap:  wrap;
+    align-items: center;
+}
 
+.autorNome b {
+    margin: 10px;
+    font-size: 1.7em;
+    border: 2px solid;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
 .car {
   overflow: hidden;
   bottom: -260px;
