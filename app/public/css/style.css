@@ -263,7 +263,7 @@ button {
 
 .bg-tipograf {
   background: url(../img/banners-output_06.png) no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .banner-lab {
@@ -2102,6 +2102,24 @@ input:checked+.c-slider:before {
   bottom: 40px;
   font-size: 20px;
   box-shadow: -0.9px 2.9px 13px 0 rgba(0, 0, 0, 0.36);
+}
+
+.c-logo {
+  font-size: 60px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.topFace {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+  top: -158px;
+  left: 100px;
 }
 
 /* FIM C-elementos */
