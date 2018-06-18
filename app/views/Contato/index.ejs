@@ -2,11 +2,81 @@
 <head>
   <title>MoodSigth - Contato</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <style>
+/*---------------------- CONTATO -----------------------*/
+ 
+
+#padnaofoi{
+	padding-left: 190px;
+	padding-top: 60px;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    width: 198px;
+  height: 50px;
+  border-radius: 24px;
+  background: linear-gradient(45deg, #a767ff, #72b798);
+  box-shadow: -1px 3.9px 6px 0 rgba(0, 0, 0, 0.28);
+  color: #FFF;
+}
+
+input[type=submit]:hover {
+ width: 198px;
+  height: 50px;
+  background: none;
+  border-radius: 24px;
+  border-style: -webkit-linear-gradient(bottom left, #a767ff, #72b798);
+  border-style: -o-linear-gradient(bottom left, #a767ff, #72b798);
+  border-style: linear-gradient(to top right, #a767ff, #72b798);
+  box-shadow: -1px 3.9px 10px 0 rgba(0, 0, 0, 0.28);
+  color: #a767ff;}
+
+.containercontato {
+    border-radius: 10px;
+    background:none;
+    padding: 20px;
+    max-width: 720px;
+    padding-left: 190px;
+    padding-bottom: 80px;
+}
+
+/*---------------------- FIM CONTATO -----------------------*/
+</style>
 </head>
 <body>
+
+
+</div>
   <% include ../commom/header.ejs %> 
   <section id="conteudo-body">
 
+
+<h1 id="padnaofoi" class="Upper font-1 bold tamfont5 title w-100 DF CS color-2"> <i class="icone-medium icon-contato Upper"></i>Contato</h1>
+
+<div class="containercontato">
+  <form action="/action_page.php">
+    <label for="fname" class="font-1 tamfont5 color-2">Nome</label>
+    <input type="text" class="font-1 tamfont5 color-2" id="fname" name="firstname" placeholder="Seu Nome..">
+
+    <label for="lname" class="font-1 tamfont5 color-2">Sobrenome</label>
+    <input type="text" class="font-1 tamfont5 color-2" id="lname" name="lastname" placeholder="Seu Sobrenome..">
+
+    <label for="subject" class="font-1 tamfont5 color-2">Assunto</label>
+    <textarea id="subject" class="font-1 tamfont5 color-2" name="subject" placeholder="Escreva algo.." style="height:200px"></textarea>
+
+    <input type="submit" value="Enviar" class="font-1 tamfont6 bold ">
+  </form>
   </section>
   <div id="result"></div>
   <% include ../commom/footer.ejs %>
